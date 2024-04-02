@@ -3,10 +3,10 @@ import os, sys
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from scipy.stats import linregress
+from scipy.stats import *
 
 
-dir = "/content/drive/MyDrive/Lab2/ - - - - "
+dir = "/content/drive/MyDrive/Laboratorio_2/ - - - - "
 drv = "/content/drive"
 
 
