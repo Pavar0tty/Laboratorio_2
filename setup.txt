@@ -1,0 +1,21 @@
+﻿from google.colab import drive
+import os, sys
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from scipy.stats import linregress
+
+
+dir = "/content/drive/MyDrive/Lab2/ - - - - "
+drv = "/content/drive"
+
+
+if not os.path.ismount(drv):
+    drive.mount(drv, force_remount=True)
+os.chdir(dir)
+
+
+if "iminuit" not in sys.modules:
+  %pip install iminuit
+from iminuit import Minuit
+from iminuit.cost import LeastSquares
