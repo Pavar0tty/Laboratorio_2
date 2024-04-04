@@ -1,7 +1,0 @@
-﻿import os, sys
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-from scipy.stats import *
-from iminuit import Minuit
-from iminuit.cost import LeastSquares
