@@ -1,4 +1,4 @@
-tempo[ms],tensione[mV](carica)
+tempo,tensione(carica)
 0.0,-900
 0.01,-560
 0.02,-360

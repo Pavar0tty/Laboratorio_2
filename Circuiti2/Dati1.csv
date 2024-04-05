@@ -1,4 +1,4 @@
-tempo(carica)[ms],tensione(carica1)[mV],tensione(carica2)[mV]
+tempo(carica),tensione(carica1),tensione(carica2)
 0.0,960,-952
 0.1,824,-824
 0.2,712,-696
