@@ -1,4 +1,4 @@
-tempo[us],tensione[mV],tempo2[us],tensione2[mV],tempo3[us],tensione3[mV]
+tempo[ms],tensione[mV],tempo2[µs],tensione2[mV],tempo3[µs],tensione3[mV]
 0.0,2,0,8,0,8
 0.01,8,2,88,2,152
 0.02,60,4,208,4,392
