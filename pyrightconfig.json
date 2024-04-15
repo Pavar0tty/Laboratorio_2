@@ -1,4 +1,5 @@
 {
     "reportMissingImports": false,
-    "reportMissingModuleSource": false
+    "reportMissingModuleSource": false,
+    "reportUndefinedVariable": false
 }

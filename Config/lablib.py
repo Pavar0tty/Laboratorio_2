@@ -54,3 +54,12 @@ def Binned_fit(bin_content:list, bin_edges:list, modello:'function', disp = 1, *
     if disp : display(my_minuit) # type: ignore
 
     return params, values, uncert, pval, dof, chi_quadro, cov
+
+def TestCompatibilita(x0:float, sigma0:float, x1:float, sigma1:float = 0) -> float:
+    """
+    Test di compatibilità tra due valori.
+    """
+    sigma = (sigma0**2 + sigma1**2)**0.5
+    z = abs(x0 - x1) / sigma
+
+    return z
