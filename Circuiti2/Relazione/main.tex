@@ -55,7 +55,7 @@
 
 
 \begin{abstract}
-Nella seguente relazione vengono presentati i risultati ottenuti dalla seconda esperienza del corso di Laboratorio II riguardante l'analisi di circuiti elettrici. L'obiettivo di questa esperienza era quello di studiare circuiti RC, RL e RLC in regimi di corrente impulsata (usando un onda quadra fornita da un generatore di funzioni). In particolare volendo verificare le leggi che descrivono questi circuiti, sono state effettuate misurazioni con oscilloscopio sull'andamento della differenza di potenziale ai capi dei vari componenti: resistenza, capacità e induttanza.
+Nella seguente relazione vengono presentati i risultati ottenuti dalla seconda esperienza del corso di Laboratorio II riguardante l'analisi di circuiti elettrici. L'obiettivo di questa esperienza è quello di studiare circuiti RC, RL e RLC in regimi di corrente impulsata (usando un onda quadra fornita da un generatore di funzioni). In particolare volendo verificare le leggi che descrivono questi circuiti, sono state effettuate misurazioni con oscilloscopio sull'andamento della differenza di potenziale ai capi dei vari componenti: resistenza, capacità e induttanza.
 
 \begin{adjustwidth}{-1cm}{-1cm}
 
@@ -79,16 +79,14 @@ tuttavia, per fare la nostra analisi ci siamo serviti della funzione:
     V(t) = V_0 \cdot e^{\frac{t}{\tau}} + k
 \end{equation}
 in modo da poter aver un controllo maggiore sullo shift verticale del grafico.
-
- Per fare ciò abbiamo selezionato con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso sia abbastanza lunga da permettere alla capacità $C$ di caricarsi.
- Per trovare la curva che descrive l'andamento di $V(t)$ è stato necessario campionare punto per punto il grafico che ci appare sull'oscilloscopio dopo aver  misurato con le sonde i segnali di tensione ai capi del resistore $R$ e capacità $C$. Prima delle misure abbiamo verificato la calibrazione di: oscilloscopio, generatore, sonde di misura e le "dimensioni" resistenza $R$ e capacità $C$.
+Per fare ciò abbiamo selezionato con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso sia abbastanza lunga da permettere alla capacità $C$ di caricarsi.
+Per trovare la curva che descrive l'andamento di $V(t)$ è stato necessario campionare punto per punto il grafico che ci appare sull'oscilloscopio dopo aver  misurato con le sonde i segnali di tensione ai capi del resistore $R$ e capacità $C$. Prima delle misure abbiamo verificato la calibrazione di: oscilloscopio, generatore, sonde di misura e le "dimensioni" resistenza $R$ e capacità $C$.
 \begin{figure}[h!]
     \centering
     \resizebox{0.5\textwidth}{!}{\includegraphics{configurazione_circuito.png}}
     \caption{Schema configurazione di circuito, Z rappresenta uno dei componenti tra R, C e L}
     \label{fig:config_circuito}
 \end{figure}
-
 
 
 Riuscire a verificare la legge prevista per il regime di circuito in questione permette di trovare la costante di tempo caratteristica \ref{costante tempo caratteristica}; conoscendo il valore di $R$ possiamo quindi stimare quanto vale la capacità $C$.
@@ -103,11 +101,10 @@ Riuscire a verificare la legge prevista per il regime di circuito in questione p
 \subsection{Dati}
 Di seguito riportiamo i dati e la configurazione del circuito RC studiato:
 \begin{enumerate}[itemsep=1pt]
-    \item Resistenza interna oscilloscopio $R_o = \SI{50}{\ohm}$ (valore indicato sull'oscilloscopio)
-    \item Resistenza usata nel circuito $R = (67.1\pm0.1) \text{k}\Omega$
+    \item Resistenza interna oscilloscopio $R_o = 50\ \Omega$ (valore indicato sull'oscilloscopio)
+    \item Resistenza usata nel circuito $R = (67.1\pm0.1)\ \text{k}\Omega$
     \item Frequenza generatore $f = \SI{200}{\hertz}$
     \item Intervallo tensione $V_0= (1000.0 - 0000.0) \text{ mV}$
-    \item Precisione oscilloscopio 0.004 V
 \end{enumerate}
 
 
@@ -128,33 +125,42 @@ Dopo aver raccolto i dati, abbiamo proceduto a interpolarli secondo la legge \eq
 \end{align*}
 Conoscendo la resistenza R, abbiamo calcolato $C = \frac{\tau}{R}$ e propagato le incertezze con la seguente formula:
 \begin{enumerate}
-    \item $\delta_\text{C} = \sqrt{(\frac{\partial C}{\partial R} \cdot \delta R)^2 + (\frac{\partial C}{\partial \tau}\cdot \delta \tau)^2} $
-    \item $ C_\text{calc}= (9.72 \pm 0.08) \cdot 10^{-9} \text{ F} \quad C_\text{attesa}= (10 \pm 0.1) \cdot 10^{-9} \text{F}$
+    \item $\sigma_\text{C} = \sqrt{(\frac{\partial C}{\partial R} \cdot \delta R)^2 + (\frac{\partial C}{\partial \tau}\cdot \delta \tau)^2} $
+    \item $ C_\text{calc}= (9.72 \pm 0.08) \cdot 10^{-9} \text{ F} \quad C_\text{attesa}= (10 \pm 0.1) \cdot 10^{-9}\ \text{F}$
 \end{enumerate}
 
  \\
 
 
 \subsection{Conclusioni circuito RC}
-Il fit ritorna un valore del $\widetilde{\chi}^2 = 0.7$ e $p-value = 0.817$, il che indica una buona compatilità delle misure con il modello \eqref{eq: Modello esponenziale}\\
+Il fit restituisce un valore del $\widetilde{\chi}^2 = 0.7$ e $p-value = 0.817$, il che indica una buona compatibilità delle misure con il modello \eqref{eq: Modello esponenziale}\\
 
 Eseguendo un test di compatibilità con la misura effettuata otteniamo $t = 1.02$. \\
 
 La misura di C rientra entro poco più di una deviazione standard dalla misurazione effettuata, fornendo ulteriore conferma della bontà dell'adattamento.
 
 \subsection{Discussione sulle incertezze}
-
 La nostra stima delle incertezze è stata basata sulla precisione dell'oscilloscopio, che a seconda della scala di risoluzione variava da 2 a 20 mV. \\
 In ciascun esperimento abbiamo tentato di selezionare il range dello strumento in modo che nello schermo fosse visibile tutta l'onda, senza mostrare regioni al di fuori del regime di interesse.\\
-Per validare il nostro metodo, abbiamo eseguito una stima a posteriori delle incertezze, osservando che la variazione sull'incertezza era sempre compatibile con l'errore da noi utilizzato.
-\newpage
+Per essere sicuri che i nostri errori fossero corretti, abbiamo eseguito una stima a posteriori delle incertezze, osservando che gli errori così ottenuti si mantengono compatibili con quelli adottati da noi.
+
+\subsubsection{Metodo "del gradino" per la stima  di $\tau$}
+Un metodo per la stima della costante di tempo caratteristica di un circuito ,senza il campionamento di punti sulla curva, potrebbe essere quello di fornire sempre con un generatore un'onda quadra di una certa frequenza $f$ poi aggiustando la scala dell'oscilloscopio per visualizzare interamente il tempo che il segnale impiega a salire e scendere. Riportiamo in seguito un procedimento a quanto pare comunemente utilizzato e pratico per ottenere una stima della costante di tempo (precisiamo che questo metodo non lo abbiamo "inventato" noi ma per completezza ci sembra giusto riportarlo):
+\begin{enumerate}
+    \item La $\tau$ è definita come il tempo necessario per la risposta del circuito ad un cambiamento del $ 63\% \text{ , circa } \frac{1}{e} $,dal valore iniziale a quello finale.
+    \item Misurando il tempo che il segnale impiega per passare dal 10\% al 90\% calcoliamo quello che viene chiamato tempo di salita $t_s$.
+    \item Il segnale ha quindi "percorso" circa l'80\% del sul cambiamento quindi si ricava una formula per costante caratteristica $ \tau = \frac{t_s}{2.2}$.
+    \item il fattore 2.2 indica quanto 80\% si avvicina al valore $\frac{1}{e}$.
+\end{enumerate}
+Con questo metodo si ottiene un'approssimazione ragionevole della costante di tempo caratteristica del circuito. Il concetto importante qui è che dall'andamento del segnale possiamo estrapolare come un cambiamento rapido di input influenza il circuito.
+
 \section{Circuito RL}
 
 \subsection{Configurazione del circuito e della strumentazione}
 L'obiettivo di questa sezione è applicare la stessa analisi seguita per il circuito $RC$ sostituendo la capacità con un induttanza $L$.
 Anche in questo circuito il modello che descrive l'andamento della tensione risulta essere \eqref{eq: Modello esponenziale}.
 
-Per le misurazioni abbiamo ripetuto lo stesso procedimento: selezionare con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso sia abbastanza lunga da permettere all'induttanza $L$ di caricarsi.
+Per le misurazioni abbiamo ripetuto lo stesso procedimento: abbiamo selezionato con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso fosse abbastanza lunga da permettere all'induttanza $L$ di caricarsi.
  Per trovare la curva che descrive l'andamento di $V(t)$ abbiamo campionato punto per punto il grafico riportato dall'oscilloscopio dopo aver misurato con le sonde il segnale tensione, stavolta ai capi del resistore $R$ e induttanza $L$. Prima di effettuare le misure abbiamo verificato la calibrazione di: oscilloscopio, generatore, sonde di misura e "dimensioni" di resistenza $R$ e induttanza $L$ in rapporto alla resistenza interna dell'oscilloscopio.\\
 Il nostro scopo è di nuovo quello di ricavare la costante di tempo caratteristica \ref{costante tempo caratt} per il regime di circuito in questione, conoscendo il valore di $R$ possiamo stimare quanto vale $L$. 
 \begin{equation}
@@ -164,11 +170,10 @@ Il nostro scopo è di nuovo quello di ricavare la costante di tempo caratteristi
 \subsection{Dati} %mancano le incertezze
 Di seguito riportiamo i dati e la configurazione del circuito RL analizzato:
 \begin{enumerate}[itemsep=1pt]
-    \item Resistenza interna oscilloscopio $R_o = (50.0)\Omega$ (valore indicato sull'oscilloscopio)
-    \item Resistenza circuito $R = (1000.01\pm0.01)\Omega$ %qual era la precisione della resistenza?
-    \item Frequenza generatore $f = \SI{700}{\hertz}$
+    \item Resistenza interna oscilloscopio $R_o = (50.0)\ \Omega$ (valore indicato sull'oscilloscopio)
+    \item Resistenza circuito $R = (1000.01\pm0.01)\ \Omega$ %qual era la precisione della resistenza?
+    \item Frequenza generatore $f = \SI{700}{\ \hertz}$
     \item Intervallo tensione $V_0= \pm (1000.0\pm0.1)\text{ mV}$
-    \item Precisione oscilloscopio 	0.02
 \end{enumerate}
 
 \subsection{Analisi dati}
@@ -179,7 +184,7 @@ Di seguito riportiamo i dati e la configurazione del circuito RL analizzato:
   \caption{Grafico fit RL}
   \label{fig:fitRL}
 \end{figure} 
-Il processo di analisi è molto simile a quello effettuato in precedenza, tuttavia, non avendo la possibilità di misurare direttamente il valore dell'induttanza, abbiamo basato la nostra analisi su un valore indicativo atteso di qualche mH.\\
+Il processo di analisi è molto simile a quello effettuato in precedenza, tuttavia, non avendo la possibilità di misurare direttamente il valore dell'induttanza, abbiamo basato la nostra analisi su un valore indicativo atteso di qualche decina di mH.\\
 Come forma funzionale per l'interpolazione delle misure abbiamo seguito nuovamente la relazione\eqref{eq: Modello esponenziale modificato}
 Dopo aver raccolto i dati, come per quanto fatto in precedenza li abbiamo interpolati secondo tale legge, estraendo per i parametri i seguenti valori:
 \begin{align*}
@@ -189,7 +194,7 @@ Dopo aver raccolto i dati, come per quanto fatto in precedenza li abbiamo interp
 \end{align*} 
 Conoscendo la resistenza R, abbiamo calcolato $L = \frac{\tau}{R}$ e propagato le incertezze con la seguente formula:
 \begin{enumerate}
-    \item $\delta_\text{L} = \sqrt{(\frac{\partial L}{\partial R} \cdot \delta R)^2 + (\frac{\partial L}{\partial \tau}\cdot \delta \tau)^2} $
+    \item $\sigma_\text{L} = \sqrt{(\frac{\partial L}{\partial R} \cdot \delta R)^2 + (\frac{\partial L}{\partial \tau}\cdot \delta \tau)^2} $
     \item $ L_\text{calc}= (52.2 \pm 0.1) \cdot 10^{-3} \text{ H} \qquad L_\text{attesa}= (50.0 \pm 0.1) \cdot 10^{-3} \text{ H}$
 \end{enumerate}
 
@@ -206,9 +211,9 @@ L'induttanza L ha una resistenza propria, lo schema che riassume il circuito rea
   \label{fig:reale}
 \end{figure}
 La resistenza interna $R_L$ dell'induttore ci aspettiamo causi una caduta di tensione proporzionale alla corrente che lo attraversa, quindi quando con le sonde misuriamo la tensione essa sarà la somma della caduta di tensione a causa di L che si carica e una caduta di tensione dovuta alla resistenza interna $R_L$
-Nel circuito RC reale bisognerebbe utilizzare la seguente relazione $$\tau = \frac{L}{R_L + R}$$
+Nel circuito RL reale bisognerebbe utilizzare la seguente relazione $$\tau = \frac{L}{R_L + R}$$
+Avendo noi utilizzato una resistenza R di circa 1000 ohm, la resistenza interna dell'induttore può venire trascurata.
 
-\newpage
 
 \section{Circuito RLC}
 
@@ -219,21 +224,21 @@ In questa terza sezione abbiamo analizzato un circuito RLC. Il modello teorico m
 	      Il sistema viene retto dall'equazione:
 	      \begin{equation}
 		      \label{eq: Modello sottosmorzato}
-		      V(t) = I_0e^{-\gamma t} sin(\omega t)
+		      V(t) = I_0Re^{-\gamma t} sin(\omega t)
 	      \end{equation}
 
 	\item \textbf{Regime criticamente smorzato}: $\gamma = \omega_0$\\
 	      Il sistema viene retto dall'equazione:
 	      \begin{equation}
               \label{eq: Modello criticamente smorzato}
-		      V(t) = I_0 t e^{-\gamma t}
+		      V(t) = I_0Ct e^{-\gamma t}
 	      \end{equation}
 
 	\item \textbf{Regime sovrasmorzato}: $\gamma > \omega_0$\\
 	      Il sistema viene retto dall'equazione:
 	      \begin{equation}
               \label{eq: Modello sovrasmorzato}
-		      V(t) = I_0 e^{-\gamma t} (e^{\omega t} - e^{-\omega t})
+		      V(t) = I_0Re^{-\gamma t} (e^{\omega t} - e^{-\omega t})
 	      \end{equation}
 \end{enumerate}
 Con l'obiettivo di di determinare $\omega$ e $\gamma$ nei tre casi abbiamo selezionato con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'accensione e spegnimento del generatore. Come suggerito dalla scheda di laboratorio, abbiamo verificato che la durata dell'impulso fosse abbastanza lunga da osservare cinque picchi a partire dal caso sottosmorzato.
@@ -248,27 +253,25 @@ Il circuito è stato configurato come in figura \ref{fig:config_circuito_RLC}\\
 \end{figure}
 
 Dall'interpolazione dei grafici ottenuti nei tre casi ci aspettiamo di ricavare i valori di $\omega$ e $\gamma$ caratteristici del circuito.
-\newpage
 
 \subsection{Dati} %mancano le incertezza
 Di seguito riportiamo i dati sulle componenti e la configurazione del circuito studiato:
 
 \begin{enumerate}[itemsep=1pt]
-    \item Resistenza interna oscilloscopio $R_o = (50.0\pm0.1)\Omega$  
+    \item Resistenza interna oscilloscopio $R_o = (50.0)\Omega$ (valore riportato sull'oscilloscopio)  
     \item Frequenza generatore $f = \SI{300}{\hertz}$
     \item Intervallo tensione $V_0= \pm (1000.0\pm0.1)\text{ mV}$ 
 \end{enumerate}
 Di seguito riportiamo anche le formule utilizzate per la propagazione delle incertezze di $\gamma$ e $\omega$:
 \begin{enumerate}
-    \item $ \delta_{\gamma} = \sqrt{(\frac{\partial \gamma}{\partial R} \cdot \delta R)^2 + (\frac{\partial \gamma}{\partial L}\cdot \delta L)^2} $
-    \item $ \delta_{\omega} = \sqrt{(\frac{\partial \gamma}{\partial L} \cdot \delta L)^2 + (\frac{\partial \gamma}{\partial C}\cdot \delta C)^2} $
+    \item $ \sigma_{\gamma} = \sqrt{(\frac{\partial \gamma}{\partial R} \cdot \delta R)^2 + (\frac{\partial \gamma}{\partial L}\cdot \delta L)^2} $
+    \item $ \sigma_{\omega} = \sqrt{(\frac{\partial \omega}{\partial L} \cdot \delta L)^2 + (\frac{\partial \omega}{\partial C}\cdot \delta C)^2} $
 \end{enumerate}
-\newpage
 
 \subsection{Analisi Dati}
 
 \subsubsection{Regime sottosmorzato}
-Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza di carico pari a : $$R_1 =(300\pm1) \Omega$$
+Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza di carico pari a : $$R_1 =(300\pm1)\ \Omega$$
 Questo valore è stato verificato con un multimetro palmare.
 I dati raccolti sono riportati nella tabella \ref{tab:dati_RLC_ssm} e il grafico ottenuto è riportato in figura \ref{fig:fitRLCsotto}.\\
 \begin{figure}[h!]
@@ -285,25 +288,23 @@ I valori di $\gamma$ e $\omega$ calcolati con le relative incertezze sono:
     \gamma_\text{calc} & = (2.87 \pm 0.06) \cdot 10^3\ \text{Hz} \\
     \omega_\text{calc} & = (44.3 \pm 0.5) \cdot 10^3\ \text{Hz}
 \end{align*}
-
 Mentre i parametri ottenuti dal fit sono:
 \begin{align*}
     \gamma_\text{attesa} & = (3.5 \pm 0.3) \cdot 10^3\ \text{Hz} \\
     \omega_\text{attesa} & = (41.9 \pm 0.2) \cdot 10^3\ \text{Hz}
 \end{align*}
+Il valore del $\widetilde{\chi}^2 = 1.1$ e $p-value = 0.279$ indicano una buona compatibilità delle misure con il modello \ref{eq: Modello sottosmorzato}\\
 Eseguendo un test di compatibilità tra i valori ottenuti e quelli attesi otteniamo:
 \begin{enumerate}
     \item $\gamma$ \quad  $t = 2.17$
     \item $\omega$ \quad $t = 4.49$
 \end{enumerate}
-Da questi valori, ci rendiamo conto che i valori ottenuti non sono compatibili con quelli attesi. 
+Da questi valori, ci rendiamo conto che i valori ottenuti non sono particolarmente compatibili con quelli attesi. 
 Discutiamo alla fine le possibili cause di questa discrepanza. \\
 
 
-\newpage
-
 \subsubsection{Regime criticamente smorzato}
-Per il circuito in regime  criticamente smorzato abbiamo utilizzato una resistenza di carico pari a: $$R_2 =(3900\pm1) \Omega $$
+Per il circuito in regime  criticamente smorzato abbiamo utilizzato una resistenza di carico pari a: $$R_2 =(3900\pm1)\ \Omega $$
 Questo valore è stato verificato con un multimetro palmare. Di seguito riportiamo il grafico\ref{fig:fitRLCcritic} del fit, mentre i dati raccolti si trovano nella tabella \ref{tab:dati_RLC_csm}. 
 \begin{figure}[h!] 
   \centering
@@ -313,19 +314,22 @@ Questo valore è stato verificato con un multimetro palmare. Di seguito riportia
 \end{figure}
 
 Il fit è stato eseguito seguendo come forma funzionale la relazione \eqref{eq: Modello criticamente smorzato}.
-I valori di $\gamma$ e $\omega$ calcolati con le relative incertezze sono:
-\begin{align*}
+Il valore di $\gamma$ e $\omega$ calcolato con le relativa incertezze è:
+$$
     \gamma_\text{attesa} & = (3.72 \pm 0.08) \cdot 10^4\ \text{Hz} \\
+$$
+e nel caso di regime critico
+$$
     \omega_\text{attesa} & = \gamma_\text{attesa}
-\end{align*}
-Mentre i parametri ottenuti dal fit sono:
+$$
+
+Il valore di $\gamma$ (e quindi $\omega$) calcolato è invece:
 \begin{align*}
     \gamma_\text{calc} & = (4.35 \pm 0.1) \cdot 10^4\ \text{Hz} \\
     \omega_\text{calc} & = \gamma_\text{calc}
 \end{align*}
-Eseguendo un test di compatibilità tra i valori ottenuti e quelli attesi otteniamo misure piuttosto distanti, tuttavia un circuito in regime critico è difficile verificare sperimentalmente perchè bisogna tenere conto di tutte le resistenze presenti nel circuito, ulteriori analisi su questa discrepanza sono riportate nelle conclusioni.
+Eseguendo un test di compatibilità tra i valori ottenuti e quelli attesi otteniamo misure piuttosto distanti, tuttavia un circuito in regime critico è difficile verificare sperimentalmente poichè bisogna tenere conto di tutte le resistenze presenti nel circuito e altri fattori. Ulteriori analisi su questa discrepanza sono riportate nelle conclusioni.
 
-\newpage
 \subsubsection{Regime sovrasmorzato}
 Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza $$R_3 =(10.0\pm0.1)\text{k}\Omega $$
 Di seguito riportiamo i dati raccolti e il grafico ottenuto in figura \ref{fig:fitRLCsovra}.
@@ -349,21 +353,22 @@ Il fit è stato eseguito con la funzione \eqref{eq: Modello sovrasmorzato} e i v
 	\omega_\text{calc} & = (68.0 \pm 0.2) \cdot 10^3\ \text{Hz}
 \end{align*}
 
-Il valore del $\widetilde{\chi}^2 = 1.44$ e $p-value = 0.02$ indicano una buona compatibilità delle misure con il modello\\
+Il valore del $\widetilde{\chi}^2 = 1.44$ e $p-value = 0.02$ indicano una buona compatibilità con il modello.\\
 
-Abbiamo poi eseguito un test di compatibilità tra i valori ottenuti e quelli attesi ottenendo
+Abbiamo poi eseguito un test di compatibilità tra valori ottenuti e attesi ottenendo:
 \begin{enumerate}
-	\item $\gamma$ \quad  $t = 7.57$
-    \item $\omega$ \quad $t = 45.2$
+	\item $\gamma$ \quad  $t = 5.45$
+    \item $\omega$ \quad $t = 7.32$
 \end{enumerate}
 Anche in questo caso i valori ottenuti non sono compatibili con quelli attesi.\\
 
-
+Nel grafico \ref{fig:fitRLCsovra} abbiamo riportato, oltre al fit dei dati realizzato con minuit, anche un plot della funzione \eqref{eq: Modello sovrasmorzato} a cui sono stati passati come parametri $\gamma_\text{calc}$ e $\omega_\text{calc}$. È possibile notare una differenza tra i due grafici, che abbiamo spiegato con la bassa concordanza tra le nostre misure e i valori calcolati.
 
 \subsection{Conclusioni sul circuito RLC}
-
-
-
+Ciò che emerge dall'analisi dati del circuito RLC è che in tutti e tre i casi otteniamo dai t-test una compatibilità bassa. Abbiamo provato ad avanzare ipotesi per capire come mai. \\
+Per quanto riguarda il caso di smorzamento critico, risulta evidente semplicemente osservando il grafico che i dati non si adattano sufficientemente bene al modello. Segue da qui che la stima dei parametri del circuito tramite interpolazione sia imprecisa, in quanto i dati non sono stati raccolti precisamente nel regime di criticità. Pensiamo inoltre di non aver precisamente misurato il picco del segnale. \\
+Nei casi di sottosmorzamento e sovrasmorzamento le interpolazioni sono buone, i valori di $\widetilde{\chi}^2$ si attestano attorno a 1, valore atteso. Resta però il fatto che i valori del t-test siano piuttosto alti. Pensiamo che il problema possa risiedere nell'aver trascurato le resistenze interne sia dell'induttanza che dell'oscilloscopio. Molto probabilmente la sorgente principale di queste discrepanze risiede nel fatto che per il campionamento dei punti sull'oscilloscopio abbiamo utilizzato una funzione che bloccasse momentaneamente il plot della curva, così facendo è probabile che un'incertezza insolita si sia propagata sulle misure delle tensioni.  
+\newpage
 \section{Tabelle}
 
 \begin{table}[htbp]
