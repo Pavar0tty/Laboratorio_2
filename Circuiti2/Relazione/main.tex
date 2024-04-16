@@ -47,7 +47,7 @@
 \begin{document}
 
 \title{{\small Università degli studi Milano-Bicocca  Dipartimento di Fisica - Laboratorio II }\\
-	Esperienza Circuiti II}
+    Esperienza Circuiti II}
 \author{F. Ballo, S. Franceschina, S. Dolci - Gruppo T1 39}
 \date{\today}
 \maketitle
@@ -55,12 +55,12 @@
 
 
 \begin{abstract}
-	Nella seguente relazione vengono presentati i risultati ottenuti dalla seconda esperienza del corso di Laboratorio II riguardante l'analisi di circuiti elettrici. L'obiettivo di questa esperienza era quello di studiare circuiti RC, RL e RLC in regimi di corrente impulsata (usando un onda quadra fornita da un generatore di funzioni). In particolare volendo verificare le leggi che descrivono questi circuiti, sono state effettuate misurazioni con oscilloscopio sull'andamento della differenza di potenziale ai capi dei vari componenti: resistenza, capacità e induttanza.
+Nella seguente relazione vengono presentati i risultati ottenuti dalla seconda esperienza del corso di Laboratorio II riguardante l'analisi di circuiti elettrici. L'obiettivo di questa esperienza era quello di studiare circuiti RC, RL e RLC in regimi di corrente impulsata (usando un onda quadra fornita da un generatore di funzioni). In particolare volendo verificare le leggi che descrivono questi circuiti, sono state effettuate misurazioni con oscilloscopio sull'andamento della differenza di potenziale ai capi dei vari componenti: resistenza, capacità e induttanza.
 
-	\begin{adjustwidth}{-1cm}{-1cm}
+\begin{adjustwidth}{-1cm}{-1cm}
 
 
-	\end{adjustwidth}
+\end{adjustwidth}
 \end{abstract}
 \tableofcontents
 \newpage
@@ -70,24 +70,31 @@
 \subsection{Configurazione del circuito e della strumentazione}
 Di seguito abbiamo riportato lo schema \ref{fig:config_circuito} utilizzato per riprodurre il circuito RC in laboratorio con l'utilizzo di una bread-board e degli opportuni componenti, con l'obiettivo di verificare la seguente legge che descrive l'andamento della tensione in un circuito RC:
 \begin{equation}
-	\label{eq: Modello esponenziale}
-	V(t) = V_0 \left(1  -e^{-\frac{t}{\tau}}\right)
+\label{eq: Modello esponenziale}
+    V(t) = V_0 \left(1  -e^{-\frac{t}{\tau}}\right) 
 \end{equation}
-Per fare ciò abbiamo selezionato con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso sia abbastanza lunga da permettere alla capacità $C$ di caricarsi.
-Per trovare la curva che descrive l'andamento di $V(t)$ è stato necessario campionare punto per punto il grafico che ci appare sull'oscilloscopio dopo aver  misurato con le sonde i segnali di tensione ai capi del resistore $R$ e capacità $C$. Prima delle misure abbiamo verificato la calibrazione di: oscilloscopio, generatore, sonde di misura e le "dimensioni" resistenza $R$ e capacità $C$.
+tuttavia, per fare la nostra analisi ci siamo serviti della funzione:
+\begin{equation}
+    \label{eq: Modello esponenziale modificato}
+    V(t) = V_0 \cdot e^{\frac{t}{\tau}} + k
+\end{equation}
+in modo da poter aver un controllo maggiore sullo shift verticale del grafico.
+
+ Per fare ciò abbiamo selezionato con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso sia abbastanza lunga da permettere alla capacità $C$ di caricarsi.
+ Per trovare la curva che descrive l'andamento di $V(t)$ è stato necessario campionare punto per punto il grafico che ci appare sull'oscilloscopio dopo aver  misurato con le sonde i segnali di tensione ai capi del resistore $R$ e capacità $C$. Prima delle misure abbiamo verificato la calibrazione di: oscilloscopio, generatore, sonde di misura e le "dimensioni" resistenza $R$ e capacità $C$.
 \begin{figure}[h!]
-	\centering
-	\resizebox{0.5\textwidth}{!}{\includegraphics{configurazione_circuito.png}}
-	\caption{Schema configurazione di circuito, Z rappresenta uno dei componenti tra R, C e L}
-	\label{fig:config_circuito}
+    \centering
+    \resizebox{0.5\textwidth}{!}{\includegraphics{configurazione_circuito.png}}
+    \caption{Schema configurazione di circuito, Z rappresenta uno dei componenti tra R, C e L}
+    \label{fig:config_circuito}
 \end{figure}
 
 
 
 Riuscire a verificare la legge prevista per il regime di circuito in questione permette di trovare la costante di tempo caratteristica \ref{costante tempo caratteristica}; conoscendo il valore di $R$ possiamo quindi stimare quanto vale la capacità $C$.
 \begin{equation}
-	\tau = RC
-	\label{costante tempo caratteristica}
+    \tau = RC
+    \label{costante tempo caratteristica}
 \end{equation}
 \newpage
 
@@ -96,32 +103,36 @@ Riuscire a verificare la legge prevista per il regime di circuito in questione p
 \subsection{Dati}
 Di seguito riportiamo i dati e la configurazione del circuito RC studiato:
 \begin{enumerate}[itemsep=1pt]
-	\item Resistenza interna oscilloscopio $R_o = \SI{50}{\ohm}$
-	\item Resistenza usata nel circuito $R = (67.1\pm0.1) \text{k}\Omega$
-	\item Frequenza generatore $f = \SI{200}{\hertz}$
-	\item Intervallo tensione $V_0= (1000.0 - 0000.0) \text{ mV}$
-	\item Precisione oscilloscopio 0.004 V
+    \item Resistenza interna oscilloscopio $R_o = \SI{50}{\ohm}$ (valore indicato sull'oscilloscopio)
+    \item Resistenza usata nel circuito $R = (67.1\pm0.1) \text{k}\Omega$
+    \item Frequenza generatore $f = \SI{200}{\hertz}$
+    \item Intervallo tensione $V_0= (1000.0 - 0000.0) \text{ mV}$
+    \item Precisione oscilloscopio 0.004 V
 \end{enumerate}
 
 
 %Qui metterei i grafici di carica e scarica dei circuiti
 \subsection{Analisi dati}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{RC.png} % Replace example-image with the filename of your image
-	\caption{Grafico fit RC}
-	\label{fig:fitRC}
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=0.8\textwidth]{RC.png} % Replace example-image with the filename of your image
+  \caption{Grafico fit RC}
+  \label{fig:fitRC}
 \end{figure}
 Per prima cosa abbiamo verificato la  misura  di C mediante un multimetro palmare, ottenendo: $$ C = (10 \pm 0.1)\ \text{nF}$$  valore che abbiamo usato per fare un confronto con quello ricavato dal fit.\\
 Dopo aver raccolto i dati, abbiamo proceduto a interpolarli secondo la legge \eqref{eq: Modello esponenziale}, ottenendo i seguenti valori dei parametri:
 \begin{align*}
-	V_0  & = (963.7 \pm 3.1)\cdot 10^{-3}\ \text{V} \\
-	\tau & = (652 \pm 6) \cdot 10^{-6}\ \text{s}
+    V_0 &= (963.7 \pm 3.1)\cdot 10^{-3}\ \text{V} \\
+    k &= (2 \pm 2)\cdot 10^{-3}\ \text{V} \\
+    \tau &= (652 \pm 6) \cdot 10^{-6}\ \text{s}
 \end{align*}
-Conoscendo la resistenza R, abbiamo calcolato $C = \frac{\tau}{R}$ e propagato le incertezze con l'opportuna formula:
-$$ C_\text{calc}= (9.72 \pm 0.08) \cdot 10^{-9} \text{ F} \quad
-	C_\text{attesa}= (10 \pm 0.1) \cdot 10^{-9} \text{F}
-$$ \\
+Conoscendo la resistenza R, abbiamo calcolato $C = \frac{\tau}{R}$ e propagato le incertezze con la seguente formula:
+\begin{enumerate}
+    \item $\delta_\text{C} = \sqrt{(\frac{\partial C}{\partial R} \cdot \delta R)^2 + (\frac{\partial C}{\partial \tau}\cdot \delta \tau)^2} $
+    \item $ C_\text{calc}= (9.72 \pm 0.08) \cdot 10^{-9} \text{ F} \quad C_\text{attesa}= (10 \pm 0.1) \cdot 10^{-9} \text{F}$
+\end{enumerate}
+
+ \\
 
 
 \subsection{Conclusioni circuito RC}
@@ -141,68 +152,68 @@ Per validare il nostro metodo, abbiamo eseguito una stima a posteriori delle inc
 
 \subsection{Configurazione del circuito e della strumentazione}
 L'obiettivo di questa sezione è applicare la stessa analisi seguita per il circuito $RC$ sostituendo la capacità con un induttanza $L$.
-In questo circuito il modello che descrive l'andamento della tensione risulta essere:
-\begin{equation}
-	V(t) = V_0 \left(1  -e^{\frac{t}{\tau}}\right)
-\end{equation}
-Per le misurazioni abbiamo ripetuto lo stesso procedimento: selezionare con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso sia abbastanza lunga da permettere all'induttanza $L$ di caricarsi.
-Per trovare la curva che descrive l'andamento di $V(t)$ abbiamo campionato punto per punto il grafico riportato dall'oscilloscopio dopo aver misurato con le sonde il segnale tensione, stavolta ai capi del resistore $R$ e induttanza $L$. Prima di effettuare le misure abbiamo verificato la calibrazione di: oscilloscopio, generatore, sonde di misura e "dimensioni" di resistenza $R$ e induttanza $L$ in rapporto alla resistenza interna dell'oscilloscopio.\\
-Il nostro scopo è di nuovo quello di ricavare la costante di tempo caratteristica \ref{costante tempo caratt} per il regime di circuito in questione, conoscendo il valore di $R$ possiamo stimare quanto vale $L$.
-\begin{equation}
-	\tau = \frac{R}{L}
-	\label{costante tempo caratt}
-\end{equation}
-\newpage
+Anche in questo circuito il modello che descrive l'andamento della tensione risulta essere \eqref{eq: Modello esponenziale}.
 
+Per le misurazioni abbiamo ripetuto lo stesso procedimento: selezionare con un generatore di funzioni un segnale a onda quadra di frequenza $f$, per simulare l'apertura o chiusura del generatore, verificando che la durata dell'impulso sia abbastanza lunga da permettere all'induttanza $L$ di caricarsi.
+ Per trovare la curva che descrive l'andamento di $V(t)$ abbiamo campionato punto per punto il grafico riportato dall'oscilloscopio dopo aver misurato con le sonde il segnale tensione, stavolta ai capi del resistore $R$ e induttanza $L$. Prima di effettuare le misure abbiamo verificato la calibrazione di: oscilloscopio, generatore, sonde di misura e "dimensioni" di resistenza $R$ e induttanza $L$ in rapporto alla resistenza interna dell'oscilloscopio.\\
+Il nostro scopo è di nuovo quello di ricavare la costante di tempo caratteristica \ref{costante tempo caratt} per il regime di circuito in questione, conoscendo il valore di $R$ possiamo stimare quanto vale $L$. 
+\begin{equation}
+    \tau = \frac{R}{L}
+    \label{costante tempo caratt}
+\end{equation}
 \subsection{Dati} %mancano le incertezze
 Di seguito riportiamo i dati e la configurazione del circuito RL analizzato:
 \begin{enumerate}[itemsep=1pt]
-	\item Resistenza interna oscilloscopio $R_o = (50.0\pm0.1)\Omega$
-	\item Resistenza circuito $R = (1000.01\pm0.01)\Omega$ %qual era la precisione della resistenza?
-	\item Frequenza generatore $f = \SI{700}{\hertz}$
-	\item Intervallo tensione $V_0= \pm (1000.0\pm0.1)\text{ mV}$
-	\item Precisione oscilloscopio 	0.02
-
-
+    \item Resistenza interna oscilloscopio $R_o = (50.0)\Omega$ (valore indicato sull'oscilloscopio)
+    \item Resistenza circuito $R = (1000.01\pm0.01)\Omega$ %qual era la precisione della resistenza?
+    \item Frequenza generatore $f = \SI{700}{\hertz}$
+    \item Intervallo tensione $V_0= \pm (1000.0\pm0.1)\text{ mV}$
+    \item Precisione oscilloscopio 	0.02
 \end{enumerate}
 
 \subsection{Analisi dati}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{RL.png} % Replace example-image with the filename of your image
-	\caption{Grafico fit RL}
-	\label{fig:fitRL}
-\end{figure}
-
-Il processo di analisi è molto simile a quello effettuato in precedenza, tuttavia, non avendo avuto la possibilità di misurare direttamente il valore dell'induttanza, abbiamo basato la nostra analisi su un valore di qualche mH.\\
-
-Per eseguire l'interpolazione abbiamo nuovamente fatto uso della \eqref{eq: Modello esponenziale}
-Dopo aver raccolto i dati, abbiamo proceduto a interpolarli secondo la legge \eqref{eq: Modello esponenziale}, ottenendo i seguenti valori dei parametri:
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=0.8\textwidth]{RL.png} % Replace example-image with the filename of your image
+  \caption{Grafico fit RL}
+  \label{fig:fitRL}
+\end{figure} 
+Il processo di analisi è molto simile a quello effettuato in precedenza, tuttavia, non avendo la possibilità di misurare direttamente il valore dell'induttanza, abbiamo basato la nostra analisi su un valore indicativo atteso di qualche mH.\\
+Come forma funzionale per l'interpolazione delle misure abbiamo seguito nuovamente la relazione\eqref{eq: Modello esponenziale modificato}
+Dopo aver raccolto i dati, come per quanto fatto in precedenza li abbiamo interpolati secondo tale legge, estraendo per i parametri i seguenti valori:
 \begin{align*}
-	V_0  & = ( \pm )\cdot 10^{-3}\ \text{V}      \\
-	\tau & = (652 \pm 6) \cdot 10^{-6}\ \text{s}
-\end{align*}
-Conoscendo la resistenza R, abbiamo calcolato $L= \frac{\tau}{R}$ e propagato le incertezze con l'opportuna formula:
-$$ L_\text{calc}= (52.2 \pm 0.1) \cdot 10^{-3} \text{H} \quad
-$$
+    V_0 &= ( 0.906\pm0.006 )\cdot 10^{-3}\ \text{V} \\
+    k &= (970 \pm 10)\cdot 10^{-3}\ \text{V} \\
+    \tau &= (52.2 \pm 1.1) \cdot 10^{-6}\ \text{s} 
+\end{align*} 
+Conoscendo la resistenza R, abbiamo calcolato $L = \frac{\tau}{R}$ e propagato le incertezze con la seguente formula:
+\begin{enumerate}
+    \item $\delta_\text{L} = \sqrt{(\frac{\partial L}{\partial R} \cdot \delta R)^2 + (\frac{\partial L}{\partial \tau}\cdot \delta \tau)^2} $
+    \item $ L_\text{calc}= (52.2 \pm 0.1) \cdot 10^{-3} \text{ H} \qquad L_\text{attesa}= (50.0 \pm 0.1) \cdot 10^{-3} \text{ H}$
+\end{enumerate}
 
 \subsection{Conclusioni circuito RL}
 
-Il fit ritorna un valore del $\widetilde{\chi}^2 = 1.0$ e $p-value = 0.400$, suggerendo un'ottima compatibilità delle misure con il modello.\\
+Dal fit dei dati abbiamo ricavato un valore del $\widetilde{\chi}^2 = 1.0$ e $\text{p-value} = 0.400$, suggerendo un'ottima compatibilità delle misure con il modello.\\
 Come detto in precedenza, non avendo una misura diretta dell'induttanza stimata, abbiamo confrontato il valore ottenuto con uno indicativo $L \approx 50 \text{mH}$.\\
-Il test di compatibilità in questo caso risulta $t = 1.02$
+Il test di compatibilità in questo caso risulta $t = 1.02$.
+L'induttanza L ha una resistenza propria, lo schema che riassume il circuito reale è riportato in figura \ref{fig:reale}. \\
+\begin{figure}[h!] 
+  \centering
+\includegraphics[width=0.4\textwidth]{RL reale.png} 
+  \caption{Grafico circuito RL reale}
+  \label{fig:reale}
+\end{figure}
+La resistenza interna $R_L$ dell'induttore ci aspettiamo causi una caduta di tensione proporzionale alla corrente che lo attraversa, quindi quando con le sonde misuriamo la tensione essa sarà la somma della caduta di tensione a causa di L che si carica e una caduta di tensione dovuta alla resistenza interna $R_L$
+Nel circuito RC reale bisognerebbe utilizzare la seguente relazione $$\tau = \frac{L}{R_L + R}$$
+
+\newpage
 
 \section{Circuito RLC}
 
 \subsection{Configurazione del circuito}
 In questa terza sezione abbiamo analizzato un circuito RLC. Il modello teorico mostra che un circuito di questo tipo si comporta come un oscillatore armonico, a seconda di come variano i parametri del circuito si osservano tre comportamenti diversi, descritti da tre leggi differenti. Di seguito riportiamo i parametri del circuito:
-\begin{enumerate}
-	\item $\gamma = \frac{R}{2L}$
-	\item $\omega_0 = \frac{1}{\sqrt{LC}}$
-	\item $\omega = \sqrt{\omega_0^2 - \gamma^2}$
-\end{enumerate}
-Di seguito sono riportati i tre regimi al variare dei parametri:
 \begin{enumerate}
 	\item \textbf{Regime sottosmorzato}: $\gamma < \omega_0$\\
 	      Il sistema viene retto dall'equazione:
@@ -230,10 +241,10 @@ Per trovare la curva che descrive l'andamento di $V(t)$ è stato necessario camp
 Il circuito è stato configurato come in figura \ref{fig:config_circuito_RLC}\\
 
 \begin{figure}[h!]
-	\centering
-	\resizebox{0.5\textwidth}{!}{\includegraphics{configurazione_circuito_RLC.JPG}}
-	\caption{Schema configurazione di circuito RLC}
-	\label{fig:config_circuito_RLC}
+    \centering
+    \resizebox{0.5\textwidth}{!}{\includegraphics{configurazione_circuito_RLC.JPG}}
+    \caption{Schema configurazione di circuito RLC}
+    \label{fig:config_circuito_RLC}
 \end{figure}
 
 Dall'interpolazione dei grafici ottenuti nei tre casi ci aspettiamo di ricavare i valori di $\omega$ e $\gamma$ caratteristici del circuito.
@@ -243,26 +254,23 @@ Dall'interpolazione dei grafici ottenuti nei tre casi ci aspettiamo di ricavare 
 Di seguito riportiamo i dati sulle componenti e la configurazione del circuito studiato:
 
 \begin{enumerate}[itemsep=1pt]
-	\item Resistenza interna oscilloscopio $R_o = (50.0\pm0.1)\Omega$
-	\item Frequenza generatore $f = \SI{300}{\hertz}$
-	\item Intervallo tensione $V_0= \pm (1000.0\pm0.1)\text{ mV}$
-
-	      Di seguito riportiamo anche le formule utilizzate per la propagazione delle incertezze di $\gamma$ e $\omega$:
-
-	      \begin{enumerate}
-		      \item $ \delta_{\gamma} = \sqrt{(\frac{\partial \gamma}{\partial R} \cdot \delta R)^2 + (\frac{\partial \gamma}{\partial L}\cdot \delta L)^2} $
-		      \item $ \delta_{\omega} = \sqrt{(\frac{\partial \gamma}{\partial L} \cdot \delta L)^2 + (\frac{\partial \gamma}{\partial C}\cdot \delta C)^2} $
-	      \end{enumerate}
+    \item Resistenza interna oscilloscopio $R_o = (50.0\pm0.1)\Omega$  
+    \item Frequenza generatore $f = \SI{300}{\hertz}$
+    \item Intervallo tensione $V_0= \pm (1000.0\pm0.1)\text{ mV}$ 
+\end{enumerate}
+Di seguito riportiamo anche le formule utilizzate per la propagazione delle incertezze di $\gamma$ e $\omega$:
+\begin{enumerate}
+    \item $ \delta_{\gamma} = \sqrt{(\frac{\partial \gamma}{\partial R} \cdot \delta R)^2 + (\frac{\partial \gamma}{\partial L}\cdot \delta L)^2} $
+    \item $ \delta_{\omega} = \sqrt{(\frac{\partial \gamma}{\partial L} \cdot \delta L)^2 + (\frac{\partial \gamma}{\partial C}\cdot \delta C)^2} $
 \end{enumerate}
 \newpage
 
-\subsection{Analisi dati}
+\subsection{Analisi Dati}
 
 \subsubsection{Regime sottosmorzato}
-Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza $$R_1 =(300\pm1) \Omega $$
-I dati da noi raccolti sono riportati nella tabella \ref{tab:dati_RLC_ssm} e il grafico ottenuto è riportato in figura \ref{fig:fitRLCsotto}.
-
-
+Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza di carico pari a : $$R_1 =(300\pm1) \Omega$$
+Questo valore è stato verificato con un multimetro palmare.
+I dati raccolti sono riportati nella tabella \ref{tab:dati_RLC_ssm} e il grafico ottenuto è riportato in figura \ref{fig:fitRLCsotto}.\\
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{RLCsotto.png}
@@ -270,7 +278,8 @@ I dati da noi raccolti sono riportati nella tabella \ref{tab:dati_RLC_ssm} e il 
 	\label{fig:fitRLCsotto}
 \end{figure}
 
-Il fit e stato eseguito con la funzione \eqref{eq: Modello sottosmorzato}.
+Il fit è stato eseguito seguendo come forma funzionale la relazione \eqref{eq: Modello sottosmorzato}.
+%mi sa che qui vanno scambiati attesi e calcolati %
 I valori di $\gamma$ e $\omega$ calcolati con le relative incertezze sono:
 \begin{align*}
     \gamma_\text{calc} & = (2.87 \pm 0.06) \cdot 10^3\ \text{Hz} \\
@@ -282,27 +291,44 @@ Mentre i parametri ottenuti dal fit sono:
     \gamma_\text{attesa} & = (3.5 \pm 0.3) \cdot 10^3\ \text{Hz} \\
     \omega_\text{attesa} & = (41.9 \pm 0.2) \cdot 10^3\ \text{Hz}
 \end{align*}
-
-Eseguendo un test di compatibilità tra i valori ottenuti e quelli attesi otteniamo per $\gamma$ un $t = 2.17$ e per $\omega$ un $t = 4.49$.\\
+Eseguendo un test di compatibilità tra i valori ottenuti e quelli attesi otteniamo:
+\begin{enumerate}
+    \item $\gamma$ \quad  $t = 2.17$
+    \item $\omega$ \quad $t = 4.49$
+\end{enumerate}
 Da questi valori, ci rendiamo conto che i valori ottenuti non sono compatibili con quelli attesi. 
-Discuteremo alla fine le possibili cause di questa discrepanza. \\
+Discutiamo alla fine le possibili cause di questa discrepanza. \\
+
 
 \newpage
 
 \subsubsection{Regime criticamente smorzato}
-Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza $$R_2 =(3900\pm1)\ \Omega $$
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.8\textwidth]{RLCcritic.png}
-	\caption{Grafico fit RLC critico}
-	\label{fig:fitRLCcritic}
+Per il circuito in regime  criticamente smorzato abbiamo utilizzato una resistenza di carico pari a: $$R_2 =(3900\pm1) \Omega $$
+Questo valore è stato verificato con un multimetro palmare. Di seguito riportiamo il grafico\ref{fig:fitRLCcritic} del fit, mentre i dati raccolti si trovano nella tabella \ref{tab:dati_RLC_csm}. 
+\begin{figure}[h!] 
+  \centering
+  \includegraphics[width=0.8\textwidth]{RLCcritic.png} % Replace example-image with the filename of your image
+  \caption{Grafico fit RLC critico}
+  \label{fig:fitRLCcritic}
 \end{figure}
-\newpage
 
+Il fit è stato eseguito seguendo come forma funzionale la relazione \eqref{eq: Modello criticamente smorzato}.
+I valori di $\gamma$ e $\omega$ calcolati con le relative incertezze sono:
+\begin{align*}
+    \gamma_\text{attesa} & = (3.72 \pm 0.08) \cdot 10^4\ \text{Hz} \\
+    \omega_\text{attesa} & = \gamma_\text{attesa}
+\end{align*}
+Mentre i parametri ottenuti dal fit sono:
+\begin{align*}
+    \gamma_\text{calc} & = (4.35 \pm 0.1) \cdot 10^4\ \text{Hz} \\
+    \omega_\text{calc} & = \gamma_\text{calc}
+\end{align*}
+Eseguendo un test di compatibilità tra i valori ottenuti e quelli attesi otteniamo misure piuttosto distanti, tuttavia un circuito in regime critico è difficile verificare sperimentalmente perchè bisogna tenere conto di tutte le resistenze presenti nel circuito, ulteriori analisi su questa discrepanza sono riportate nelle conclusioni.
+
+\newpage
 \subsubsection{Regime sovrasmorzato}
 Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza $$R_3 =(10.0\pm0.1)\text{k}\Omega $$
+Di seguito riportiamo i dati raccolti e il grafico ottenuto in figura \ref{fig:fitRLCsovra}.
 
 \begin{figure}[h!]
 	\centering
@@ -310,6 +336,27 @@ Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza $$R_3 
 	\caption{Grafico fit RLC sovrasmorzato}
 	\label{fig:fitRLCsovra}
 \end{figure}
+
+Abbiamo calcolato i valori di $\gamma$ e $\omega$ con le relative incertezze:
+\begin{align*}
+	\gamma_\text{atteso} & = (95.8 \pm 2.2) \cdot 10^3\ \text{Hz} \\
+	\omega_\text{atteso} & = (44.3 \pm 0.5) \cdot 10^3\ \text{Hz}
+\end{align*}
+
+Il fit è stato eseguito con la funzione \eqref{eq: Modello sovrasmorzato} e i valori estratti sono:
+\begin{align*}
+	\gamma_\text{calc} & = (79.1 \pm 0.3) \cdot 10^3\ \text{Hz} \\
+	\omega_\text{calc} & = (68.0 \pm 0.2) \cdot 10^3\ \text{Hz}
+\end{align*}
+
+Il valore del $\widetilde{\chi}^2 = 1.44$ e $p-value = 0.02$ indicano una buona compatibilità delle misure con il modello\\
+
+Abbiamo poi eseguito un test di compatibilità tra i valori ottenuti e quelli attesi ottenendo
+\begin{enumerate}
+	\item $\gamma$ \quad  $t = 7.57$
+    \item $\omega$ \quad $t = 45.2$
+\end{enumerate}
+Anche in questo caso i valori ottenuti non sono compatibili con quelli attesi.\\
 
 
 
@@ -320,179 +367,179 @@ Per il circuito in regime sottosmorzato abbiamo utilizzato una resistenza $$R_3 
 \section{Tabelle}
 
 \begin{table}[htbp]
-	\centering
-	\caption{Dati circuito RC}
-	\begin{tabular}{ccc}
-		\toprule
-		Tempo [ms] & Tensione - carica pos. [mV] & Tensione - carica neg. [mV] \\
-		\midrule
-		0.0        & 960                         & -952                        \\
-		0.1        & 824                         & -824                        \\
-		0.2        & 712                         & -696                        \\
-		0.3        & 600                         & -600                        \\
-		0.4        & 520                         & -512                        \\
-		0.5        & 448                         & -440                        \\
-		0.6        & 384                         & -368                        \\
-		0.7        & 328                         & -320                        \\
-		0.8        & 280                         & -272                        \\
-		0.9        & 232                         & -224                        \\
-		1.0        & 208                         & -200                        \\
-		1.2        & 152                         & -144                        \\
-		1.4        & 112                         & -104                        \\
-		1.6        & 80                          & -72                         \\
-		1.8        & 56                          & -56                         \\
-		2.0        & 40                          & -40                         \\
-		2.2        & 32                          & -28                         \\
-		2.4        & 24                          & -16                         \\
-		2.6        & 16                          & -8                          \\
-		\bottomrule
-	\end{tabular}
-	\label{tab:dati_RC}
+    \centering
+    \caption{Dati circuito RC}
+    \begin{tabular}{ccc}
+        \toprule
+        Tempo [ms] & Tensione - carica pos. [mV] & Tensione - carica neg. [mV]\\
+        \midrule
+        0.0 & 960 & -952 \\
+        0.1 & 824 & -824 \\
+        0.2 & 712 & -696 \\
+        0.3 & 600 & -600 \\
+        0.4 & 520 & -512 \\
+        0.5 & 448 & -440 \\
+        0.6 & 384 & -368 \\
+        0.7 & 328 & -320 \\
+        0.8 & 280 & -272 \\
+        0.9 & 232 & -224 \\
+        1.0 & 208 & -200 \\
+        1.2 & 152 & -144 \\
+        1.4 & 112 & -104 \\
+        1.6 & 80 & -72 \\
+        1.8 & 56 & -56 \\
+        2.0 & 40 & -40 \\
+        2.2 & 32 & -28 \\
+        2.4 & 24 & -16 \\
+        2.6 & 16 & -8 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:dati_RC}
 \end{table}
 
 \begin{table}[htbp]
-	\centering
-	\caption{Dati circuito RL}
-	\begin{tabular}{cc}
-		\toprule
-		Tempo [ms] & Tensione - carica [mV] \\
-		\midrule
-		0.0        & -900                   \\
-		0.01       & -560                   \\
-		0.02       & -360                   \\
-		0.03       & -80                    \\
-		0.04       & 120                    \\
-		0.05       & 240                    \\
-		0.06       & 340                    \\
-		0.07       & 500                    \\
-		0.08       & 600                    \\
-		0.09       & 620                    \\
-		0.1        & 680                    \\
-		0.12       & 780                    \\
-		0.13       & 820                    \\
-		0.14       & 840                    \\
-		0.15       & 860                    \\
-		0.16       & 880                    \\
-		0.18       & 900                    \\
-		0.2        & 920                    \\
-		0.22       & 940                    \\
-		0.29       & 960                    \\
-		\bottomrule
-	\end{tabular}
-	\label{tab:dati_RL}
+    \centering
+    \caption{Dati circuito RL}
+    \begin{tabular}{cc}
+        \toprule
+        Tempo [ms] & Tensione - carica [mV] \\
+        \midrule
+        0.0 & -900 \\
+        0.01 & -560 \\
+        0.02 & -360 \\
+        0.03 & -80 \\
+        0.04 & 120 \\
+        0.05 & 240 \\
+        0.06 & 340 \\
+        0.07 & 500 \\
+        0.08 & 600 \\
+        0.09 & 620 \\
+        0.1 & 680 \\
+        0.12 & 780 \\
+        0.13 & 820 \\
+        0.14 & 840 \\
+        0.15 & 860 \\
+        0.16 & 880 \\
+        0.18 & 900 \\
+        0.2 & 920 \\
+        0.22 & 940 \\
+        0.29 & 960 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:dati_RL}
 \end{table}
 
 \begin{table}[htbp]
-	\centering
-	\caption{Dati caso sottosmorzato}
-	\begin{tabular}{cc}
-		\toprule
-		Tempo [ms] & Tensione [mV] \\
-		\midrule
-		0.0        & 2             \\
-		0.01       & 8             \\
-		0.02       & 60            \\
-		0.03       & 100           \\
-		0.04       & 108           \\
-		0.05       & 96            \\
-		0.06       & 76            \\
-		0.07       & 40            \\
-		0.08       & 16            \\
-		0.09       & -36           \\
-		0.1        & -70           \\
-		0.11       & -76           \\
-		0.12       & -64           \\
-		0.13       & -52           \\
-		0.14       & -44           \\
-		0.15       & -22           \\
-		...        & ...           \\
-		0.66       & 2             \\
-		0.67       & -6            \\
-		0.68       & -18           \\
-		\bottomrule
-	\end{tabular}
-	\label{tab:dati_RLC_ssm}
+    \centering
+    \caption{Dati caso sottosmorzato}
+    \begin{tabular}{cc}
+        \toprule
+        Tempo [ms] & Tensione [mV] \\
+        \midrule
+        0.0 & 2 \\
+        0.01 & 8 \\
+        0.02 & 60 \\
+        0.03 & 100 \\
+        0.04 & 108 \\
+        0.05 & 96 \\
+        0.06 & 76 \\
+        0.07 & 40 \\
+        0.08 & 16 \\
+        0.09 & -36 \\
+        0.1 & -70 \\
+        0.11 & -76 \\
+        0.12 & -64 \\
+        0.13 & -52 \\
+        0.14 & -44 \\
+        0.15 & -22 \\
+        ... & ...\\
+        0.66 & 2 \\
+        0.67 & -6 \\
+        0.68 & -18 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:dati_RLC_ssm}
 \end{table}
 
 \begin{table}[htbp]
-	\centering
-	\caption{Dati caso criticamente smorzato}
-	\begin{tabular}{cc}
-		\toprule
-		Tempo  [ms] & Tensione [mV] \\
-		\midrule
-		0.0         & 8.0           \\
-		0.002       & 88.0          \\
-		0.004       & 208.0         \\
-		0.006       & 304.0         \\
-		0.008       & 392.0         \\
-		0.01        & 464.0         \\
-		0.012       & 520.0         \\
-		0.014       & 568.0         \\
-		0.016       & 600.0         \\
-		0.02        & 648.0         \\
-		0.022       & 656.0         \\
-		0.024       & 664.0         \\
-		0.026       & 664.0         \\
-		0.028       & 664.0         \\
-		0.03        & 656.0         \\
-		0.032       & 640.0         \\
-		0.036       & 608.0         \\
-		0.04        & 568.0         \\
-		0.044       & 528.0         \\
-		0.048       & 480.0         \\
-		0.052       & 432.0         \\
-		0.056       & 384.0         \\
-		0.062       & 320.0         \\
-		0.068       & 256.0         \\
-		0.074       & 208.0         \\
-		0.08        & 160.0         \\
-		0.086       & 120.0         \\
-		0.09        & 104.0         \\
-		0.094       & 80.0          \\
-		0.098       & 64.0          \\
-		0.102       & 56.0          \\
-		0.104       & 48.0          \\
-		0.11        & 32.0          \\
-		0.114       & 24.0          \\
-		0.122       & 16.0          \\
-		0.13        & 8.0           \\
-		0.14        & 0.0           \\
-		\bottomrule
-	\end{tabular}
-	\label{tab:dati_RLC_csm}
+    \centering
+    \caption{Dati caso criticamente smorzato}
+    \begin{tabular}{cc}
+        \toprule
+        Tempo  [ms] & Tensione [mV] \\
+        \midrule
+        0.0 & 8.0 \\
+        0.002 & 88.0 \\
+        0.004 & 208.0 \\
+        0.006 & 304.0 \\
+        0.008 & 392.0 \\
+        0.01 & 464.0 \\
+        0.012 & 520.0 \\
+        0.014 & 568.0 \\
+        0.016 & 600.0 \\
+        0.02 & 648.0 \\
+        0.022 & 656.0 \\
+        0.024 & 664.0 \\
+        0.026 & 664.0 \\
+        0.028 & 664.0 \\
+        0.03 & 656.0 \\
+        0.032 & 640.0 \\
+        0.036 & 608.0 \\
+        0.04 & 568.0 \\
+        0.044 & 528.0 \\
+        0.048 & 480.0 \\
+        0.052 & 432.0 \\
+        0.056 & 384.0 \\
+        0.062 & 320.0 \\
+        0.068 & 256.0 \\
+        0.074 & 208.0 \\
+        0.08 & 160.0 \\
+        0.086 & 120.0 \\
+        0.09 & 104.0 \\
+        0.094 & 80.0 \\
+        0.098 & 64.0 \\
+        0.102 & 56.0 \\
+        0.104 & 48.0 \\
+        0.11 & 32.0 \\
+        0.114 & 24.0 \\
+        0.122 & 16.0 \\
+        0.13 & 8.0 \\
+        0.14 & 0.0 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:dati_RLC_csm}
 \end{table}
 
 \begin{table}[htbp]
-	\centering
-	\caption{Dati caso sovrasmorzato}
-	\begin{tabular}{cc}
-		\toprule
-		Tempo [ms] & Tensione [mV] \\
-		\midrule
-		0.0        & 8.0           \\
-		0.002      & 152.0         \\
-		0.004      & 392.0         \\
-		0.006      & 592.0         \\
-		0.008      & 728.0         \\
-		0.01       & 808.0         \\
-		0.012      & 848.0         \\
-		0.014      & 872.0         \\
-		0.016      & 880.0         \\
-		0.018      & 880.0         \\
-		0.02       & 864.0         \\
-		0.022      & 856.0         \\
-		0.024      & 840.0         \\
-		0.026      & 832.0         \\
-		0.03       & 800.0         \\
-		0.034      & 768.0         \\
-		...        & ...           \\
-		0.354      & 32.0          \\
-		0.386      & 24.0          \\
-		0.426      & 16.0          \\
-		\bottomrule
-	\end{tabular}
-	\label{tab:dati_RLC_svsm}
+    \centering
+    \caption{Dati caso sovrasmorzato}
+    \begin{tabular}{cc}
+        \toprule
+        Tempo [ms] & Tensione [mV] \\
+        \midrule
+        0.0 & 8.0 \\
+        0.002 & 152.0 \\
+        0.004 & 392.0 \\
+        0.006 & 592.0 \\
+        0.008 & 728.0 \\
+        0.01 & 808.0 \\
+        0.012 & 848.0 \\
+        0.014 & 872.0 \\
+        0.016 & 880.0 \\
+        0.018 & 880.0 \\
+        0.02 & 864.0 \\
+        0.022 & 856.0 \\
+        0.024 & 840.0 \\
+        0.026 & 832.0 \\
+        0.03 & 800.0 \\
+        0.034 & 768.0 \\
+        ... & ...\\
+        0.354 & 32.0 \\
+        0.386 & 24.0 \\
+        0.426 & 16.0 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:dati_RLC_svsm}
 \end{table}
 
 
