@@ -46,7 +46,7 @@
 \begin{document}
 
 \title{{\small Università degli studi Milano-Bicocca  Dipartimento di Fisica - Laboratorio II }\\
-    Esperienza Circuiti III}
+	Esperienza Circuiti III}
 \author{F. Ballo, S. Franceschina, S. Dolci - Gruppo T1 39}
 \date{\today}
 \maketitle
@@ -54,9 +54,9 @@
 
 
 \begin{abstract}
-Nella seguente relazione vengono presentati i risultati ottenuti dalla terza esperienza del corso di Laboratorio II riguardante l'analisi di circuiti elettrici. L'obiettivo di questa esperienza è quello di studiare circuiti RC, RL e RLC in regimi di corrente continua. Imponendo sul circuito, con un generatore di funzioni, un segnale sinusoidale di ampiezza nota, vogliamo ricavare il comportamento del circuito in base alle componenti e in base a dove andiamo a misurare il segnale.
-\begin{adjustwidth}{-1cm}{-1cm}
-\end{adjustwidth}
+	Nella seguente relazione vengono presentati i risultati ottenuti dalla terza esperienza del corso di Laboratorio II riguardante l'analisi di circuiti elettrici. L'obiettivo di questa esperienza è quello di studiare circuiti RC, RL e RLC in regimi di corrente continua. Imponendo sul circuito, con un generatore di funzioni, un segnale sinusoidale di ampiezza nota, vogliamo ricavare il comportamento del circuito in base alle componenti e in base a dove andiamo a misurare il segnale.
+	\begin{adjustwidth}{-1cm}{-1cm}
+	\end{adjustwidth}
 \end{abstract}
 \tableofcontents
 \newpage
@@ -64,49 +64,63 @@ Nella seguente relazione vengono presentati i risultati ottenuti dalla terza esp
 \section{Circuiti RC e RL in corrente alternata}
 
 \subsection{Configurazione del circuito e della strumentazione}
-Di seguito abbiamo riportato lo schema \ref{fig:config_circuito} utilizzato per riprodurre il circuito in laboratorio con l'utilizzo di una bread-board e degli opportuni componenti. 
+Di seguito abbiamo riportato lo schema \ref{fig:config_circuito} utilizzato per riprodurre il circuito in laboratorio con l'utilizzo di una bread-board e degli opportuni componenti.
 \begin{figure}[h!]
-    \centering
-    \resizebox{0.5\textwidth}{!}{\includegraphics{configurazione circuito.png}}
-    \caption{Schema configurazione di circuito, Z rappresenta C o L }
-    \label{fig:config_circuito}
+	\centering
+	\resizebox{0.5\textwidth}{!}{\includegraphics{configurazione circuito.png}}
+	\caption{Schema configurazione di circuito, Z rappresenta C o L }
+	\label{fig:config_circuito}
 \end{figure}
-Questa configurazione di circuito rappresenta di fatto un dispositivo a due porte, una di ingresso e uscita, lineare. Per studiare il comportamento di circuiti simili ci si rifà alle funzioni di trasferimento, definite come il rapporto tra il segnale in uscita $V_\text{out}$ e segnale in entrata $V_\text{in}$. 
-Tali funzioni dipendono dalla frequenza $H = H(\omega)$ del segnale imposta dal generatore; in particolare si tratta di funzioni complesse: 
-$$ H(\omega) = \frac{V_\text{out}(\omega)}{V_\text{in}(\omega)}$$ 
-saranno quindi caratterizzate da un modulo e una fase: 
+Questa configurazione di circuito rappresenta di fatto un dispositivo a due porte, una di ingresso e uscita, lineare. Per studiare il comportamento di circuiti simili ci si rifà alle funzioni di trasferimento, definite come il rapporto tra il segnale in uscita $V_\text{out}$ e segnale in entrata $V_\text{in}$.
+Tali funzioni dipendono dalla frequenza $H = H(\omega)$ del segnale imposta dal generatore; in particolare si tratta di funzioni complesse:
+$$ H(\omega) = \frac{V_\text{out}(\omega)}{V_\text{in}(\omega)}$$
+saranno quindi caratterizzate da un modulo e una fase:
 $$ |{H(\omega)| = \frac{|V_\text{out}(\omega)|}{|V_\text{in}(\omega)|}}$$
 $$ \phi(\omega) = \phi(\omega)_\text{out} - \phi(\omega)_\text{in} $$
-Di seguito riportiamo le funzioni di trasferimento per un circuito RC:
+Di seguito riportiamo le funzioni di trasferimento per un circuito RC ai capi della resistenza:
 
 \begin{equation}
-\label{eq:Modulo RC}
-    |H_C(\omega)| = \frac{R}{\sqrt{R^2 + \frac{1}{\omega^2C^2}}}
+	\label{eq:Modulo RC (resistenza)}
+	|H_C(\omega)| = \frac{R}{\sqrt{R^2 + \frac{1}{\omega^2C^2}}}
 \end{equation}
 
 \begin{equation}
-    \label{eq:Fase RC}
-    \phi = \arctan\left(\frac{1}{R\omega C}\right)
+	\label{eq:Fase RC (resistenza)}
+	\phi = \arctan\left(\frac{1}{R\omega C}\right)
+\end{equation}
+e ai capi del condensatore:
+
+\begin{equation}
+	\label{eq:Modulo RC (condensatore)}
+	|H_L(\omega)| = \frac{1}{\sqrt{1 + \frac{1}{R^2\omega^2C^2}}}
 \end{equation}
 
-    
+\begin{equation}
+	\label{eq:Fase RC (condensatore)}
+	\phi = \arctan\left(\frac{1}{R\omega C}\right)
+\end{equation}
+
+
 \newpage
 
 
 \subsection{Dati raccolti RC}
-Di seguito riportiamo i dati raccolti per la prima parte dell'esperienza. Dopo aver riprodotto il circuito rappresentato nella figura \ref{fig:config_circuito} abbiamo posizionato le sonde dell'oscilloscopio: sonda 1 per misurare $V_\text{in}$ capacità e sonda 2 per misurare $V_\text{out}$ ai capi della resistenza. Le componenti utilizzate per questo circuito sono:
+Di seguito riportiamo i dati raccolti per la prima parte dell'esperienza.
+Dopo aver riprodotto il circuito rappresentato nella figura \ref{fig:config_circuito} abbiamo posizionato le sonde dell'oscilloscopio:
+sonda 1 per misurare $V_\text{in}$ capacità e sonda 2 per misurare $V_\text{out}$ ai capi della resistenza.
+Le componenti utilizzate per questo circuito sono:
 
 \begin{enumerate}
-    \item Resistenza $R = (100.8\pm0.1)\Omega$
-    \item Capacità $C = (99\pm1$) \text{nF}
+	\item Resistenza $R = (100.8\pm0.1)\Omega$
+	\item Capacità $C = (99\pm1$) \text{nF}
 \end{enumerate}
 Successivamente abbiamo misurato al variare della frequenza prodotta dal generatore in un range ():
 \begin{enumerate}
-    \item Ampiezza del segnale $V_\text{in}$
-    \item Ampiezza del segnale $V_\text{out}$
-    \item Ampiezza della differenza $V_\text{in} - V_\text{out}$
-    \item Differenza di fase tra $V_\text{in} - V_\text{out}$ e $V_\text{in}$
-    \item Differenza di fase tra $V_\text{in}$ e $V_\text{out}$
+	\item Ampiezza del segnale $V_\text{in}$
+	\item Ampiezza del segnale $V_\text{out}$
+	\item Ampiezza della differenza $V_\text{in} - V_\text{out}$
+	\item Differenza di fase tra $V_\text{in} - V_\text{out}$ e $V_\text{in}$
+	\item Differenza di fase tra $V_\text{in}$ e $V_\text{out}$
 \end{enumerate}
 
 
@@ -116,12 +130,13 @@ Successivamente abbiamo misurato al variare della frequenza prodotta dal generat
 
 \subsubsection{Ai capi della resistenza}
 
-Una volta configurato il circuito, abbiamo variato la frequenza della tensione in ingresso da 200 Hz a 300 MHz seguendo un campionamento logaritmico. Abbiamo misurato la tensione ai capi di R e del generatore con l'oscilloscopio. Tramite la funzione MATH, abbiamo ricavato la differenza tra le due, che rappresenta la tensione ai capi del condensatore. Per ottenere il modulo della funzione di trasferimento abbiamo diviso la tensione ai capi della resistenza per la tensione ai capi del generatore; per ottenere la fase abbiamo misurato tramite lo strumento la differenza di fase fra la tensione in ingresso e la tensione ai capi di R, in seguito abbiamo trasposto le misure in radianti. //
+Una volta configurato il circuito, abbiamo variato la frequenza della tensione in ingresso da 200 Hz a 300 MHz seguendo un campionamento logaritmico.
+Abbiamo misurato la tensione ai capi di R e del generatore con l'oscilloscopio. Tramite la funzione MATH, abbiamo ricavato la differenza tra le due, che rappresenta la tensione ai capi del condensatore. Per ottenere il modulo della funzione di trasferimento abbiamo diviso la tensione ai capi della resistenza per la tensione ai capi del generatore; per ottenere la fase abbiamo misurato tramite lo strumento la differenza di fase fra la tensione in ingresso e la tensione ai capi di R, in seguito abbiamo trasposto le misure in radianti. //
 Riportiamo di seguito il grafico del modulo della funzione di trasferimento:
 
 %Figura da inserire
 
-Dato che la teoria prevede 
+Dato che la teoria prevede
 
 
 \subsubsection{Ai capi del condensatore}
@@ -134,48 +149,143 @@ Dato che la teoria prevede
 Di seguito riportiamo i dati raccolti per il circuito RL Dopo aver riprodotto lo stesso circuito rappresentato nella figura \ref{fig:config_circuito} cambiano condensatore con induttore abbiamo posizionato le sonde dell'oscilloscopio: sonda 1 per misurare $V_\text{in}$ induttore e sonda 2 per misurare $V_\text{out}$ ai capi della resistenza. Le componenti utilizzate per questo circuito sono:
 
 \begin{enumerate}
-    \item Resistenza $R = 1040\ \Omega$
-    \item Induttore $L = 0.05\ \text{H}$
+	\item Resistenza $R = 1040\ \Omega$
+	\item Induttore $L = 0.05\ \text{H}$
 \end{enumerate}
 
-Successivamente abbiamo misurato al variare della frequenza prodotta dal generatore in un range ():
+Successivamente abbiamo misurato al variare della frequenza prodotta dal generatore tra 100 Hz e 1 MHz:
 \begin{enumerate}
-    \item Ampiezza del segnale $V_\text{in}$
-    \item Ampiezza del segnale $V_\text{out}$
-    \item Ampiezza della differenza $V_\text{in} - V_\text{out}$
-    \item Differenza di fase tra $V_\text{in} - V_\text{out}$ e $V_\text{in}$
-    \item Differenza di fase tra $V_\text{in}$ e $V_\text{out}$
+	\item Ampiezza del segnale $V_\text{in}$
+	\item Ampiezza del segnale $V_\text{out}$
+	\item Ampiezza della differenza $V_\text{in} - V_\text{out}$
+	\item Differenza di fase tra $V_\text{in} - V_\text{out}$ e $V_\text{in}$
+	\item Differenza di fase tra $V_\text{in}$ e $V_\text{out}$
 \end{enumerate}
 
 Le funzioni di trasferimento di un circuito RL sono le seguenti. \\
 Ai capi della resistenza:
 \begin{equation}
-    \label{eq:Modulo RL (resistenza)}
-    |H_R(\omega)| = \frac{R}{\sqrt{R^2 + \omega^2L^2}}
+	\label{eq:Modulo RL (resistenza)}
+	|H_R(\omega)| = \frac{R}{\sqrt{R^2 + \omega^2L^2}}
 \end{equation}
 
 \begin{equation}
-    \label{eq:Fase RL (resistenza)}
-    \phi_R = \arctan\left(\frac{\omega L}{R}\right)
+	\label{eq:Fase RL (resistenza)}
+	\phi_R = \arctan\left(\frac{\omega L}{R}\right)
 \end{equation}
 
 E ai capi dell'induttanza:
 
 \begin{equation}
-    \label{eq:Modulo RL (induttanza)}
-    |H_L(\omega)| = \frac{\omega L}{\sqrt{R^2 + \omega^2L^2}}
+	\label{eq:Modulo RL (induttanza)}
+	|H_L(\omega)| = \frac{\omega L}{\sqrt{R^2 + \omega^2L^2}}
 \end{equation}
 
 \begin{equation}
-    \label{eq:Fase RL (induttanza)}
-    \phi_L = \arctan\left(\frac{\omega L}{R}\right)
+	\label{eq:Fase RL (induttanza)}
+	\phi_L = \arctan\left(\frac{\omega L}{R}\right)
 \end{equation}
+
 
 \subsection{Analisi dati RL}
 
-\newpage
+\subsection{Ai capi della resistenza}
+
+Dopo aver raccolto i dati in modo analogo a quanto fatto per il circuito RC, abbiamo calcolato il modulo e la fase della funzione di trasferimento ai capi della resistenza; i risultati sono stati riportati in grafico. \\
+
+%Figura da inserire, sia modulo che fase
+
+\begin{figure}[h!]
+    \centering
+    
+    \caption{<caption>}
+    \label{fig:grafici RL resistenza}
+\end{figure}
+
+Abbiamo interpolato i dati secondo la legge (\ref{eq:Modulo RL (resistenza)}), ottenendo i seguenti valori per i parametri:
+
+\begin{align*} %da rivedere
+    R &= temp \\
+    L &= temp
+\end{align*}
+
+In seguito abbiamo interpolato i dati della fase seguendo la (\ref{eq:Fase RL (resistenza)}), ricavando i valori che seguono:
+
+\begin{align*} %da rivedere
+    R &= temp \\
+    L &= temp
+\end{align*}
+
+La concordanza del modello è stata valutata tramite il test del $\chi^2$; di seguito riportiamo i risultati ottenuti.
+
+Concordanza del modello per il modulo:
+\begin{itemize} % da rivedere 
+    \item: $\widetilde{\chi}^2 = 0.9$   
+    \item: $p-value = 0.56$ 
+\end{itemize}
+
+Concordanza del modello per la fase:
+\begin{itemize} 
+    \item: $\widetilde{\chi}^2 = 1.0$   
+    \item: $p-value = 0.41$
+\end{itemize}
+
+\subsection{Ai capi dell'induttanza}
+
+Abbiamo proceduto eseguendo un fit per le misure ai capi dell'induttanza, ottenute sottraendo la tensione ai capi della resistenza con quella del generatore, seguendo l'equazione (\ref{eq:Modulo RL (induttanza)}) per il modulo della funzione di trasferimento e (\ref{eq:Fase RL (induttanza)}) per la fase.\\
+
+% Figure da inserire modulo e fase
+\begin{figure}[h!]
+    \centering
+    
+    \caption{<caption>}
+    \label{fig:grafici RL induttanza}
+\end{figure}
+
+Valori della resistenza ottenuti dai fit:
+\begin{align*} %da rivedere
+    R &= temp \\
+    R &= temp \\
+\end{align*}
+
+Valori dell'induttanza ottenuti dai fit:
+\begin{align*} 
+    L &= temp \\
+    L &= temp \\
+\end{align*}
+
+Infine abbiamo ripetuto il test del $\chi^2$ per valutare l'accordo dei dati al modello. \\
+Concordanza del modello per il modulo:
+\begin{itemize} % da rivedere 
+    \item: $\widetilde{\chi}^2 = 1.5$   
+    \item: $p-value = 0.04$ 
+\end{itemize}
+
+Concordanza del modello per la fase:
+\begin{itemize} 
+    \item: $\widetilde{\chi}^2 = 5.1$   
+    \item: $p-value \approx 0.0$
+\end{itemize}
+
 \subsection{Conclusioni circuito RL}
 
+Osservando i grafici \ref{fig:grafici RL resistenza} ottenuti per la resistenza, e giudicando i valori del p-value ottenuti dal test del $\chi^2$, possiamo dedurre una buona concordanza tra i dati raccolti e il modello teorico. \\
+Risulta tuttavia evidente, soprattutto nel grafico di fase, la presenza di uno "shift" delle misure verso il basso. Eseguendo un test di compatibilità tra i valori ottenuti dal fit e quelli misurati precedentemente si ottiene:
+\begin{align*}
+    \text{Tra resistenze} & = 0.96 \\
+    \text{Tra induttanze} & = 0.62
+\end{align*} 
+
+Questo ci suggerisce che la misura della resistenza sia coerente con quella presente nel circuito, mentre per l'induttanza si potrebbe ipotizzare un errore sistematico, come ad esempio la presenza di un induttanza parassita negli strumenti utilizzati. \\
+
+Per quanto riguarda i risultati sull'induttanza, possiamo osservare il primo grafico della figura \ref{fig:grafici RL induttanza} per notare lo stesso "shift" verso il basso. Ripetendo il t-test, in questo caso si ottiene:
+\begin{align*}
+    \text{Tra resistenze} & = 0.96 \\
+    \text{Tra induttanze} & = 0.62
+\end{align*}
+il che ci porta a pensare nuovamente alla presenza di un errore sistematico. \\
+
+Infine, guardando il secondo grafico della figura ci accorgiamo che la fase misurata è incompatibile con il modello teorico, probabilmente per la scarsa qualita delle misure effettuate. \textbf{questa parte e' da rivedere}
 
 
 \newpage
@@ -186,20 +296,20 @@ In questa seconda parte dell'esperimento lo scopo è quello di studiare le funzi
 Di seguito riportiamo le tre funzioni di trasferimento $V_z$ dove z rappresenta tensione su R, L e C:
 
 \begin{enumerate}
-    \item \textbf{Traferimento $V_R$} 
-    
-    $$|H(\omega)| = \frac{R}{\sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2}}$$  
-    $$ \phi = \arctan(\frac{\omega^2LC -1 }{\omega CR})$$
-    
-     \item \textbf{Traferimento $V_C$} 
-     
-    $$|H(\omega)| = \frac{1}{\sqrt{(1-\omega^2LC)^2 + \omega^2C^2R^2}}$$  
-    $$ \phi = \arctan(\frac{\omega CR}{1 - \omega^2 LC})$$
-    
-     \item \textbf{Traferimento $V_L$} 
-     
-    $$|H(\omega)| = \frac{\omega^2 L^2}{\sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2}}$$  
-    $$ \phi = \arctan(\frac{\omega^2LC -1 }{\omega CR})$$
+	\item \textbf{Traferimento $V_R$}
+
+	      $$|H(\omega)| = \frac{R}{\sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2}}$$
+	      $$ \phi = \arctan(\frac{\omega^2LC -1 }{\omega CR})$$
+
+	\item \textbf{Traferimento $V_C$}
+
+	      $$|H(\omega)| = \frac{1}{\sqrt{(1-\omega^2LC)^2 + \omega^2C^2R^2}}$$
+	      $$ \phi = \arctan(\frac{\omega CR}{1 - \omega^2 LC})$$
+
+	\item \textbf{Traferimento $V_L$}
+
+	      $$|H(\omega)| = \frac{\omega^2 L^2}{\sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2}}$$
+	      $$ \phi = \arctan(\frac{\omega^2LC -1 }{\omega CR})$$
 \end{enumerate}
 
 
@@ -208,15 +318,15 @@ Di seguito riportiamo le tre funzioni di trasferimento $V_z$ dove z rappresenta 
 
 
 \begin{figure}[h!]
-    \centering
-    \resizebox{0.5\textwidth}{!}{\includegraphics{configRLC.png}}
-    \caption{Configurazione circuito RLC}
-    \label{fig:configRLC}
+	\centering
+	\resizebox{0.5\textwidth}{!}{\includegraphics{configRLC.png}}
+	\caption{Configurazione circuito RLC}
+	\label{fig:configRLC}
 \end{figure}
 
 
 
-\subsection{Dati raccolti RLC} 
+\subsection{Dati raccolti RLC}
 Di seguito riportiamo i dati sulle componenti e la configurazione del circuito studiato:
 
 \newpage
