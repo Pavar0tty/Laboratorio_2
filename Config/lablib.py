@@ -74,8 +74,10 @@ def TrasportoErroriX2Y(x:list, dx:float, dy:float, modello:'function') -> list:
     for i, j, k in zip(x, dx, dy):
         yl = modello(i - j)
         yr = modello(i + j)
-        delta_y = yr - yl # eventualmente /2
+        delta_y = (yr - yl)/2
 
-        sy.append(np.sqrt(delta_y**2 + k**2))
+        sy.append((delta_y**2 + k**2) ** .5)
+
+    return sy
 
     return sy
