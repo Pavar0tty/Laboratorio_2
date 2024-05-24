@@ -63,3 +63,19 @@ def TestCompatibilita(x0:float, sigma0:float, x1:float, sigma1:float = 0) -> flo
     z = abs(x0 - x1) / sigma
 
     return z
+
+def TrasportoErroriX2Y(x:list, dx:float, dy:float, modello:'function') -> list:
+    """
+    Trasporto degli errori da x a y seguendo il modello nell'approssimazione
+    di errori piccoli.
+    """
+    sy = []
+
+    for i, j, k in zip(x, dx, dy):
+        yl = modello(i - j)
+        yr = modello(i + j)
+        delta_y = (yr - yl)/2
+
+        sy.append((delta_y**2 + k**2) ** .5)
+
+    return sy
