@@ -80,4 +80,3 @@ def TrasportoErroriX2Y(x:list, dx:float, dy:float, modello:'function') -> list:
 
     return sy
 
-    return sy
