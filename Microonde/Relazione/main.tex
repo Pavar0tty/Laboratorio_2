@@ -90,8 +90,23 @@ Di seguito riportiamo informazioni sulla strumentazione e sulle modalità di mis
 Introduzione su interferenza 
 
 \subsection{Specchio Lloyd}
+In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci di microonde. 
+Abbiamo disposto emettitore e ricevitore uno di fronte all'altro, misurandone la distanza $d$, in seguito abbiamo 
+posizionato una lastra riflettente ad una certa distanza $h$ dal centro. \\
+In questo modo si vengono a creare due fasci: il primo percorre una distanza $d$ in linea retta, mentre il secondo
+percorre una distanza $2 \sqrt[]{h^2 + (d/2)^2}$. Tale differenza di percorso porta a delle interferenze: 
+se la differenza di cammino ottico è un multiplo intero di $\lambda$ si ha interferenza costruttiva, 
+altrimenti si ha interferenza distruttiva.\\
+Al fine di misurare la lunghezza d'onda delle microonde, abbiamo seguito le istruzioni fornite dal manuale 
+PASCO e abbiamo variato la distanza $h$ alla ricerca di due minimi distanti dieci volte la lunghezza d'onda,
+una volta fissata la distanza $d$. Per poter eseguire un confronto sperimentale e non solo con il valore di $\lambda$
+tabulato, abbiamo ripetuto la procedura per un'altra distanza $d$.
 
 \subsubsection{Analisi Dati Lloyd}
+Riportiamo di seguito i dati raccolti durante l'esperienza e i risultati ottenuti.
+Per la prima misurazione abbiamo scelto $d = 100 \pm 1$ cm.
+In tabella \ref{tab:lloyd1} riportiamo i valori di $h$ e le intensità misurate per i minimi di interferenza.
+
 
 \subsection{Interferometro di Michelson}
 
@@ -106,6 +121,20 @@ Introduzione su interferenza
 \newpage
 \section{Tabelle misurazioni}
 
-
+\begin{table}[h!]
+    \centering
+    \caption{Lloyd: prima misura}
+    \label{tab:lloyd1}
+    \begin{tabular}{|c|c|}
+        \hline
+        $h$ [cm] & $I$ [V]\\
+        \hline
+        9.9 & 1.64 \\
+        16.9 & 1.7 \\
+        \hline
+    \end{tabular}
+\end{table}
+    
+    
 
 \end{document}
