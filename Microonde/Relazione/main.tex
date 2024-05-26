@@ -100,12 +100,46 @@ altrimenti si ha interferenza distruttiva.\\
 Al fine di misurare la lunghezza d'onda delle microonde, abbiamo seguito le istruzioni fornite dal manuale 
 PASCO e abbiamo variato la distanza $h$ alla ricerca di due minimi distanti dieci volte la lunghezza d'onda,
 una volta fissata la distanza $d$. Per poter eseguire un confronto sperimentale e non solo con il valore di $\lambda$
-tabulato, abbiamo ripetuto la procedura per un'altra distanza $d$.
+tabulato, abbiamo ripetuto la procedura per un'altra distanza $d$. \\
+Come formula per il calcolo della lunghezza d'onda abbiamo utilizzato la seguente, ricavata dalle relazioni geometriche
+che legano i cammini ottici e la differenza di fase tra i due fasci:
+\begin{equation}
+    \lambda = \frac{2h + 4 \sqrt[]{(d/2)^2 + h^2}}{n}
+    \label{eq:lloyd}
+\end{equation}
+Dalla prima misurazione abbiamo ottenuto due valori di $\lambda$ che abbiamo mediato, lo stesso abbiamo fatto per 
+la seconda misurazione.Come errori delle singole lunghezze d'onda abbiamo propagato gli errori a partire dall'equazione
+\ref{eq:lloyd}, in seguito abbiamo propagato gli errori per la media. \\
+
 
 \subsubsection{Analisi Dati Lloyd}
 Riportiamo di seguito i dati raccolti durante l'esperienza e i risultati ottenuti.
-Per la prima misurazione abbiamo scelto $d = 100 \pm 1$ cm.
-In tabella \ref{tab:lloyd1} riportiamo i valori di $h$ e le intensità misurate per i minimi di interferenza.
+Per la prima misurazione abbiamo scelto $d = 100 \pm 1$ cm, mentre per la seconda $d = 110 \pm 1$ cm. Abbiamo stimato
+le incertezze di 1 cm poichè sugli "horn" non erano ben segnalati i punti di emissione e di ricezione
+dell'onda; non sapendo bene dove fossero localizzati abbiamo aumentato l'errore rispetto alla sensibilità della riga
+graduata.\\
+In tabella \ref{tab:lloyd1} riportiamo i valori di $h$ e le intensità misurate per i minimi di interferenza, 
+in tabella \ref{tab:lloyd2} riportiamo i valori di $h$ e le intensità misurate per i massimi di interferenza.\\
+Come valore $\lambda_1$ abbiamo ottenuto $2.86 \pm 0.07$ cm, mentre per $\lambda_2$ abbiamo ottenuto $2.85 \pm 0.06$ cm.\\
+Abbiamo confrontato i valori ottenuti con il valore tabulato di $\lambda = 2.85$ cm, ottenendo:
+\begin{enumerate}
+    \item Distanza in deviazioni standard tra $\lambda_1$ e $\lambda_{tab}$: $0.11 \sigma$
+    \item Distanza in deviazioni standard tra $\lambda_2$ e $\lambda_{tab}$: $0.08 \sigma$
+    \item Distanza in deviazioni standard tra $\lambda_1$ e $\lambda_2$: $0.03 \sigma$
+\end{enumerate}
+L'ultimo punto è stato calcolato per verificare la coerenza tra i due valori di $\lambda$ ottenuti.\\
+
+\subsubsection{Specchio Lloyd: Conclusioni}
+Dai risultati ottenuti possiamo concludere che la lunghezza d'onda delle microonde calcolata tramite interferometro 
+di Lloyd è compatibile con il valore tabulato. 
+Al di là della misura della lunghezza d'onda tramite interferenza, questa sezione ci ha permesso di verificare
+sperimentalmente un'ipotesi che avanziamo in altre sezioni: l'interferenza per riflessione delle microonde. Ogniqualvolta
+un esperimento richieda la rotazione del ricevitore, si possono considerare effetti di interferenza alla Lloyd,
+poichè, per angoli in cui ricevitore e emettitore sono sempre più vicini, si può modelizzare il sistema come 
+un interferometro di Lloyd.\\
+In conclusione, l'interferenza alla Lloyd si ottiene quando un materiale che abbia proprietà riflettenti viene
+avvicinato all'apparecchiatura, portandoci a considerare questo effetto di interferenza in tutte le sezioni in cui 
+ci troviamo a ruotare il ricevitore.\\
 
 
 \subsection{Interferometro di Michelson}
@@ -135,6 +169,23 @@ In tabella \ref{tab:lloyd1} riportiamo i valori di $h$ e le intensità misurate 
     \end{tabular}
 \end{table}
     
-    
+\begin{table}[h!]
+    \centering
+    \caption{Lloyd: seconda misura}
+    \label{tab:lloyd2}
+    \begin{tabular}{|c|c|}
+        \hline
+        $h$ [cm] & $I$ [V]\\
+        \hline
+        10.9 & 1.40 \\
+        17.2 & 1.5 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+10.9
+v4 = 1.40
+h4 = 17.2
+v4 = 1.5
 
 \end{document}
