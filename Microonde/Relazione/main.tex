@@ -83,11 +83,63 @@ Di seguito riportiamo informazioni sulla strumentazione e sulle modalità di mis
 
 
 \section{Angolo di Brewster}
+In questa sezione abbiamo studiato i raggi trasmesso e riflesso da una lastra di polietilene al fine di determinare
+l'angolo di Brewster.\\
+Per l'analisi del raggio trasmesso abbiamo posto il ricevitore di fronte al trasmettitore, frapponendo la lastra 
+fra i due. Abbiamo montato la lastra su un supporto rotante e e variando in tal modo l'angolo di incidenza del raggio
+abbiamo campionato l'intensità del raggio trasmesso.\\
+Per verificare il fatto che l'intensità del raggio trasmesso sia dipendente anche dalla polarizzazione abbiamo 
+eseguito la stessa procedura per due differenti polarizzazioni, rouotando l'emettitrore di 90 gradi. Per la polarizzazione
+parallela alla lastra, al fine di trovare l'angolo di Brewster, abbiamo interpolato il picco con un modello parabolico,
+che riportiamo:
+\begin{equation}
+    y = a(x-b)^2 + c
+    \label{eq:parabola}
+\end{equation}
+\\
+
+Per l'analisi del raggio riflesso abbiamo configurato l'apparato in modo tale da far variare sia l'angolo della lastra,
+sia l'angolo tra emettitore e ricevitore, in modo che il ricevitore seguisse il raggio riflesso. Abbiamo così campionato
+l'intensità del raggio riflesso al variare dell'angolo di incidenza.\\
 
 \subsubsection{Analisi dati} 
 
+Riportiamo di seguito il grafico dell'intensità del raggio trasmesso in funzione dell'angolo di incidenza.\\
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{trasmesso.png}
+    \caption{Intensità del raggio trasmesso in funzione dell'angolo di incidenza}
+    \label{fig:trasmesso}
+\end{figure}
+
+Abbiamo inserito il grafico con tutte le misurazioni effettuate (grafico di sinistra). Analizzando la figura ci
+siamo accorti che l'intensità torna ad aumentare oltre 70 gradi. Questo è dovuto al fatto che la lastra, non essendo
+abbastanza lunga, lasciava passare parte del raggio incidente, determinando un aumento dell'intensità. Abbiamo quindi
+deciso di escludere gli ultimi dati poichè non rilevanti per il fenomeno. Vengono riportati nel grafico di destra
+i valori che abbiamo utilizzato per l'analisi.\\
+Una volta individuata la regione in cui l'intensità aumentava, abbiamo interpolato il picco con un modello parabolico.
+Vengono riportate l'interpolazione, i parametri ottenuti e il valore di $\chi^2$:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{brew_angle.png}
+    \caption{Interpolazione del picco con modello parabolico}
+    \label{fig:parabola}
+\end{figure}
+
+%Da cambbiare i valori con quelli ottenuti dal fit (manca la propagazione degli errori x2y)
+\begin{enumerate}
+    \item $a = 0.0003 \pm 0.0001$
+    \item $b = 0.0003 \pm 0.0001$
+    \item $c = 0.0003 \pm 0.0001$
+    \item $\chi^2 = 0.0003$
+\end{enumerate}
+
+Il parametro b, essendo la traslazione della parabola sull'asse x, rappresenta l'angolo di Brewster. Abbiamo 
+confrontato l'angolo ottenuto con l'angolo atteso, ottenendo una distanza in deviazioni standard di: DA INSERIRE\\
+
 \section{Interferenza}
-Introduzione su interferenza 
+Per la sezione di interferenza abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
 
 \subsection{Specchio Lloyd}
 In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci di microonde. 
@@ -112,7 +164,7 @@ la seconda misurazione.Come errori delle singole lunghezze d'onda abbiamo propag
 \ref{eq:lloyd}, in seguito abbiamo propagato gli errori per la media. \\
 
 
-\subsubsection{Analisi Dati Lloyd}
+\subsubsection{Analisi dati}
 Riportiamo di seguito i dati raccolti durante l'esperienza e i risultati ottenuti.
 Per la prima misurazione abbiamo scelto $d = 100 \pm 1$ cm, mentre per la seconda $d = 110 \pm 1$ cm. Abbiamo stimato
 le incertezze di 1 cm poichè sugli "horn" non erano ben segnalati i punti di emissione e di ricezione
@@ -129,7 +181,7 @@ Abbiamo confrontato i valori ottenuti con il valore tabulato di $\lambda = 2.85$
 \end{enumerate}
 L'ultimo punto è stato calcolato per verificare la coerenza tra i due valori di $\lambda$ ottenuti.\\
 
-\subsubsection{Specchio Lloyd: Conclusioni}
+\subsubsection{Conclusioni}
 Dai risultati ottenuti possiamo concludere che la lunghezza d'onda delle microonde calcolata tramite interferometro 
 di Lloyd è compatibile con il valore tabulato. 
 Al di là della misura della lunghezza d'onda tramite interferenza, questa sezione ci ha permesso di verificare
