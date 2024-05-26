@@ -70,20 +70,119 @@ Di seguito riportiamo informazioni sulla strumentazione e sulle modalità di mis
 
 \subsection{Polarizzazione}
 
+Il primo obbiettivo dell'esperienza è stato quello di caratterizzare il fascio di microonde emesso dall'emettitore.
+Per fare ciò, abbiamo cominciato verificando la direzione di polarizzazione del fascio. \\
+Abbiamo posizionato l'emettitore e il ricevitore uno di fronte all'altro, in modo che fossero
+allineati ed a una distanza fissa. Abbiamo quindi ruotato gradualmente il ricevitore e campionando
+la tensione rilevata dal ricevitore, fino ad aver compiuto una rotazione di 180 gradi.\\
+Dal manuale Pasco sappiamo che l'emettitore emette un fascio coerente polarizzato linearmente
+e il ricevitore è sensibile solo ad una certa polarizzazione. Il comportamento che ci aspettiamo
+di osservare da questo esperimento è quello previsto dalla legge di Malus:
+\begin{equation}
+    I = I_0 \cos^2(\theta)
+    \label{eq:malus}
+\end{equation}
+Dove $I$ è l'intensità del segnale rilevato dal ricevitore, $I_0$ è l'intensità massima e $\theta$ è l'angolo
+tra la direzione di polarizzazione del fascio e quello rilevato dal ricevitore.\\
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{polarizzazione.png}
+    \caption{Intensità del segnale rilevato in funzione dell'angolo di rotazione}
+    \label{fig:polarizzazione}
+\end{figure}
+\paragraph*{Finire la conclusione e manca la parte del filtro polarizzatore}
 
 \subsection{Ampiezza} 
+\subsubsection{Intensità in funzione dell'angolo di rotazione}
+\subsubsection{Intensità in funzione della distanza}
+\paragraph*{Andamento globale del segnale}
+Il punto successivo consisteva nello studiare l'andamento dell'intensità del segnale in funzione della distanza tra i 
+dispositivi. Mantenendo l'emettitore e il ricevitore allineati, abbiamo quindi variato la separazione tra i due
+e campionato a intervalli regolari la tensione misurata.\\
+A causa del fatto che emettitore e ricevitore si trovavano uno di fronte all'altro, oltre alla decrescita
+del segnale dovuta alla distanza, abbiamo osservato un andamento oscillatorio. Questo è dovuto al fatto che
+parte del segnale inviato non viene assorbito dal rilevatore, ma viene riflessa e ritorna verso l'emettitore,
+che a sua volta riflette parte del segnale.
+Si forma quindi un'onda stazionaria tra i due dispositivi, la cui interferenza porta a un andamento oscillatorio dell'intensità del segnale.\\
+Per cominciare abbiamo campionato ogni 1 cm, per analizzare l'andamento generale del fascio; successivamente, 
+ci siamo ristretti attorno ad alcuni massimi e misurato con passi di 0.2 cm per farci un idea migliore della lunghezza d'onda.\\
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{dati_distanza.png}
+    \caption{Intensità del segnale rilevato in funzione della distanza}
+    \label{fig:distanza}
+\end{figure}
 
+Se il fascio si comportasse come un'onda piana ideale, ci aspetteremmo che la sua intensità non dipendesse dalla distanza.
+Se invece si comportasse come un'onda sferica, l'andamento dell'intensità dovrebbe essere inversamente proporzionale
+al quadrato della distanza. Nella realtà, il segnale avrà un andamento più complesso che non si adatterà perfettamente
+a nessuna delle due funzioni.\\
+Per capire quale fosse l'andamento dell'intensità del segnale, abbiamo deciso di interpolare i dati con diverse funzioni,
+per vedere quale fosse la più adatta.\\ 
 
-\subsection{Geometria}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = .9\textwidth]{fit_distanza_vari_modelli.png}
+    \caption{Fit dell'intensità del segnale rilevato in funzione della distanza secondo diversi modelli}
+    \label{fig:fit_distanza_vari_modelli}
+\end{figure}
 
+Non avendo una risoluzione sufficiente per distinguere con precisione massimi e minimi, abbiamo deciso di interpolare
+i dati con funzioni non oscillanti. Per giustificare questa scelta, basta pensare che le oscillazioni dovute all'interferenza
+variano attorno ad un valore medio, e che i contributi dovuti ad ogni particolare oscillazione si annullano a vicenda.\\
+Osservando i grafici in figura \ref{fig:fit_distanza_vari_modelli}, si evince che tra quelli considerati, il modello che meglio si adattava 
+ai dati era lineare.
+\newpage
+\paragraph*{Andamento attorno ai massimi}
+Successivamente, abbiamo proceduto ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, riportati nella figura di seguito.
 
-\subsection{Analisi conclusiva fascio}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{dati_distanza_ondulatori.png}
+    \caption{Intensità del segnale rilevato in funzione della distanza - zoom attorno ad alcuni massimi}
+    \label{fig:distanza_zoom}
+\end{figure}
 
+Avendo stabilito che l'andamento dell'intensità del segnale era lineare, abbiamo deciso di interpolare i dati con una funzione del tipo:
+\begin{equation}
+    I = Ax + B\ + Csin(Dx + E)
+    \label{eq:modello_oscillante}
+\end{equation}
+che corrisponde ad una retta con un'onda sinusoidale sovrapposta.\\
+Il risultato del fit è riportato in figura \ref{fig:fit_distanza_ondulatori}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{fit_distanza_ondulatori.png}
+    \caption{Fit dell'intensità del segnale rilevato in funzione della distanza campionato più frequentemente}
+    \label{fig:fit_distanza_ondulatori}
+\end{figure}
+
+Il fit ha restituito i seguenti valori: (magari una tabella esce meglio)
+\begin{enumerate}
+    \item $A = -0.057 \pm 0.004$
+    \item $B = 6.43 \pm 0.18$
+    \item $C = 0.077 \pm 0.006$
+    \item $D = 4.56 \pm 0.06$
+    \item $E = -67.5 \pm 3.1$
+    \item $\tilde\chi^2 = 1.1$
+\end{enumerate}
+
+In questo grafico il valore $D$ rappresenta il numero d'onda, e quindi la lunghezza d'onda è data da 
+$$\lambda = 2\cdot \frac{2\pi}{D}$$
+dove il fattore 2 sta ad indicare il fatto che la lunghezza d'onda della microonda è il doppio della lunghezza d'onda del segnale che interferisce.\\
+Inserendo i valori ottenuti dal fit, propagando l'errore ed eseguendo un test di compatibilità, otteniamo:
+\begin{align*}
+    &\lambda = (2.75 \pm 0.04)\ \text{m} \\
+    &t-test : 2.47 
+\end{align*}
+
+\subsection{Conclusioni}
 
 \section{Angolo di Brewster}
-In questa sezione abbiamo studiato i raggi trasmesso e riflesso da una lastra di polietilene al fine di determinare
+In questa sezione abbiamo studiato il raggio trasmesso e riflesso da una lastra di polietilene al fine di determinare
 l'angolo di Brewster.\\
 Per l'analisi del raggio trasmesso abbiamo posto il ricevitore di fronte al trasmettitore, frapponendo la lastra 
 fra i due. Abbiamo montato la lastra su un supporto rotante e e variando in tal modo l'angolo di incidenza del raggio
@@ -179,7 +278,7 @@ In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'inter
 Abbiamo disposto emettitore e ricevitore uno di fronte all'altro, misurandone la distanza $d$, in seguito abbiamo 
 posizionato una lastra riflettente ad una certa distanza $h$ dal centro. \\
 In questo modo si vengono a creare due fasci: il primo percorre una distanza $d$ in linea retta, mentre il secondo
-percorre una distanza $2 \sqrt[]{h^2 + (d/2)^2}$. Tale differenza di percorso porta a delle interferenze: 
+percorre una distanza $2\ \sqrt[]{h^2 + (d/2)^2}$. Tale differenza di percorso porta a delle interferenze: 
 se la differenza di cammino ottico è un multiplo intero di $\lambda$ si ha interferenza costruttiva, 
 altrimenti si ha interferenza distruttiva.\\
 Al fine di misurare la lunghezza d'onda delle microonde, abbiamo seguito le istruzioni fornite dal manuale 
@@ -189,7 +288,7 @@ tabulato, abbiamo ripetuto la procedura per un'altra distanza $d$. \\
 Come formula per il calcolo della lunghezza d'onda abbiamo utilizzato la seguente, ricavata dalle relazioni geometriche
 che legano i cammini ottici e la differenza di fase tra i due fasci:
 \begin{equation}
-    \lambda = \frac{2h + 4 \sqrt[]{(d/2)^2 + h^2}}{n}
+    \lambda = \frac{2h + 4\ \sqrt[]{(d/2)^2 + h^2}}{n}
     \label{eq:lloyd}
 \end{equation}
 Dalla prima misurazione abbiamo ottenuto due valori di $\lambda$ che abbiamo mediato, lo stesso abbiamo fatto per 
