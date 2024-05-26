@@ -102,7 +102,7 @@ Per l'analisi del raggio riflesso abbiamo configurato l'apparato in modo tale da
 sia l'angolo tra emettitore e ricevitore, in modo che il ricevitore seguisse il raggio riflesso. Abbiamo così campionato
 l'intensità del raggio riflesso al variare dell'angolo di incidenza.\\
 
-\subsubsection{Analisi dati} 
+\subsection{Analisi dati} 
 
 Riportiamo di seguito il grafico dell'intensità del raggio trasmesso in funzione dell'angolo di incidenza.\\
 \begin{figure}[h!]
@@ -127,7 +127,7 @@ Vengono riportate l'interpolazione, i parametri ottenuti e il valore di $\chi^2$
     \label{fig:parabola}
 \end{figure}
 
-%Da cambbiare i valori con quelli ottenuti dal fit (manca la propagazione degli errori x2y)
+%Da cambiare i valori con quelli ottenuti dal fit (manca la propagazione degli errori x2y)
 \begin{enumerate}
     \item $a = 0.0003 \pm 0.0001$
     \item $b = 0.0003 \pm 0.0001$
@@ -137,6 +137,39 @@ Vengono riportate l'interpolazione, i parametri ottenuti e il valore di $\chi^2$
 
 Il parametro b, essendo la traslazione della parabola sull'asse x, rappresenta l'angolo di Brewster. Abbiamo 
 confrontato l'angolo ottenuto con l'angolo atteso, ottenendo una distanza in deviazioni standard di: DA INSERIRE\\
+
+Riportiamo in figura \ref{fig:wrong_pol} il grafico dell'intensità del raggio trasmesso per la polarizzazione
+perpendicolare alla lastra. Abbiamo escluso le ultime misure per lo stesso motivo dell'analisi di raggio trasmesso
+con polarizzazione parallela.\\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{wrong_pol.png}
+    \caption{Intensità del raggio trasmesso - polarizzazione perpendicolare}
+    \label{fig:wrong_pol}
+\end{figure}
+
+Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo per completezza, 
+nonostante siano intrattabili dal punto di vista dell'analisi. Avendo osservato ciò già nella prima giornata di
+laboratorio, abbiamo effettuato nuovamente le stesse misure nella seconda giornata, ma senza ottenere miglioramenti.
+L'andamento globale dei grafici richiama quello corretto, ma i numerosi picchi fanno intuire la necessità di un
+campionamento maggiore, come spiegato nelle conclusioni.\\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{riflesso1.png}
+    \caption{Intensità del raggio riflesso - prima giornata}
+    \label{fig:riflesso1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{riflesso2.png}
+    \caption{Intensità del raggio riflesso - seconda giornata}
+    \label{fig:riflesso2}
+\end{figure}
+
+\subsection{Conclusioni}
 
 \section{Interferenza}
 Per la sezione di interferenza abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
