@@ -412,9 +412,68 @@ ci troviamo a ruotare il ricevitore.\\
 
 
 \subsection{Interferometro di Michelson}
-
+In questa seconda esperienza sull'interferenza di onde abbiamo deciso di riprodurre una versione del note esperiemento di 
+interferometria di Michelson e Morley.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.4\textwidth]{MichelsonSetup.png}
+	\caption{Setup esperimento Michelson e Morley}
+	\label{fig:GraficoBragg}
+\end{figure}
+Per questo setup abbiamo utilizzato due specchi riflettenti (placche metalliche)
+che in figura sono segnati come B e A. Al centro abbiamo posizionato ad un angolo di 45 gradi una superficie semiriflettente.
+Tenendo fermo uno dei due specchi e muovendo l'altro variamo il cammino ottico del raggio di luce che esce dall'emettitore e che si è diviso in due su C.
+Percorrendo distanze diverse i due raggi quando ricongiungendosi ci aspettiamo creino la tipica figura a frange di interferenza.  
+Se le due onde sono in fase quando arrivano al ricevitore ci attendiamo di misurare un massimo ogni $\lambda/2$ dove lambda è la lunghezza d'onda del raggio divisa per due dato che 
+ogni onda passa due volte tra lo specchio e la superficie semiriflettente.
 
 \subsubsection{Analisi Dati Michelson}
+In questa sezione elenchiamo i risultati ottenuti dalle misure sperimentali.
+Come suggerito dalla scheda e dal manuale Pasco, abbiamo deciso di spostare lo specchio A. Prima di tutto ci siamo posizionati attorno ad un
+massimo del segnale (picco di voltaggio sempre con multimetro palmare), successivamente abbiamo allontanato lo specchio A attraversando 10 minimi. Una volta ritrovato un massimo ci siamo segnati tale nuova posizione.
+\begin{enumerate}
+	\item Posizione iniziale $x1 =(38.7 \pm0.2)$ cm
+	\item Voltaggio iniziale $\Delta V1 = (0.82\pm0.02)$ V 
+	\item Posizione finale $x2 =(24.5 \pm0.2)$cm
+	\item Voltaggio finale $\Delta V2 = (0.87\pm0.02)$V
+\end{enumerate}
+Ripetendo le misure cambiando la distanza:
+\begin{enumerate}
+	\item Posizione iniziale $x1 =(43.0\pm0.2)$ cm
+	\item Voltaggio iniziale $\Delta V1 = (1.1\pm0.02)$ V 
+	\item Posizione finale $x2 =(28.8\pm0.2)$cm
+	\item Voltaggio finale $\Delta V2 = (0.83\pm0.02)$V
+\end{enumerate}
+Infine di nuovo cambiando la distanza inziale:
+\begin{enumerate}
+	\item Posizione iniziale $x1 =(34.4\pm0.2)$ cm
+	\item Voltaggio iniziale $\Delta V1 = (0.83\pm0.02)$ V 
+	\item Posizione finale $x2 =(20.1\pm0.2)$cm
+	\item Voltaggio finale $\Delta V2 = (0.86\pm0.02)$V
+\end{enumerate}
+Da queste misure abbiamo estrapolato una stima del valore della lunghezza d'onda, secondo la seguente relazione:
+$$ \lambda = \frac{2\Delta x}{n} $$ 
+Facendo una media delle tre misure e utilizzando la formula di propagazione degli errori abbiamo stimato:
+$$\lambda_\text{mis} = (2.85 \pm0.01)\text{cm}$$
+\subsubsection{Conclusioni Michelson e Morley}
+Oltre ad aver effettivamente verificato la posizione dei massimi trovarsi ad una distanza pari a $\lambda/2$, 
+il valore ottenuto per la stima della lunghezza d'onda è perfettamente in linea con il valore suggerito dal manuale Pasco.
+Questo metodo sembra quello che ha restituito la misura più accurata di $\lambda$. Riportiamo in seguito un altro metodo per la stima 
+della lunghezza d'onda sempre dalla raccolta dati:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{MichelsonGrafico.png}
+	\caption{Setup esperimento Michelson e Morley}
+	\label{fig:GraficoBragg}
+\end{figure}
+
+Graficando il numero di frange oltrepassate rispetto alla posizione dello specchio A riflettente otteniamo una retta,
+il cui coefficiente rappresenta mezza lunghezza d'onda. Fittando i nostri dati con un modello lineare abbiamo ottenuto:
+\begin{enumerate}
+	\item Stima coeff retta = $(1.44\pm0.004)$ cm
+	\item Stima lunghezza d'onda $ \lambda = (2.89\pm0.01)$ cm
+	\item Chi-quadro ridotto $\widetilde{\chi}^2 = 0.2$
+\end{enumerate}
 
 \newpage
 \section{Diffrazione di Bragg}
