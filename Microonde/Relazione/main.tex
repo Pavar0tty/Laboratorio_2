@@ -3,6 +3,7 @@
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}     %serve per mettere il modulo 
 \usepackage{booktabs}
 \usepackage{bm}
+\usepackage{textcomp}
 \usepackage{colortbl}
 \usepackage{tabularx}
 \usepackage{textcomp}
@@ -66,8 +67,13 @@
 \section{Caratteristiche del fascio}
 
 \subsection{Configurazione del circuito e della strumentazione}
-Di seguito riportiamo informazioni sulla strumentazione e sulle modalità di misura
-
+Di seguito riportiamo informazioni sulla strumentazione, sulle modalità di misura e in generale gli obiettivi di questa esperienza.
+Per studiare i vari fenomeni e le proprietà ottiche di onde elettromagnetiche abbiamo utilizzato come strumentazione 
+quella fornita da PASCO scientific "Advanced Microwave Optics System , WA-9316A".
+Di seguito abbiamo allegato un manuale che contiene tutte le informazioni riguardo alla
+\href{https://cdn.pasco.com/product_document/Microwave-Optics-Experiment-Guide-WA-9314C.pdf}{strumentazione (clicca qui)}.
+Per quanto riguarda i fasci utilizzati, un diodo Gunn fa da sorgente di microonde linearmente polarizzate con lunghezza d'onda pari a $2.85$cm. Per la presa di misure un multimetro palmare è stato collegato al ricevitore, dunqe l'intensità del segnale è stata misurata registrando la $\Delta V$, mentre per quanto riguarda la misura di angoli abbiamo utilizzato un goniometro graduato.
+\
 \subsection{Polarizzazione}
 
 Il primo obbiettivo dell'esperienza è stato quello di caratterizzare il fascio di microonde emesso dall'emettitore.
@@ -369,10 +375,78 @@ ci troviamo a ruotare il ricevitore.\\
 
 \subsubsection{Analisi Dati Michelson}
 
-
+\newpage
 \section{Diffrazione di Bragg}
+In quest'ultima parte dell'esperienza abbiamo cercato di riprodurre a livello macroscopico 
+una tecnica per "l'imaging" di piano atomici in cristalli reticolari. Per farlo abbiamo utilizzato come modello per il reticolo cristallino, un cubo di ethafoam 
+contenente delle sferette di metallo di circa $10$mm. Queste sferette allo stesso modo della loro controparte microscopica (atomi in un normale reticolo) diffondono un fascio incidente e in base alla distanza d dei "piani atomici" producono figure di interferza.
+Lo scopo di questa tecnica è quello di ricavare dallo studio delle figure di interferenza (massimi e minimi) la configurazione geometrica del cubo e in particolare trovare la distanza d tra i piani.
+Di seguito alleghiamo delle figure rappresentative per la configurazione dell'esperimento.
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth} % Adjust the width as needed
+		\centering
+		\includegraphics[width=\textwidth]{setup_bragg.png}
+		\caption{Setup diffrazione Bragg}
+		\label{fig:Setup Bragg}
+	\end{subfigure}
+	\hfill % Add horizontal space between the subfigures
+	\begin{subfigure}[b]{0.3\textwidth} % Adjust the width as needed
+		\centering
+		\includegraphics[width=\textwidth]{piani_bragg.png}
+		\caption{Piani di incidenza}
+		\label{fig:Piani di Bragg}
+	\end{subfigure}
+	\caption{Setup diffrazione di Bragg}
+\end{figure}
 
+Per il campionamento delle misure, abbiamo posizionato emettitore e ricevitore come in figura \ref{fig:Setup Bragg}
+e abbiamo deciso di studiare il fascio in relazione al piano di incideza $(100)$. Per questi indici di Miller dei piani cristallini abbiamo $n=1$, ovvero un solo piano attraversato lungo direzione del fascio.
+In questo caso dunque la condizione per cui si verificherà la diffrazione dell'onda incidente:
+\begin{equation}
+	n \lambda = 2dsin(\theta) \quad ,n=1
+	\label{eq:Legge Bragg}
+\end{equation}
+In questa relazione, d rappresenta la nostra incognita, lambda è la lunghezza d'onda nota e $\theta$ rappresenta
+l'angolo tra il fascio incidente e la superficie del cubo secondo la seguente figura 
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.28\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{diffrazione_bragg.png}
+        \caption{Riflessione su reticolo}
+        \label{fig:Reticolo Bragg}
+    \end{subfigure}
+    \hspace{0.3\textwidth} 
+    \begin{subfigure}[b]{0.28\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{angolo_bragg.png}
+        \caption{Angolo di incidenza}
+        \label{fig:riflesso2}
+    \end{subfigure}
+    \caption{Diffrazione di Bragg e angolo}
+    \label{fig:combined_figures}
+\end{figure}
+
+\newpage
 \subsection{Analisi Dati Bragg}
+In questa sezione riportiamo le misure effettuate per la verifica della legge di Bragg (Eq. \ref{eq:Legge Bragg}). Dopo aver acceso e posizionato l'emettitore di fronte al ricevitore come nel setup, abbiamo iniziato a ruotare il cubo di $\theta = 2\textdegree$ per volta e di conseguenza il braccio che sosteneva il ricevitore di $\theta' = 2\theta = 4\textdegree$.
+Ripetendo questa procedura abbiamo segnato per ogni angolo di rotazione, il valore dell'intensità del segnale catturato dal ricevitore.
+Graficando gli angoli di incidenza con il voltaggio del ricevitore otteniamo:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.7\textwidth]{Grafico1_bragg.png}
+	\caption{Grafico angoli-intesità per Bragg}
+	\label{fig:GraficoBragg}
+\end{figure}
+La condizione che interessa a noi riguarda quella del picco attorno a $\theta=2.4$. I primi picchi rappresentano probabilmente riflessioni da altri piani rispetto a quello sotto nostra analisi (100).
+Ci aspettiamo che la relazione di Bragg si verifichi quando $$ \lambda = 2dsin(\theta) $$
+riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale(che starebbe ad indicare un raggio difratto) attorno a quest'angolo:
+$$ \theta_\text{atteso} = arcsin(\frac{\lambda}{2d}) = arcsin(\frac{2.85\text{cm}}{2\times(2,10\text{cm})}) =  $$ 
+Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = 138\text{°} = 2.40\text{ rad}$$
+
+
+
 
 \newpage
 \section{Tabelle misurazioni}
