@@ -185,7 +185,7 @@ Non avendo una risoluzione sufficiente per distinguere con precisione massimi e 
 i dati con funzioni non oscillanti. Per giustificare questa scelta, abbiamo considerato che le oscillazioni dovute all'interferenza
 variano attorno ad un valore medio, e che i contributi dovuti ad ogni particolare oscillazione in media si annullano a vicenda.\\
 Osservando i grafici in figura \ref{fig:fit_distanza_vari_modelli}, si evince che tra quelli considerati, il modello che meglio si adatta
-ai dati è lineare.
+ai dati è quello composito, che considera un adattamento inversamente proporzionale sia al raggio, sia al quadrato di esso.\\
 
 %diciamo che prendiamo per buono il modello composito, ma che nell'analisi usiamo quello lineare che e' una buona approssimazione
 
@@ -217,14 +217,23 @@ Il risultato del fit è riportato in figura \ref{fig:fit_distanza_ondulatori}.
 \end{figure}
 
 Il fit ha restituito i seguenti valori: (magari una tabella esce meglio)
-\begin{enumerate}
-	\item $A = -0.057 \pm 0.004$
-	\item $B = 6.43 \pm 0.18$
-	\item $C = 0.077 \pm 0.006$
-	\item $D = 4.56 \pm 0.06$
-	\item $E = -67.5 \pm 3.1$
-	\item $\tilde\chi^2 = 1.1$
-\end{enumerate}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Parametro & Valore \\
+		\hline
+		$A$ & $-0.057 \pm 0.004$ \\
+		$B$ & $6.43 \pm 0.18$ \\
+		$C$ & $0.077 \pm 0.006$ \\
+		$D$ & $4.56 \pm 0.06$ \\
+		$E$ & $-67.5 \pm 3.1$ \\
+		$\tilde\chi^2$ & $1.1$ \\
+		\hline
+	\end{tabular}
+	\caption{Risultati del fit del modello oscillante}
+	\label{tab:fit_distanza_ondulatori}
+\end{table}
 
 In questo caso il valore $D$ rappresenta il numero d'onda, quindi la lunghezza d'onda è data da
 $$\lambda = 2\cdot \frac{2\pi}{D}$$
