@@ -447,7 +447,7 @@ Ripetendo questa procedura abbiamo segnato per ogni angolo di rotazione, il valo
 Graficando gli angoli di incidenza con il voltaggio del ricevitore otteniamo:
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 0.7\textwidth]{Grafico1_bragg.png}
+	\includegraphics[width = 0.6\textwidth]{Grafico1_bragg.png}
 	\caption{Grafico angoli-intesità per Bragg}
 	\label{fig:GraficoBragg}
 \end{figure}
@@ -455,10 +455,11 @@ La condizione che interessa a noi riguarda quella del picco attorno a $\theta=2.
 Ci aspettiamo che la relazione di Bragg si verifichi quando $$ \lambda = 2dsin(\theta) $$
 riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale(che starebbe ad indicare un raggio difratto) attorno a quest'angolo:
 $$ \theta_\text{atteso} = arcsin(\frac{\lambda}{2d}) = arcsin(\frac{2.85\text{cm}}{2\times(\text{insert real d})}) =  $$ 
-Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = 138\text{°} = 2.40\text{ rad}$$
-Per verificare il picco attorno a quell'angolo abbiamo provato a fittare i dati con una parabola
-
-
+Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = (138 \pm1)\text{°} = (2.40 \pm0.1)\text{ rad}$$
+Da questo valore possiamo trovare una stima per la distanza tra i piani atomici.
+Inserendo l'angolo e propagando l'errore secondo questa formula 
+$$ d = \frac{\lambda}{2sin(\theta)} \quad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta)^2} $$ 
+otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	 
 \subsection{Conclusioni Bragg}
 
 \newpage
