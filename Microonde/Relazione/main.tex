@@ -117,12 +117,21 @@ Di seguito riportiamo i dati raccolti:
     \label{fig:rotazione}
 \end{figure}
 
-Per stabilire quale modello stessero seguendo i dati, abbiamo scelto di interpolarli prima con una funzione coseno generica,
-successivamente con una funzione coseno elevato ad una potenza ignota:
-\begin{align}
-    & I = A\cos(Bx + C) + D \\
-    & I = A\cos^(Bx + C) + D
-\end{align} 
+Per stabilire quale modello stessero seguendo i dati, abbiamo scelto di interpolarli prima con le seguenti funzioni:
+\begin{align*}
+    & I = I_0\cos(Bx)^A \\
+    & I = A\cdot\cos(Bx + C) + D \\
+    & I = A\cdot cos(B\theta)^D
+\end{align*} 
+I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 0.7\textwidth]{fit_rotazione.png}
+    \caption{Fit dell'intensità del segnale rilevato in funzione dell'angolo di rotazione}
+    \label{fig:fit_rotazione}
+\end{figure}
+
 
 \subsubsection{Intensità in funzione della distanza}
 
