@@ -75,7 +75,7 @@ Di seguito abbiamo allegato un manuale che contiene tutte le informazioni riguar
 Per quanto riguarda i fasci utilizzati, un diodo Gunn fa da sorgente di microonde linearmente polarizzate con lunghezza d'onda pari a $2.85$cm. Per la presa di misure un multimetro palmare è stato collegato al ricevitore, dunqe l'intensità del segnale è stata misurata registrando la $\Delta V$, mentre per quanto riguarda la misura di angoli abbiamo utilizzato un goniometro graduato.
 \
 \subsection{Polarizzazione}
-
+\paragraph*{Legge di Malus}
 Il primo obbiettivo dell'esperienza è stato quello di caratterizzare il fascio di microonde emesso dall'emettitore.
 Per fare ciò, abbiamo cominciato verificando la direzione di polarizzazione del fascio. \\
 Abbiamo posizionato l'emettitore e il ricevitore uno di fronte all'altro, in modo che fossero
@@ -96,7 +96,23 @@ Dove $I_0$ è l'intensità massima e $\theta$ è l'angolo tra la direzione di po
 	\caption{Intensità del segnale rilevato in funzione dell'angolo di rotazione}
 	\label{fig:polarizzazione}
 \end{figure}
-\paragraph*{Finire la conclusione e manca la parte del filtro polarizzatore}
+
+\paragraph*{Filtro polarizzatore}
+Applicando un filtro polarizzatore tra emettitore e ricevitore, siamo stati in grado di studiare il cambiamento della lettura del segnale.
+Il filtro permetteva il passaggio delle onde polarizzate parallelamente alla sua direzione, e bloccava quelle perpendicolari.\\
+Posizionandolo quando gli horn si trovavano orientati a 90 gradi uno rispetto all'altro, non abbiamo osservato alcun cambiamento nella lettura del segnale. 
+Questo poiché il ricevitore agiva contemporaneamente da filtro, e con uno sfasamento di $\frac{\pi}{2}$ la lettura era già nulla; dunque la
+selezione della direzione di polarizzazione dovuta al filtro non aveva effetto.\\
+Quando invece gli horn erano allineati, il filtro polarizzatore aveva la capacità di bloccare il segnale a seconda della rotazione, dunque il ricevitore
+rilevava un segnale ridotto o nullo.
+
+\subsubsection{Conclusioni}
+
+Abbiamo rappresentato i dati raccolti in figura \ref{fig:polarizzazione} e sovrapposti alla legge di Malus \eqref{eq:malus}.\\ 
+Abbiamo poi calcolato il valore del $\tilde{\chi^2} = 12.7$, il che ci suggerisce che il modello non è adatto a descrivere i dati.
+Tuttavia, dalle nostre aspettative e dall'analisi dei punti successivi, ci siamo convinti che il segnale sia descritto da una funzione più complessa di quella
+considerata per la legge di Malus.\\ 
+
 
 \subsection{Ampiezza}
 \subsubsection{Intensità in funzione dell'angolo di rotazione}
@@ -186,11 +202,12 @@ i dati con funzioni non oscillanti. Per giustificare questa scelta, abbiamo cons
 variano attorno ad un valore medio, e che i contributi dovuti ad ogni particolare oscillazione in media si annullano a vicenda.\\
 Osservando i grafici in figura \ref{fig:fit_distanza_vari_modelli}, si evince che tra quelli considerati, il modello che meglio si adatta
 ai dati è quello composito, che considera un adattamento inversamente proporzionale sia al raggio, sia al quadrato di esso.\\
+Ci aspettavamo un risultato simile, dal momento che il segnale emesso non è perfettamente né un'onda piana, né una sferica. Peculiare invece,
+è il fatto che avendo provato un fit con modello lineare, esso sia quello che ottiene il valore di $\tilde{\chi^2}$ minore. Questo potrebbe essere dovuto al fatto
+che sulla scala da noi scelta per le misure, l'andamento del segnale è approssimabile con una retta.\\
+Per questo motivo, nella successiva analisi abbiamo deciso di utilizzare il modello lineare per semplicità.\\
 
-%diciamo che prendiamo per buono il modello composito, ma che nell'analisi usiamo quello lineare che e' una buona approssimazione
 
-
-\newpage
 \paragraph*{Andamento attorno ai massimi}
 Successivamente, abbiamo proceduto ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, riportati nella figura di seguito.
 
@@ -216,7 +233,7 @@ Il risultato del fit è riportato in figura \ref{fig:fit_distanza_ondulatori}.
 	\label{fig:fit_distanza_ondulatori}
 \end{figure}
 
-Il fit ha restituito i seguenti valori: (magari una tabella esce meglio)
+Il fit ha restituito i seguenti valori:
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -239,12 +256,15 @@ In questo caso il valore $D$ rappresenta il numero d'onda, quindi la lunghezza d
 $$\lambda = 2\cdot \frac{2\pi}{D}$$
 dove il fattore 2 sta ad indicare il fatto che la lunghezza d'onda del fascio emesso è il doppio della lunghezza d'onda del segnale che interferisce.\\
 Inserendo i valori ottenuti dal fit, propagando l'errore ed eseguendo un test di compatibilità, otteniamo:
+
 \begin{align*}
 	 & \lambda = (2.75 \pm 0.04)\ \text{m} \\
 	 & \text{compatibilità}: 2.47
 \end{align*}
 
 \subsection{Conclusioni}
+
+
 
 \section{Angolo di Brewster}
 In questa sezione abbiamo studiato il raggio trasmesso e riflesso da una lastra di polietilene al fine di determinare
