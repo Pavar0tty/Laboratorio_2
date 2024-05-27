@@ -471,26 +471,79 @@ l'angolo tra il fascio incidente e la superficie del cubo secondo la seguente fi
 
 \newpage
 \subsection{Analisi Dati Bragg}
-In questa sezione riportiamo le misure effettuate per la verifica della legge di Bragg (Eq. \ref{eq:Legge Bragg}). Dopo aver acceso e posizionato l'emettitore di fronte al ricevitore come nel setup, abbiamo iniziato a ruotare il cubo di $\theta = 2\textdegree$ per volta e di conseguenza il braccio che sosteneva il ricevitore di $\theta' = 2\theta = 4\textdegree$.
+In questa sezione riportiamo le misure effettuate per la verifica della legge di Bragg (Eq. \ref{eq:Legge Bragg}). Dopo aver acceso e posizionato l'emettitore di fronte al ricevitore come nel setup, abbiamo iniziato a ruotare il cubo di $\theta = 2\text{°}$ per volta e di conseguenza il braccio che sosteneva il ricevitore di $\theta' = 2\theta = 4\text{°}$.
 Ripetendo questa procedura abbiamo segnato per ogni angolo di rotazione, il valore dell'intensità del segnale catturato dal ricevitore.
-Graficando gli angoli di incidenza con il voltaggio del ricevitore otteniamo:
+Graficando gli angoli di incidenza con il voltaggio del ricevitore otteniamo: 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.6\textwidth]{Grafico1_bragg.png}
 	\caption{Grafico angoli-intesità per Bragg}
 	\label{fig:GraficoBragg}
 \end{figure}
-La condizione che interessa a noi riguarda quella del picco attorno a $\theta=2.4$. I primi picchi rappresentano probabilmente riflessioni da altri piani rispetto a quello sotto nostra analisi (100).
-Ci aspettiamo che la relazione di Bragg si verifichi quando $$ \lambda = 2dsin(\theta) $$
-riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale(che starebbe ad indicare un raggio difratto) attorno a quest'angolo:
+
+La regione di interesse nel grafico è quella del picco attorno a $\theta=2.4$. I primi picchi rappresentano probabilmente riflessioni da altri piani rispetto a quello sotto nostra analisi (100).
+Ci aspettiamo che la relazione di Bragg si verifichi quando:
+$$ \lambda = 2dsin(\theta) $$
+riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale,il quale rappresenta un massimo del raggio difratto, attorno a quest'angolo:
 $$ \theta_\text{atteso} = arcsin(\frac{\lambda}{2d}) = arcsin(\frac{2.85\text{cm}}{2\times(\text{insert real d})}) =  $$ 
 Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = (138 \pm1)\text{°} = (2.40 \pm0.1)\text{ rad}$$
 Da questo valore possiamo trovare una stima per la distanza tra i piani atomici.
 Inserendo l'angolo e propagando l'errore secondo questa formula 
-$$ d = \frac{\lambda}{2sin(\theta)} \quad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta)^2} $$ 
-otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	 
-\subsection{Conclusioni Bragg}
+$$ d = \frac{\lambda}{2sin(\theta_\text{mis})} \quad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta_\text{mis})^2} $$ 
+otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	
+Confrontandola con la vera distanza: $$ d_\text{true} = ( \pm) \text{cm} $$ 
 
+Abbiamo inoltre provato ad eseguire un fit con due modelli differenti per estrapolare un'ulteriore stima dell'angolo di Bragg.
+Due modelli alternativi che spesso vengono comunemente utilizzati per descrivere picchi in esperimenti simili sono: gaussiano, picchi con code brevi e il lorentziano per picchi con code più importanti.
+Le due forme funzionali sono
+\begin{equation}
+	y = A \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)
+	\end{equation}
+	
+	\begin{equation}
+	y = A \frac{w^2}{(x - x_0)^2 + w^2}
+	\end{equation}
+Di seguito riportiamo un grafico dei fit effettuati per questi due modelli, per quanto riguarda le incertezze:
+\begin{enumerate}
+	\item Incertezza sull'angolo è di $\delta\theta= 1$ grado dettata da sensibilità goniometro.
+	\item Incertezza sull'intensità abbiamo scelto $\delta V = 0.05 V$ dettata sia dalla sensibilià del palmare che da noise nelle misure.
+\end{enumerate}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.7\textwidth]{graf_bragg.png}
+	\caption{Grafico angoli-intesità per Bragg}
+	\label{fig:GraficoBragg}
+\end{figure}
+
+\subsection{Conclusioni Bragg}
+Di seguito riportiamo i risultati ottenuti dal fit e in generale da questa parte dell'esperienza.
+Anche se realtivamente approssimativi i fit hanno restituito come angolo di Bragg un valore molto vicino a $138$
+e in particolare il chi-quadro ridotto è più basso per il modello gaussiano, il che sottolinea che si tratta di un segnale dove il picco è più importante delle code.
+In generale analizzando la differenza tra la distanza attesa e quella estrapolata dalle misure possiamo concludere che quel picco 
+rappressenta effettivamente il segnale del raggio diffratto. Ricordiamo inoltre che tali misure sono state effettuate per il piano di incidenza denotato da 
+(100).
+
+\begin{table}[h!]
+    \centering
+    \caption{Riassunto dei risultati dei fit}
+    \label{tab:fit_results}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Modello} & \textbf{Parametro} & \textbf{Valore} \\
+        \hline
+        Gaussiano & $A$ & $0.782 \pm 0.070$ \\
+                  & $\mu$ & $139.861 \pm 0.669$ \\
+                  & $\sigma$ & $6.463 \pm 0.667$ \\
+        \hline
+        Lorentziano & $A$ & $0.826 \pm 0.093$ \\
+                    & $x_0$ & $138.898 \pm 0.767$ \\
+                    & $w$ & $6.379 \pm 1.149$ \\
+        \hline
+        Chi-quadro ridotto & Gaussiano & 2.528 \\
+                            & Lorentziano & 3.166 \\
+        \hline
+    \end{tabular}
+\end{table}
 \newpage
 \section{Tabelle misurazioni}
 
