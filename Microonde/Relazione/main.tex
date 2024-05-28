@@ -21,6 +21,7 @@
 \usepackage[margin=1in,letterpaper]{geometry} % decreases margins
 \usepackage{cite} % takes care of citations
 \usepackage[hidelinks]{hyperref} % adds hyper links inside the generated pdf file
+\usepackage{siunitx} % provides the \SI{}{} command for proper typesetting of units
 % Define the colors
 \definecolor{linkcolor}{RGB}{0, 102, 204}
 \definecolor{citecolor}{RGB}{34, 139, 34}
@@ -267,26 +268,40 @@ Inserendo i valori ottenuti dal fit, propagando l'errore ed eseguendo un test di
 
 
 \section{Angolo di Brewster}
-In questa sezione abbiamo studiato il raggio trasmesso e riflesso da una lastra di polietilene al fine di determinare
-l'angolo di Brewster.\\
+In questa sezione abbiamo studiato il raggio trasmesso e riflesso da una lastra di polietilene al fine di 
+determinare l'angolo di Brewster. Come confronto, abbiamo calcolato l'angolo atteso, 
+dato dalla formula \ref{eq:brew_atteso}
+\begin{equation}
+	\theta_B = \arctan\left(\frac{n_2}{n_1}\right)
+	\label{eq:brew_atteso}
+\end{equation}
+
+Dove $n_1$ = 1.0003 è l'indice di rifrazione dell'aria e $n_2$ = 1.5 è l'indice di rifrazione del polietilene.\\
+
 Per l'analisi del raggio trasmesso abbiamo posto il ricevitore di fronte al trasmettitore, frapponendo la lastra
-fra i due. Abbiamo montato la lastra su un supporto rotante e e variando in tal modo l'angolo di incidenza del raggio
-abbiamo campionato l'intensità del raggio trasmesso.\\
-Per verificare il fatto che l'intensità del raggio trasmesso sia dipendente anche dalla polarizzazione abbiamo
-eseguito la stessa procedura per due differenti polarizzazioni, rouotando l'emettitrore di 90 gradi. Per la polarizzazione
-parallela alla lastra, al fine di trovare l'angolo di Brewster, abbiamo interpolato il picco con un modello parabolico,
-che riportiamo:
+fra i due. Abbiamo montato la lastra sopra un supporto rotante e 
+sistemato l'emettitore in modo che la polarizzazione fosse parallela all'angolo di incidenza. 
+Variando l'angolo di incidenza del raggio abbiamo campionato l'intensità del raggio trasmesso.
+Per individuare l'angolo di Brewster abbiamo interpolato il picco ottenuto dal grafico con una parabola, di
+cui riportiamo il modello:
 \begin{equation}
 	y = a(x-b)^2 + c
 	\label{eq:parabola}
 \end{equation}
 \\
 
-Per l'analisi del raggio riflesso abbiamo configurato l'apparato in modo tale da far variare sia l'angolo della lastra,
-sia l'angolo tra emettitore e ricevitore, in modo che il ricevitore seguisse il raggio riflesso. Abbiamo così campionato
-l'intensità del raggio riflesso al variare dell'angolo di incidenza.\\
+Per verificare che l'intensità del raggio trasmesso sia dipendente dalla polarizzazione abbiamo
+eseguito la stessa procedura per polarizzazione perpendicolare al piano di incidenza,
+ruotando l'emettitore di 90 gradi. \\
+
+Per l'analisi del raggio riflesso abbiamo configurato l'apparato in modo tale da far variare sia l'angolo della 
+lastra, sia l'angolo tra emettitore e ricevitore, in modo che il ricevitore seguisse il raggio riflesso. Abbiamo 
+così campionato l'intensità del raggio riflesso al variare dell'angolo di incidenza.\\
 
 \subsection{Analisi dati}
+
+Utilizzando la formula \ref{eq:brew_atteso} abbiamo calcolato l'angolo di Brewster atteso, 
+ottenendo $\theta_B = 56.3$ gradi.\\
 
 Riportiamo di seguito il grafico dell'intensità del raggio trasmesso in funzione dell'angolo di incidenza.\\
 \begin{figure}[h!]
@@ -297,10 +312,9 @@ Riportiamo di seguito il grafico dell'intensità del raggio trasmesso in funzion
 \end{figure}
 
 Abbiamo inserito il grafico con tutte le misurazioni effettuate (grafico di sinistra). Analizzando la figura ci
-siamo accorti che l'intensità torna ad aumentare oltre 70 gradi. Questo è dovuto al fatto che la lastra, non essendo
-abbastanza lunga, lasciava passare parte del raggio incidente, determinando un aumento dell'intensità. Abbiamo quindi
-deciso di escludere gli ultimi dati poichè non rilevanti per il fenomeno. Vengono riportati nel grafico di destra
-i valori che abbiamo utilizzato per l'analisi.\\
+siamo accorti che l'intensità torna ad aumentare oltre 70 gradi. Questo è dovuto al fatto che la lastra, non 
+essendo abbastanza lunga, lasciava passare parte del raggio incidente, determinando un aumento dell'intensità. 
+Abbiamo quindi deciso di riportare nel grafico di destra gli unici dati rilevanti per determinare l'angolo di Brewster.\\
 Una volta individuata la regione in cui l'intensità aumentava, abbiamo interpolato il picco con un modello parabolico.
 Di seguito riportiamo i risultati del fit: 
 
@@ -311,48 +325,54 @@ Di seguito riportiamo i risultati del fit:
 	\label{fig:parabola}
 \end{figure}
 
-%Da cambiare i valori con quelli ottenuti dal fit (manca la propagazione degli errori x2y)
 \begin{enumerate}
-	\item $a = 0.0003 \pm 0.0001$
-	\item $b = 0.0003 \pm 0.0001$
-	\item $c = 0.0003 \pm 0.0001$
-	\item $\chi^2 = 0.0003$
+	\item $a = \num{-4.4e-3}  \pm \num{0.5e-3}$
+	\item $b = 47.2 \pm 0.4$
+	\item $c = 3.57 \pm 0.02$
+	\item $\chi^2 = 2.2$
 \end{enumerate}
 
 Il parametro b, essendo la traslazione della parabola sull'asse x, rappresenta l'angolo di Brewster. Abbiamo
-confrontato l'angolo ottenuto con l'angolo atteso, ottenendo una distanza in deviazioni standard di: DA INSERIRE\\
+confrontato l'angolo ottenuto con l'angolo atteso, ottenendo una distanza in deviazioni standard di: 114\\
 
 Riportiamo in figura \ref{fig:wrong_pol} il grafico dell'intensità del raggio trasmesso per la polarizzazione
 perpendicolare alla lastra. Abbiamo escluso le ultime misure per lo stesso motivo dell'analisi di raggio trasmesso
 con polarizzazione parallela.
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.6\textwidth]{wrong_pol.png}
+	\includegraphics[width = 0.8\textwidth]{wrong_pol.png}
 	\caption{Intensità del raggio trasmesso - polarizzazione perpendicolare}
 	\label{fig:wrong_pol}
 \end{figure}
 \newpage
-Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo per completezza,
-nonostante siano intrattabili dal punto di vista dell'analisi. Avendo osservato ciò già nella prima giornata di
-laboratorio, abbiamo effettuato nuovamente le stesse misure nella seconda giornata, ma senza ottenere miglioramenti.
-L'andamento globale dei grafici richiama quello corretto, ma i numerosi picchi fanno intuire la necessità di un
-campionamento maggiore, come spiegato nelle conclusioni.\\
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 0.6\textwidth]{riflesso1.png}
-	\caption{Intensità del raggio riflesso - prima giornata}
-	\label{fig:riflesso1}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 0.6\textwidth]{riflesso2.png}
-	\caption{Intensità del raggio riflesso - seconda giornata}
-	\label{fig:riflesso2}
-\end{figure}
+Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo in fondo alla 
+relazione. Il loro comportamento anomalo li ha resi poco utili per la ricerca dell'angolo di Brewster.
+Avendo osservato ciò nella prima giornata di laboratorio, abbiamo effettuato nuovamente le stesse misure 
+nella seconda giornata, ma senza ottenere miglioramenti. L'andamento globale dei grafici richiama quello corretto,
+ma i numerosi picchi fanno intuire la necessità di un campionamento maggiore.\\
 
 \subsection{Conclusioni}
+\paragraph*{Raggio trasmesso} L'andamento dei grafici è in accordo con quanto atteso, perchè osserviamo
+un'aumento dell'intensità nell'intorno dei 50 gradi sia per polarizzazione parallela che perpendicolare.
+In ogni caso, l'interpolazione parabolica restituisce un valore dell'angolo di Brewster molto distante 
+da quello atteso. Abbiamo pensato che sarebbe necessario campionare più punti attorno al picco 
+per avere una migliore stima, ma la grande distanza tra valore atteso e valore ottenuto 
+ci fa pensare che non sia un problema di campionamento, bensì di errori sistematici che spostano il picco attorno 
+a un angolo diverso da quello atteso.\\
+Il fatto che lo spostamento del picco sia dovuto ad un errore di tipo sistematico è confermato dal grafico 
+\ref{fig:wrong_pol}. Infatti per polarizzazione perpendicolare si può osservare una crescita di intensità attorno 
+all'angolo di Brewster, anche se non in maniera vistosa. Nel nostro caso questo aumento si può osservare attorno 
+all'angolo ottenuto dall'interpolazione. Il fatto che per due misurazioni diverse (polarizzazione parallela 
+e perpendicolare) si sia ottenuto lo stesso risultato conferma la spiegazione di errore sistematico
+
+
+\paragraph*{Raggio riflesso} L'andamento anomalo dei grafici \ref{fig:riflesso1} e \ref{fig:riflesso2}, relativi 
+al raggio riflesso, non ci ha permesso di determinare l'angolo di Brewster. Abbiamo pensato che il problema 
+fosse dovuto al fatto che il raggio incidente venisse separato in riflesso e rifratto, e che il raggio rifratto, 
+colpendo la seconda superficie di separazione, venisse nuovamente riflesso e rifratto. Questo comportamento porta 
+ad avere due raggi che colpiscono il ricevitore, causando possibili interferenze e grafici anomali.\\
 
 
 \newpage
@@ -650,9 +670,22 @@ rappressenta effettivamente il segnale del raggio diffratto. Ricordiamo inoltre 
 	\end{tabular}
 \end{table}
 
-10.9
-v4 = 1.40
-h4 = 17.2
-v4 = 1.5
+\newpage
+\section{Grafici Brewster}
+Sono riportati i grafici che non tornano con l'andamento atteso.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{riflesso1.png}
+	\caption{Intensità del raggio riflesso - prima giornata}
+	\label{fig:riflesso1}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{riflesso2.png}
+	\caption{Intensità del raggio riflesso - seconda giornata}
+	\label{fig:riflesso2}
+\end{figure}
 
 \end{document}
