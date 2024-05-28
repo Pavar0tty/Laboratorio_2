@@ -478,8 +478,8 @@ quando un materiale che abbia proprietà riflettenti viene avvicinato all'appare
 considerare questo effetto di interferenza in tutte le sezioni in cui ci troviamo a ruotare il ricevitore.\\
 
 \subsection{Interferometro di Michelson}
-In questa seconda esperienza sull'interferenza di onde abbiamo deciso di riprodurre una versione del note esperiemento di 
-interferometria di Michelson e Morley.
+In questa seconda esperienza sull'interferenza di onde abbiamo deciso di riprodurre una versione del noto esperiemento di 
+interferometria di Michelson.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.4\textwidth]{MichelsonSetup.png}
@@ -529,15 +529,15 @@ della lunghezza d'onda sempre dalla raccolta dati:
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.6\textwidth]{MichelsonGrafico.png}
-	\caption{Setup esperimento Michelson e Morley}
+	\caption{Grafico relazione tra frange e posizione ricevitore}
 	\label{fig:GraficoBragg2}
 \end{figure}
 
 Graficando il numero di frange oltrepassate rispetto alla posizione dello specchio A riflettente otteniamo una retta,
-il cui coefficiente rappresenta mezza lunghezza d'onda. Fittando i nostri dati con un modello lineare abbiamo ottenuto:
+il cui coefficiente rappresenta mezza lunghezza d'onda. Fittando i nostri dati con un modello lineare abbiamo ottenuto un'altra buona stima della lunghezza d'onda, propagando l'incertezza con l'opportuna formula:
 \begin{enumerate}
-	\item Stima coeff retta = $(1.44\pm0.004)$ cm
-	\item Stima lunghezza d'onda $ \lambda = (2.89\pm0.01)$ cm
+	\item Stima coeff. retta = $(1.44\pm0.01)$
+	\item Stima lunghezza d'onda $ \lambda = (2.89\pm0.02)$ cm
 	\item Chi-quadro ridotto $\widetilde{\chi}^2 = 0.2$
 \end{enumerate}
 
@@ -550,14 +550,14 @@ Lo scopo di questa tecnica è quello di ricavare dallo studio delle figure di in
 Di seguito alleghiamo delle figure rappresentative per la configurazione dell'esperimento.
 \begin{figure}[h!]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth} % Adjust the width as needed
+	\begin{subfigure}[b]{0.48\textwidth} 
 		\centering
 		\includegraphics[width=\textwidth]{setup_bragg.png}
 		\caption{Setup diffrazione Bragg}
 		\label{fig:Setup Bragg}
 	\end{subfigure}
-	\hfill % Add horizontal space between the subfigures
-	\begin{subfigure}[b]{0.3\textwidth} % Adjust the width as needed
+	\hfill 
+	\begin{subfigure}[b]{0.3\textwidth} 
 		\centering
 		\includegraphics[width=\textwidth]{piani_bragg.png}
 		\caption{Piani di incidenza}
@@ -594,7 +594,6 @@ l'angolo tra il fascio incidente e la superficie del cubo secondo la seguente fi
     \label{fig:combined_figures}
 \end{figure}
 
-\newpage
 \subsection{Analisi Dati Bragg}
 In questa sezione riportiamo le misure effettuate per la verifica della legge di Bragg (Eq. \ref{eq:Legge Bragg}). Dopo aver acceso e posizionato l'emettitore di fronte al ricevitore come nel setup, abbiamo iniziato a ruotare il cubo di $\theta = 2\text{°}$ per volta e di conseguenza il braccio che sosteneva il ricevitore di $\theta' = 2\theta = 4\text{°}$.
 Ripetendo questa procedura abbiamo segnato per ogni angolo di rotazione, il valore dell'intensità del segnale catturato dal ricevitore.
@@ -610,11 +609,11 @@ La regione di interesse nel grafico è quella del picco attorno a $\theta=2.4$. 
 Ci aspettiamo che la relazione di Bragg si verifichi quando:
 $$ \lambda = 2dsin(\theta) $$
 riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale,il quale rappresenta un massimo del raggio difratto, attorno a quest'angolo:
-$$ \theta_\text{atteso} = arcsin(\frac{\lambda}{2d}) = arcsin(\frac{2.85\text{cm}}{2\times(\text{insert real d})}) =  $$ 
+$$ \theta_\text{atteso} = arcsin\left(\frac{\lambda}{2d}\right) = arcsin\left(\frac{2.85\text{cm}}{2\times(\text{insert real d})}\right) =  $$ 
 Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = (138 \pm1)\text{°} = (2.40 \pm0.1)\text{ rad}$$
 Da questo valore possiamo trovare una stima per la distanza tra i piani atomici.
 Inserendo l'angolo e propagando l'errore secondo questa formula: 
-$$ d = \frac{\lambda}{2sin(\theta_\text{mis})} \quad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta_\text{mis})^2} $$ 
+$$ d = \frac{\lambda}{2sin(\theta_\text{mis})} \qquad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta_\text{mis})^2} $$ 
 otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	
 Confrontandola con la vera distanza: $$ d_\text{true} = ( \pm) \text{cm} $$ 
 
