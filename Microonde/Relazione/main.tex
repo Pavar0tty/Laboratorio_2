@@ -345,6 +345,27 @@ con polarizzazione parallela.
 	\caption{Intensità del raggio trasmesso - polarizzazione perpendicolare}
 	\label{fig:wrong_pol}
 \end{figure}
+
+Nonostante non sia necessario interpolare questa sezione, poichè per polarizzazione perpendicolare non si dovrebbe 
+osservare un picco di intensità attorno all'angolo di Brewster, abbiamo deciso di farlo per motivazioni che
+saranno spiegate nelle conclusioni. In figura \ref{fig:wrong_pol_fit} riportiamo il grafico dell'interpolazione 
+parabolica eseguito attorno all'angolo ottenuto con polarizzazione parallela.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{wrong_pol_fit.png}
+	\caption{Interpolazione del picco con modello parabolico - polarizzazione perpendicolare}
+	\label{fig:wrong_pol_fit}
+\end{figure}
+
+Di seguito riportiamo i risultati del fit:
+\begin{enumerate}
+	\item $a = \num{-1.1e-3}  \pm \num{0.3e-3}$
+	\item $b = 47 \pm 1$
+	\item $c = 3.35 \pm 0.02$
+	\item $\chi^2 = 0.1$
+\end{enumerate}
+
 \newpage
 
 Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo in fondo alla 
@@ -362,10 +383,11 @@ per avere una migliore stima, ma la grande distanza tra valore atteso e valore o
 ci fa pensare che non sia un problema di campionamento, bensì di errori sistematici che spostano il picco attorno 
 a un angolo diverso da quello atteso.\\
 Il fatto che lo spostamento del picco sia dovuto ad un errore di tipo sistematico è confermato dal grafico 
-\ref{fig:wrong_pol}. Infatti per polarizzazione perpendicolare si può osservare una crescita di intensità attorno 
-all'angolo di Brewster, anche se non in maniera vistosa. Nel nostro caso questo aumento si può osservare attorno 
-all'angolo ottenuto dall'interpolazione. Il fatto che per due misurazioni diverse (polarizzazione parallela 
-e perpendicolare) si sia ottenuto lo stesso risultato conferma la spiegazione di errore sistematico
+\ref{fig:wrong_pol}. Nonostante nel caso reale non debba verificarsi una crescita di intensità nella regione 
+dell'angolo di Brewster per polarizzazione perpendicolare, è curioso come nel nostro caso questo aumento 
+si possa osservare proprio attorno all'angolo ottenuto dall'interpolazione. Il fatto che per due misurazioni 
+diverse (polarizzazione parallela e perpendicolare) si sia ottenuto lo stesso risultato conferma 
+la spiegazione di errore sistematico.
 
 
 \paragraph*{Raggio riflesso} L'andamento anomalo dei grafici \ref{fig:riflesso1} e \ref{fig:riflesso2}, relativi 
