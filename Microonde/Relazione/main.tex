@@ -89,6 +89,9 @@ di osservare da questo esperimento è quello previsto dalla legge di Malus:
 	\label{eq:malus}
 \end{equation}
 Dove $I_0$ è l'intensità massima e $\theta$ è l'angolo tra la direzione di polarizzazione del fascio e quella rilevata dal ricevitore.\\
+Abbiamo rappresentato i dati raccolti in figura \ref{fig:polarizzazione} e sovrapposti alla legge di Malus \eqref{eq:malus}.
+Infine, abbiamo calcolato il valore del $\tilde{\chi^2} = 12.7$.
+
 
 \begin{figure}[h!]
 	\centering
@@ -105,13 +108,6 @@ Questo poiché il ricevitore agiva contemporaneamente da filtro, e con uno sfasa
 selezione della direzione di polarizzazione dovuta al filtro non aveva effetto.\\
 Quando invece gli horn erano allineati, il filtro polarizzatore aveva la capacità di bloccare il segnale a seconda della rotazione, dunque il ricevitore
 rilevava un segnale ridotto o nullo.
-
-\subsubsection{Conclusioni}
-
-Abbiamo rappresentato i dati raccolti in figura \ref{fig:polarizzazione} e sovrapposti alla legge di Malus \eqref{eq:malus}.\\ 
-Abbiamo poi calcolato il valore del $\tilde{\chi^2} = 12.7$, il che ci suggerisce che il modello non è adatto a descrivere i dati.
-Tuttavia, dalle nostre aspettative e dall'analisi dei punti successivi, ci siamo convinti che il segnale sia descritto da una funzione più complessa di quella
-considerata per la legge di Malus.\\ 
 
 
 \subsection{Ampiezza}
@@ -131,7 +127,8 @@ tra emettitore e ricevitore.\\
 Per fare ciò, abbiamo fissato una distanza tra i due dispositivi e ruotato gradualmente il ricevitore attorno ad un asse
 passante di fronte all'emettitore. Abbiamo poi campionato la tensione rilevata dal ricevitore ad intervalli di 5 gradi, fino a quando
 il valore misurato è calato a circa zero.\\
-Di seguito riportiamo i dati raccolti:
+Riportiamo i dati raccolti in figura \ref{fig:rotazione}.\\
+
 \begin{figure}[h]
     \centering
     \includegraphics[width = 0.6\textwidth]{dati_rotazione.png}
@@ -155,8 +152,8 @@ I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}
 \end{figure}
 
 \newpage
+\textbf{MANCANO I DATI DEI FIT}
 \subsubsection{Intensità in funzione della distanza}
-
 \begin{figure}[h!]
     \centering
     \includegraphics[width = 0.45\textwidth]{ampiezza distanza.jpg}
@@ -173,7 +170,7 @@ parte del segnale inviato non viene assorbita dal rilevatore, ma viene riflessa 
 che a sua volta riflette parte del segnale. Si forma quindi un'onda stazionaria tra i due dispositivi,
 la cui interferenza porta a un andamento oscillatorio dell'intensità osservata.\\
 Per cominciare abbiamo campionato ogni 1 cm, per analizzare l'andamento generale del fascio; successivamente,
-ci siamo ristretti attorno ad alcuni massimi e misurato con passi di 0.2 cm per farci un idea migliore della lunghezza d'onda.\\
+ci siamo ristretti attorno ad alcuni massimi e misurato con passi di 0.2 cm per farci un idea migliore della forma precisa del segnale.\\
 
 \begin{figure}[h!]
 	\centering
@@ -187,7 +184,7 @@ Se il fascio si comportasse come un'onda piana ideale, ci aspetteremmo che la su
 Se invece si comportasse come un'onda sferica, l'andamento dell'intensità dovrebbe essere inversamente proporzionale
 al quadrato della distanza. Nella realtà, il segnale avrà un andamento più complesso che non si adatterà perfettamente
 a nessuna delle due funzioni.\\
-Per capire quale fosse l'andamento dell'intensità del segnale, abbiamo deciso di interpolare i dati con diverse funzioni,
+Per capire quale fosse l'andamento dell'intensità del segnale, abbiamo deciso di eseguire un'interpolazione con diverse funzioni,
 per vedere quale fosse la più adatta.\\
 
 \begin{figure}[h!]
@@ -198,9 +195,9 @@ per vedere quale fosse la più adatta.\\
 \end{figure}
 
 Non avendo una risoluzione sufficiente per distinguere con precisione massimi e minimi, abbiamo deciso di interpolare
-i dati con funzioni non oscillanti. Per giustificare questa scelta, abbiamo considerato che le oscillazioni dovute all'interferenza
+i dati con funzioni non oscillanti. Per giustificare questa scelta, abbiamo considerato il fatto che le oscillazioni dovute all'interferenza
 variano attorno ad un valore medio, e che i contributi dovuti ad ogni particolare oscillazione in media si annullano a vicenda.\\
-Osservando i grafici in figura \ref{fig:fit_distanza_vari_modelli}, si evince che tra quelli considerati, il modello che meglio si adatta
+Osservando i grafici in figura \ref{fig:fit_distanza_vari_modelli}, si evince che tra quelli considerati in precedenza, il modello che meglio si adatta
 ai dati è quello composito, che considera un adattamento inversamente proporzionale sia al raggio, sia al quadrato di esso.\\
 Ci aspettavamo un risultato simile, dal momento che il segnale emesso non è perfettamente né un'onda piana, né una sferica. Peculiare invece,
 è il fatto che avendo provato un fit con modello lineare, esso sia quello che ottiene il valore di $\tilde{\chi^2}$ minore. Questo potrebbe essere dovuto al fatto
@@ -209,7 +206,7 @@ Per questo motivo, nella successiva analisi abbiamo deciso di utilizzare il mode
 
 
 \paragraph*{Andamento attorno ai massimi}
-Successivamente, abbiamo ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, con un passo minore, riportandoli nella figura di seguito \ref{fig:distanza_zoom}.
+Successivamente, abbiamo ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, con un passo minore, riportandoli in figura \ref{fig:distanza_zoom}.
 
 \begin{figure}[h!]
 	\centering
@@ -236,9 +233,9 @@ Il risultato del fit è riportato in figura \ref{fig:fit_distanza_ondulatori}.
 Il fit ha restituito i seguenti valori:
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{|c|c|}
+	\begin{tabular}{|c c|}
 		\hline
-		Parametro & Valore \\
+		\textbf{Parametro} & \textbf{Valore} \\
 		\hline
 		$A$ & $-0.057 \pm 0.004$ \\
 		$B$ & $6.43 \pm 0.18$ \\
@@ -264,6 +261,14 @@ Inserendo i valori ottenuti dal fit, propagando l'errore ed eseguendo un test di
 
 \subsection{Conclusioni}
 
+L'obbiettivo di questa sezione era quello di caratterizzare il fascio di microonde emesso dall'emettitore.\\
+Per cominciare, ci siamo domandati la validità della legge di Malus. Osservando il valore del $\tilde{\chi^2}$
+ottenuto e il grafico in figura \ref{fig:polarizzazione}, si evince che i dati raccolti non sono compatibili con tale modello.
+Tuttavia, dall'analisi dei punti successivi ci siamo convinti che il segnale sia descritto da una funzione più complessa,
+non approssimabile con la legge di Malus.\\
+In seguito abbiamo tentato di stabilire la geometria del segnale, studiandone l'andamento dell'intensità al variare
+dell'angolo di rotazione e della distanza. Da queste misurazioni emerge che il segnale non è né un'onda piana, né sferica,
+ma un'onda complessa, 
 
 
 \section{Angolo di Brewster}
@@ -480,7 +485,7 @@ della lunghezza d'onda sempre dalla raccolta dati:
 	\centering
 	\includegraphics[width = 0.6\textwidth]{MichelsonGrafico.png}
 	\caption{Setup esperimento Michelson e Morley}
-	\label{fig:GraficoBragg}
+	\label{fig:GraficoBragg2}
 \end{figure}
 
 Graficando il numero di frange oltrepassate rispetto alla posizione dello specchio A riflettente otteniamo una retta,
@@ -494,7 +499,7 @@ il cui coefficiente rappresenta mezza lunghezza d'onda. Fittando i nostri dati c
 \newpage
 \section{Diffrazione di Bragg}
 In quest'ultima parte dell'esperienza abbiamo cercato di riprodurre a livello macroscopico 
-una tecnica per "l'imaging" di piano atomici in cristalli reticolari. Per farlo abbiamo utilizzato come modello per il reticolo cristallino, un cubo di ethafoam 
+una tecnica per "l'imaging" di piani atomici in cristalli reticolari. Per farlo abbiamo utilizzato come modello per il reticolo cristallino, un cubo di ethafoam 
 contenente delle sferette di metallo di circa $10$mm. Queste sferette allo stesso modo della loro controparte microscopica (atomi in un normale reticolo) diffondono un fascio incidente e in base alla distanza d dei "piani atomici" producono figure di interferza.
 Lo scopo di questa tecnica è quello di ricavare dallo studio delle figure di interferenza (massimi e minimi) la configurazione geometrica del cubo e in particolare trovare la distanza d tra i piani.
 Di seguito alleghiamo delle figure rappresentative per la configurazione dell'esperimento.
@@ -538,7 +543,7 @@ l'angolo tra il fascio incidente e la superficie del cubo secondo la seguente fi
         \centering
         \includegraphics[width=\textwidth]{angolo_bragg.png}
         \caption{Angolo di incidenza}
-        \label{fig:riflesso2}
+        \label{fig:Angolo Bragg}
     \end{subfigure}
     \caption{Diffrazione di Bragg e angolo}
     \label{fig:combined_figures}
@@ -553,7 +558,7 @@ Graficando gli angoli di incidenza con il voltaggio del ricevitore otteniamo:
 	\centering
 	\includegraphics[width = 0.6\textwidth]{Grafico1_bragg.png}
 	\caption{Grafico angoli-intesità per Bragg}
-	\label{fig:GraficoBragg}
+	\label{fig:GraficoBragg3}
 \end{figure}
 
 La regione di interesse nel grafico è quella del picco attorno a $\theta=2.4$. I primi picchi rappresentano probabilmente riflessioni da altri piani rispetto a quello sotto nostra analisi (100).
@@ -563,7 +568,7 @@ riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco ne
 $$ \theta_\text{atteso} = arcsin(\frac{\lambda}{2d}) = arcsin(\frac{2.85\text{cm}}{2\times(\text{insert real d})}) =  $$ 
 Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = (138 \pm1)\text{°} = (2.40 \pm0.1)\text{ rad}$$
 Da questo valore possiamo trovare una stima per la distanza tra i piani atomici.
-Inserendo l'angolo e propagando l'errore secondo questa formula 
+Inserendo l'angolo e propagando l'errore secondo questa formula: 
 $$ d = \frac{\lambda}{2sin(\theta_\text{mis})} \quad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta_\text{mis})^2} $$ 
 otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	
 Confrontandola con la vera distanza: $$ d_\text{true} = ( \pm) \text{cm} $$ 
@@ -587,7 +592,7 @@ Di seguito riportiamo un grafico dei fit effettuati per questi due modelli, per 
 	\centering
 	\includegraphics[width = 0.7\textwidth]{graf_bragg.png}
 	\caption{Grafico angoli-intesità per Bragg}
-	\label{fig:GraficoBragg}
+	\label{fig:GraficoBragg4}
 \end{figure}
 
 \subsection{Conclusioni Bragg}
