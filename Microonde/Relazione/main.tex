@@ -123,6 +123,7 @@ considerata per la legge di Malus.\\
     \caption{Impostazione dell'apparato per la misura dell'ampiezza del segnale in funzione dell'angolo di rotazione}
     \label{fig:ampiezza_angolo}
 \end{figure}
+\newpage
 
 Dopo aver concluso che il rilevatore reagisce all'intensità del segnale, ci siamo dedicati allo studio della geometria
 del fascio emesso. Per prima cosa, abbiamo studiato la variazione dell'intensità rilevata al variare dell'angolo di rotazione
@@ -131,8 +132,7 @@ Per fare ciò, abbiamo fissato una distanza tra i due dispositivi e ruotato grad
 passante di fronte all'emettitore. Abbiamo poi campionato la tensione rilevata dal ricevitore ad intervalli di 5 gradi, fino a quando
 il valore misurato è calato a circa zero.\\
 Di seguito riportiamo i dati raccolti:
-
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.6\textwidth]{dati_rotazione.png}
     \caption{Intensità del segnale rilevato in funzione dell'angolo di rotazione}
@@ -154,7 +154,7 @@ I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}
     \label{fig:fit_rotazione}
 \end{figure}
 
-
+\newpage
 \subsubsection{Intensità in funzione della distanza}
 
 \begin{figure}[h!]
@@ -165,7 +165,7 @@ I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}
 \end{figure}
 
 Il punto successivo consisteva nello studiare l'andamento dell'intensità del segnale in funzione della distanza tra i
-dispositivi. Mantenendo l'emettitore e il ricevitore allineati, abbiamo variato la separazione tra i due
+dispositivi. Mantenendo l'emettitore e il ricevitore allineati, abbiamo variato la distanza tra i due
 e campionato a intervalli regolari la tensione misurata.\\
 A causa del fatto che emettitore e ricevitore si trovavano uno di fronte all'altro, oltre alla decrescita
 del segnale dovuta alla distanza, abbiamo osservato un andamento oscillatorio. Questo è dovuto al fatto che
@@ -209,7 +209,7 @@ Per questo motivo, nella successiva analisi abbiamo deciso di utilizzare il mode
 
 
 \paragraph*{Andamento attorno ai massimi}
-Successivamente, abbiamo proceduto ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, riportati nella figura di seguito.
+Successivamente, abbiamo ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, con un passo minore, riportandoli nella figura di seguito \ref{fig:distanza_zoom}.
 
 \begin{figure}[h!]
 	\centering
@@ -302,7 +302,7 @@ abbastanza lunga, lasciava passare parte del raggio incidente, determinando un a
 deciso di escludere gli ultimi dati poichè non rilevanti per il fenomeno. Vengono riportati nel grafico di destra
 i valori che abbiamo utilizzato per l'analisi.\\
 Una volta individuata la regione in cui l'intensità aumentava, abbiamo interpolato il picco con un modello parabolico.
-Vengono riportate l'interpolazione, i parametri ottenuti e il valore di $\chi^2$:
+Di seguito riportiamo i risultati del fit: 
 
 \begin{figure}[h!]
 	\centering
@@ -324,15 +324,14 @@ confrontato l'angolo ottenuto con l'angolo atteso, ottenendo una distanza in dev
 
 Riportiamo in figura \ref{fig:wrong_pol} il grafico dell'intensità del raggio trasmesso per la polarizzazione
 perpendicolare alla lastra. Abbiamo escluso le ultime misure per lo stesso motivo dell'analisi di raggio trasmesso
-con polarizzazione parallela.\\
-
-\begin{figure}[h!]
+con polarizzazione parallela.
+\begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.8\textwidth]{wrong_pol.png}
+	\includegraphics[width = 0.6\textwidth]{wrong_pol.png}
 	\caption{Intensità del raggio trasmesso - polarizzazione perpendicolare}
 	\label{fig:wrong_pol}
 \end{figure}
-
+\newpage
 Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo per completezza,
 nonostante siano intrattabili dal punto di vista dell'analisi. Avendo osservato ciò già nella prima giornata di
 laboratorio, abbiamo effettuato nuovamente le stesse misure nella seconda giornata, ma senza ottenere miglioramenti.
@@ -341,32 +340,49 @@ campionamento maggiore, come spiegato nelle conclusioni.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 0.8\textwidth]{riflesso1.png}
+	\includegraphics[width = 0.6\textwidth]{riflesso1.png}
 	\caption{Intensità del raggio riflesso - prima giornata}
 	\label{fig:riflesso1}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 0.8\textwidth]{riflesso2.png}
+	\includegraphics[width = 0.6\textwidth]{riflesso2.png}
 	\caption{Intensità del raggio riflesso - seconda giornata}
 	\label{fig:riflesso2}
 \end{figure}
 
 \subsection{Conclusioni}
 
+
+\newpage
 \section{Interferenza}
-Per la sezione di interferenza abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
+In questa seconda parte dell'esperienza abbiamo analizzato fenomeni legati all'interferenza tra onde. Come esperimenti da replicare 
+abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
 
 \subsection{Specchio Lloyd}
 In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci di microonde.
 Abbiamo disposto emettitore e ricevitore uno di fronte all'altro, misurandone la distanza $d$, in seguito abbiamo
 posizionato una lastra riflettente ad una certa distanza $h$ dal centro. \\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.5\textwidth]{LloydSetup.png}
+	\caption{Setup sperimentale per interferometro Lloyd}
+	\label{fig:setupLloyd}
+\end{figure}
+
 In questo modo si vengono a creare due fasci: il primo percorre una distanza $d$ in linea retta, mentre il secondo
 percorre una distanza $2\ \sqrt[]{h^2 + (d/2)^2}$. Tale differenza di percorso porta a delle interferenze:
 se la differenza di cammino ottico è un multiplo intero di $\lambda$ si ha interferenza costruttiva,
 altrimenti si ha interferenza distruttiva.\\
-Al fine di misurare la lunghezza d'onda delle microonde, abbiamo seguito le istruzioni fornite dal manuale
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.3\textwidth]{SchemaLloyd.png}
+	\caption{Schema riassuntivo interferometro Lloyd}
+	\label{fig:schemaLloyd}
+\end{figure}
+
+Al fine di misurare la lunghezza d'onda del fascio microonde, abbiamo seguito le istruzioni fornite dal manuale
 PASCO e abbiamo variato la distanza $h$ alla ricerca di due minimi distanti dieci volte la lunghezza d'onda,
 una volta fissata la distanza $d$. Per poter eseguire un confronto sperimentale e non solo con il valore di $\lambda$
 tabulato, abbiamo ripetuto la procedura per un'altra distanza $d$. \\
@@ -412,9 +428,68 @@ ci troviamo a ruotare il ricevitore.\\
 
 
 \subsection{Interferometro di Michelson}
-
+In questa seconda esperienza sull'interferenza di onde abbiamo deciso di riprodurre una versione del note esperiemento di 
+interferometria di Michelson e Morley.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.4\textwidth]{MichelsonSetup.png}
+	\caption{Setup esperimento Michelson e Morley}
+	\label{fig:GraficoBragg}
+\end{figure}
+Per questo setup abbiamo utilizzato due specchi riflettenti (placche metalliche)
+che in figura sono segnati come B e A. Al centro abbiamo posizionato ad un angolo di 45 gradi una superficie semiriflettente.
+Tenendo fermo uno dei due specchi e muovendo l'altro variamo il cammino ottico del raggio di luce che esce dall'emettitore e che si è diviso in due su C.
+Percorrendo distanze diverse i due raggi quando ricongiungendosi ci aspettiamo creino la tipica figura a frange di interferenza.  
+Se le due onde sono in fase quando arrivano al ricevitore ci attendiamo di misurare un massimo ogni $\lambda/2$ dove lambda è la lunghezza d'onda del raggio divisa per due dato che 
+ogni onda passa due volte tra lo specchio e la superficie semiriflettente.
 
 \subsubsection{Analisi Dati Michelson}
+In questa sezione elenchiamo i risultati ottenuti dalle misure sperimentali.
+Come suggerito dalla scheda e dal manuale Pasco, abbiamo deciso di spostare lo specchio A. Prima di tutto ci siamo posizionati attorno ad un
+massimo del segnale (picco di voltaggio sempre con multimetro palmare), successivamente abbiamo allontanato lo specchio A attraversando 10 minimi. Una volta ritrovato un massimo ci siamo segnati tale nuova posizione.
+\begin{enumerate}
+	\item Posizione iniziale $x1 =(38.7 \pm0.2)$ cm
+	\item Voltaggio iniziale $\Delta V1 = (0.82\pm0.02)$ V 
+	\item Posizione finale $x2 =(24.5 \pm0.2)$cm
+	\item Voltaggio finale $\Delta V2 = (0.87\pm0.02)$V
+\end{enumerate}
+Ripetendo le misure cambiando la distanza:
+\begin{enumerate}
+	\item Posizione iniziale $x1 =(43.0\pm0.2)$ cm
+	\item Voltaggio iniziale $\Delta V1 = (1.1\pm0.02)$ V 
+	\item Posizione finale $x2 =(28.8\pm0.2)$cm
+	\item Voltaggio finale $\Delta V2 = (0.83\pm0.02)$V
+\end{enumerate}
+Infine di nuovo cambiando la distanza inziale:
+\begin{enumerate}
+	\item Posizione iniziale $x1 =(34.4\pm0.2)$ cm
+	\item Voltaggio iniziale $\Delta V1 = (0.83\pm0.02)$ V 
+	\item Posizione finale $x2 =(20.1\pm0.2)$cm
+	\item Voltaggio finale $\Delta V2 = (0.86\pm0.02)$V
+\end{enumerate}
+Da queste misure abbiamo estrapolato una stima del valore della lunghezza d'onda, secondo la seguente relazione:
+$$ \lambda = \frac{2\Delta x}{n} $$ 
+Facendo una media delle tre misure e utilizzando la formula di propagazione degli errori abbiamo stimato:
+$$\lambda_\text{mis} = (2.85 \pm0.01)\text{cm}$$
+\subsubsection{Conclusioni Michelson e Morley}
+Oltre ad aver effettivamente verificato la posizione dei massimi trovarsi ad una distanza pari a $\lambda/2$, 
+il valore ottenuto per la stima della lunghezza d'onda è perfettamente in linea con il valore suggerito dal manuale Pasco.
+Questo metodo sembra quello che ha restituito la misura più accurata di $\lambda$. Riportiamo in seguito un altro metodo per la stima 
+della lunghezza d'onda sempre dalla raccolta dati:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{MichelsonGrafico.png}
+	\caption{Setup esperimento Michelson e Morley}
+	\label{fig:GraficoBragg}
+\end{figure}
+
+Graficando il numero di frange oltrepassate rispetto alla posizione dello specchio A riflettente otteniamo una retta,
+il cui coefficiente rappresenta mezza lunghezza d'onda. Fittando i nostri dati con un modello lineare abbiamo ottenuto:
+\begin{enumerate}
+	\item Stima coeff retta = $(1.44\pm0.004)$ cm
+	\item Stima lunghezza d'onda $ \lambda = (2.89\pm0.01)$ cm
+	\item Chi-quadro ridotto $\widetilde{\chi}^2 = 0.2$
+\end{enumerate}
 
 \newpage
 \section{Diffrazione di Bragg}
@@ -471,26 +546,79 @@ l'angolo tra il fascio incidente e la superficie del cubo secondo la seguente fi
 
 \newpage
 \subsection{Analisi Dati Bragg}
-In questa sezione riportiamo le misure effettuate per la verifica della legge di Bragg (Eq. \ref{eq:Legge Bragg}). Dopo aver acceso e posizionato l'emettitore di fronte al ricevitore come nel setup, abbiamo iniziato a ruotare il cubo di $\theta = 2\textdegree$ per volta e di conseguenza il braccio che sosteneva il ricevitore di $\theta' = 2\theta = 4\textdegree$.
+In questa sezione riportiamo le misure effettuate per la verifica della legge di Bragg (Eq. \ref{eq:Legge Bragg}). Dopo aver acceso e posizionato l'emettitore di fronte al ricevitore come nel setup, abbiamo iniziato a ruotare il cubo di $\theta = 2\text{°}$ per volta e di conseguenza il braccio che sosteneva il ricevitore di $\theta' = 2\theta = 4\text{°}$.
 Ripetendo questa procedura abbiamo segnato per ogni angolo di rotazione, il valore dell'intensità del segnale catturato dal ricevitore.
-Graficando gli angoli di incidenza con il voltaggio del ricevitore otteniamo:
+Graficando gli angoli di incidenza con il voltaggio del ricevitore otteniamo: 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.6\textwidth]{Grafico1_bragg.png}
 	\caption{Grafico angoli-intesità per Bragg}
 	\label{fig:GraficoBragg}
 \end{figure}
-La condizione che interessa a noi riguarda quella del picco attorno a $\theta=2.4$. I primi picchi rappresentano probabilmente riflessioni da altri piani rispetto a quello sotto nostra analisi (100).
-Ci aspettiamo che la relazione di Bragg si verifichi quando $$ \lambda = 2dsin(\theta) $$
-riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale(che starebbe ad indicare un raggio difratto) attorno a quest'angolo:
+
+La regione di interesse nel grafico è quella del picco attorno a $\theta=2.4$. I primi picchi rappresentano probabilmente riflessioni da altri piani rispetto a quello sotto nostra analisi (100).
+Ci aspettiamo che la relazione di Bragg si verifichi quando:
+$$ \lambda = 2dsin(\theta) $$
+riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale,il quale rappresenta un massimo del raggio difratto, attorno a quest'angolo:
 $$ \theta_\text{atteso} = arcsin(\frac{\lambda}{2d}) = arcsin(\frac{2.85\text{cm}}{2\times(\text{insert real d})}) =  $$ 
 Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = (138 \pm1)\text{°} = (2.40 \pm0.1)\text{ rad}$$
 Da questo valore possiamo trovare una stima per la distanza tra i piani atomici.
 Inserendo l'angolo e propagando l'errore secondo questa formula 
-$$ d = \frac{\lambda}{2sin(\theta)} \quad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta)^2} $$ 
-otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	 
-\subsection{Conclusioni Bragg}
+$$ d = \frac{\lambda}{2sin(\theta_\text{mis})} \quad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta_\text{mis})^2} $$ 
+otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	
+Confrontandola con la vera distanza: $$ d_\text{true} = ( \pm) \text{cm} $$ 
 
+Abbiamo inoltre provato ad eseguire un fit con due modelli differenti per estrapolare un'ulteriore stima dell'angolo di Bragg.
+Due modelli alternativi che spesso vengono comunemente utilizzati per descrivere picchi in esperimenti simili sono: gaussiano, picchi con code brevi e il lorentziano per picchi con code più importanti.
+Le due forme funzionali sono
+\begin{equation}
+	y = A \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)
+	\end{equation}
+	
+	\begin{equation}
+	y = A \frac{w^2}{(x - x_0)^2 + w^2}
+	\end{equation}
+Di seguito riportiamo un grafico dei fit effettuati per questi due modelli, per quanto riguarda le incertezze:
+\begin{enumerate}
+	\item Incertezza sull'angolo è di $\delta\theta= 1$ grado dettata da sensibilità goniometro.
+	\item Incertezza sull'intensità abbiamo scelto $\delta V = 0.05 V$ dettata sia dalla sensibilià del palmare che da noise nelle misure.
+\end{enumerate}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.7\textwidth]{graf_bragg.png}
+	\caption{Grafico angoli-intesità per Bragg}
+	\label{fig:GraficoBragg}
+\end{figure}
+
+\subsection{Conclusioni Bragg}
+Di seguito riportiamo i risultati ottenuti dal fit e in generale da questa parte dell'esperienza.
+Anche se realtivamente approssimativi i fit hanno restituito come angolo di Bragg un valore molto vicino a $138$
+e in particolare il chi-quadro ridotto è più basso per il modello gaussiano, il che sottolinea che si tratta di un segnale dove il picco è più importante delle code.
+In generale analizzando la differenza tra la distanza attesa e quella estrapolata dalle misure possiamo concludere che quel picco 
+rappressenta effettivamente il segnale del raggio diffratto. Ricordiamo inoltre che tali misure sono state effettuate per il piano di incidenza denotato da 
+(100).
+
+\begin{table}[h!]
+    \centering
+    \caption{Riassunto dei risultati dei fit}
+    \label{tab:fit_results}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Modello} & \textbf{Parametro} & \textbf{Valore} \\
+        \hline
+        Gaussiano & $A$ & $0.782 \pm 0.070$ \\
+                  & $\mu$ & $139.861 \pm 0.669$ \\
+                  & $\sigma$ & $6.463 \pm 0.667$ \\
+        \hline
+        Lorentziano & $A$ & $0.826 \pm 0.093$ \\
+                    & $x_0$ & $138.898 \pm 0.767$ \\
+                    & $w$ & $6.379 \pm 1.149$ \\
+        \hline
+        Chi-quadro ridotto & Gaussiano & 2.528 \\
+                            & Lorentziano & 3.166 \\
+        \hline
+    \end{tabular}
+\end{table}
 \newpage
 \section{Tabelle misurazioni}
 
