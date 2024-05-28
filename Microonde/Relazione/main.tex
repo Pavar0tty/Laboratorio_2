@@ -308,7 +308,8 @@ così campionato l'intensità del raggio riflesso al variare dell'angolo di inci
 Utilizzando la formula \ref{eq:brew_atteso} abbiamo calcolato l'angolo di Brewster atteso, 
 ottenendo $\theta_B = 56.3$ gradi.\\
 
-Riportiamo di seguito il grafico dell'intensità del raggio trasmesso in funzione dell'angolo di incidenza.\\
+Riportiamo in figura \ref{fig:trasmesso} il grafico dell'intensità del raggio trasmesso in funzione 
+dell'angolo di incidenza.\\
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.8\textwidth]{trasmesso.png}
@@ -321,7 +322,8 @@ siamo accorti che l'intensità torna ad aumentare oltre 70 gradi. Questo è dovu
 essendo abbastanza lunga, lasciava passare parte del raggio incidente, determinando un aumento dell'intensità. 
 Abbiamo quindi deciso di riportare nel grafico di destra gli unici dati rilevanti per determinare l'angolo di Brewster.\\
 Una volta individuata la regione in cui l'intensità aumentava, abbiamo interpolato il picco con un modello parabolico.
-Di seguito riportiamo i risultati del fit: 
+Riportiamo l'interpolazione in figura \ref{fig:parabola} e i risultati del fit nella tabella 
+\ref{tab:fit_brew_trasmesso}: 
 
 \begin{figure}[h!]
 	\centering
@@ -330,12 +332,21 @@ Di seguito riportiamo i risultati del fit:
 	\label{fig:parabola}
 \end{figure}
 
-\begin{enumerate}
-	\item $a = \num{-4.4e-3}  \pm \num{0.5e-3}$
-	\item $b = 47.2 \pm 0.4$
-	\item $c = 3.57 \pm 0.02$
-	\item $\chi^2 = 2.2$
-\end{enumerate}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Valore} \\
+		\hline
+		$a$ & $\num{-4.4e-3} \pm \num{0.5e-3}$ \\
+		$b$ & $47.2 \pm 0.4$ \\
+		$c$ & $3.57 \pm 0.02$ \\
+		$\tilde\chi^2$ & $2.2$ \\
+		\hline
+	\end{tabular}
+	\caption{Risultati del fit con modello parabolico}
+	\label{tab:fit_brew_trasmesso}
+\end{table}
 
 Il parametro b, essendo la traslazione della parabola sull'asse x, rappresenta l'angolo di Brewster. Abbiamo
 confrontato l'angolo ottenuto con l'angolo atteso, ottenendo una distanza in deviazioni standard di: 114\\
@@ -363,21 +374,32 @@ parabolica eseguito attorno all'angolo ottenuto con polarizzazione parallela.
 	\label{fig:wrong_pol_fit}
 \end{figure}
 
-Di seguito riportiamo i risultati del fit:
-\begin{enumerate}
-	\item $a = \num{-1.1e-3}  \pm \num{0.3e-3}$
-	\item $b = 47 \pm 1$
-	\item $c = 3.35 \pm 0.02$
-	\item $\chi^2 = 0.1$
-\end{enumerate}
+Di seguito riportiamo i risultati del fit in tabella \ref{tab:fit_brew_trasmesso_perp}.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Parametro} & \textbf{Valore} \\
+		\hline
+		$a$ & $\num{-1.1e-3} \pm \num{0.3e-3}$ \\
+		$b$ & $47 \pm 1$ \\
+		$c$ & $3.35 \pm 0.02$ \\
+		$\tilde\chi^2$ & $0.1$ \\
+		\hline
+	\end{tabular}
+	\caption{Risultati del fit con modello parabolico}
+	\label{tab:fit_brew_trasmesso_perp}
+\end{table}
 
 \newpage
 
 Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo in fondo alla 
-relazione. Il loro comportamento anomalo li ha resi poco utili per la ricerca dell'angolo di Brewster.
-Avendo osservato ciò nella prima giornata di laboratorio, abbiamo effettuato nuovamente le stesse misure 
-nella seconda giornata, ma senza ottenere miglioramenti. L'andamento globale dei grafici richiama quello corretto,
-ma i numerosi picchi fanno intuire la necessità di un campionamento maggiore.\\
+relazione (\ref{fig:riflesso1} e \ref{fig:riflesso2}). Il loro comportamento anomalo li ha resi poco utili per la
+ricerca dell'angolo di Brewster. Avendo osservato ciò nella prima giornata di laboratorio, 
+abbiamo effettuato nuovamente le stesse misure nella seconda giornata, ma senza ottenere miglioramenti. 
+L'andamento globale dei grafici richiama quello corretto, ma i numerosi picchi fanno intuire la necessità 
+di un campionamento maggiore.\\
 
 \subsection{Conclusioni}
 \paragraph*{Raggio trasmesso} L'andamento dei grafici è in accordo con quanto atteso, perchè osserviamo
@@ -412,7 +434,7 @@ causando possibili interferenze e conseguentemente grafici anomali.\\
 In questa seconda parte dell'esperienza abbiamo analizzato fenomeni legati all'interferenza tra onde. Come esperimenti da replicare 
 abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
 
-\subsection{Specchio Lloyd}
+\subsection{Specchio di Lloyd}
 In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci 
 di microonde.Abbiamo disposto emettitore e ricevitore uno di fronte all'altro, misurandone la distanza $d$, 
 in seguito abbiamo posizionato una lastra riflettente ad una certa distanza $h$ dal centro. \\
