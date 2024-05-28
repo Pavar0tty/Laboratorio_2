@@ -588,24 +588,22 @@ In questa sezione elenchiamo i risultati ottenuti dalle misure sperimentali.
 Come suggerito dalla scheda e dal manuale Pasco, abbiamo deciso di spostare lo specchio A. Prima di tutto ci siamo posizionati attorno ad un
 massimo del segnale (picco di voltaggio sempre con multimetro palmare), successivamente abbiamo allontanato lo specchio attraversando 10 minimi. Una volta ritrovato un massimo ci siamo segnati tale nuova posizione.
 
-\begin{enumerate}
-	\item Posizione iniziale $x1 =(38.7 \pm0.2)$ cm
-	\item Voltaggio iniziale $\Delta V1 = (0.82\pm0.02)$ V 
-	\item Posizione finale $x2 =(24.5 \pm0.2)$cm
-	\item Voltaggio finale $\Delta V2 = (0.87\pm0.02)$V
-\end{enumerate}
-\begin{enumerate}
-	\item Posizione iniziale $x1 =(43.0\pm0.2)$ cm
-	\item Voltaggio iniziale $\Delta V1 = (1.1\pm0.02)$ V 
-	\item Posizione finale $x2 =(28.8\pm0.2)$cm
-	\item Voltaggio finale $\Delta V2 = (0.83\pm0.02)$V
-\end{enumerate}
-\begin{enumerate}
-	\item Posizione iniziale $x1 =(34.4\pm0.2)$ cm
-	\item Voltaggio iniziale $\Delta V1 = (0.83\pm0.02)$ V 
-	\item Posizione finale $x2 =(20.1\pm0.2)$cm
-	\item Voltaggio finale $\Delta V2 = (0.86\pm0.02)$V
-\end{enumerate}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ccccc}
+        \toprule
+        & Posizione iniziale & Voltaggio iniziale & Posizione finale & Voltaggio finale \\
+        \midrule
+        Misurazione 1 & $38.7 \pm 0.2$ cm & $0.82 \pm 0.02$ V & $24.5 \pm 0.2$ cm & $0.87 \pm 0.02$ V \\
+        \midrule
+        Misurazione 2 & $43.0 \pm 0.2$ cm & $1.1 \pm 0.02$ V & $28.8 \pm 0.2$ cm & $0.83 \pm 0.02$ V \\
+        \midrule
+        Misurazione 3 & $34.4 \pm 0.2$ cm & $0.83 \pm 0.02$ V & $20.1 \pm 0.2$ cm & $0.86 \pm 0.02$ V \\
+        \bottomrule
+    \end{tabular}
+    \caption{Risultati delle misurazioni di posizione e voltaggio}
+    \label{tab:misurazioni michelson}
+\end{table}
 
 
 Da queste misure abbiamo estrapolato una stima del valore della lunghezza d'onda, secondo la seguente relazione:
@@ -616,22 +614,10 @@ $$\lambda_\text{mis} = (2.85 \pm0.01)\text{cm}$$0
 \subsubsection{Conclusioni Michelson e Morley}
 Oltre ad aver effettivamente verificato la posizione dei massimi trovarsi ad una distanza pari a $\lambda/2$, 
 il valore ottenuto per la stima della lunghezza d'onda è perfettamente in linea con il valore suggerito dal manuale Pasco.
-Questo metodo sembra quello che ha restituito la misura più accurata di $\lambda$. Riportiamo in seguito un altro metodo per la stima 
-della lunghezza d'onda sempre dalla raccolta dati:
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 0.6\textwidth]{MichelsonGrafico.png}
-	\caption{Grafico relazione tra frange e posizione ricevitore}
-	\label{fig:GraficoBragg2}
-\end{figure}
+Questo metodo sembra quello che ha restituito la misura più accurata di $\lambda$.
 
-Graficando il numero di frange oltrepassate rispetto alla posizione dello specchio A riflettente otteniamo una retta,
-il cui coefficiente rappresenta mezza lunghezza d'onda. Fittando i nostri dati con un modello lineare abbiamo ottenuto un'altra buona stima della lunghezza d'onda, propagando l'incertezza con l'opportuna formula:
-\begin{enumerate}
-	\item Stima coeff. retta = $(1.44\pm0.01)$
-	\item Stima lunghezza d'onda $ \lambda = (2.89\pm0.02)$ cm
-	\item Chi-quadro ridotto $\widetilde{\chi}^2 = 0.2$
-\end{enumerate}
+Eseguendo un test di compatibilità tra il valore di $\lambda$ ottenuto e il valore tabulato, otteniamo una
+$ \text{compatibilità} = 0.295 $, dando ottima conferma alla validità del metodo sperimentale.
 
 \newpage
 \section{Diffrazione di Bragg}
@@ -701,13 +687,16 @@ La regione di interesse nel grafico è quella del picco attorno a $\theta=2.4$. 
 Ci aspettiamo che la relazione di Bragg si verifichi quando:
 $$ \lambda = 2dsin(\theta) $$
 riarrangiando i termini in questa equazione ci aspettiamo di trovare un picco nel segnale,il quale rappresenta un massimo del raggio difratto, attorno a quest'angolo:
-$$ \theta_\text{atteso} = arcsin\left(\frac{\lambda}{2d}\right) = arcsin\left(\frac{2.85\text{cm}}{2\times(\text{insert real d})}\right) =  $$ 
-Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = (138 \pm1)\text{°} = (2.40 \pm0.1)\text{ rad}$$
+$$ \theta_\text{atteso} = arcsin\left(\frac{\lambda}{2d}\right) = arcsin\left(\frac{2.85\text{cm}}{2\times3.5}\right) = 24\text{°} = 0.42\text{ rad} $$ 
+Dal grafico delle nostre misure abbiamo notato un picco per $$\theta_\text{mis} = (138 \pm2)\text{°} = (2.40 \pm0.1)\text{ rad}$$
 Da questo valore possiamo trovare una stima per la distanza tra i piani atomici.
 Inserendo l'angolo e propagando l'errore secondo questa formula: 
 $$ d = \frac{\lambda}{2sin(\theta_\text{mis})} \qquad \delta d = \sqrt{\left( \frac{\partial d}{\partial \theta} \right)^2 (\delta \theta_\text{mis})^2} $$ 
-otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3) \text{cm} $$ 	
-Confrontandola con la vera distanza: $$ d_\text{true} = ( \pm) \text{cm} $$ 
+otteniamo una stima per la distanza: $$ d_\text{stima} = (2.13 \pm0.3)\ \text{cm} $$ 	
+Confrontandola con la distanza attesa: $ d_\text{true} =  3.5\ \text{cm} $ tramite t-test, otteniamo:
+$$
+\text{compatibilità} = 4.5
+$$
 
 Abbiamo inoltre provato ad eseguire un fit con due modelli differenti per estrapolare un'ulteriore stima dell'angolo di Bragg.
 Due modelli alternativi che spesso vengono comunemente utilizzati per descrivere picchi in esperimenti simili sono: gaussiano, picchi con code brevi e il lorentziano per picchi con code più importanti.
@@ -760,6 +749,12 @@ rappressenta effettivamente il segnale del raggio diffratto. Ricordiamo inoltre 
         \hline
     \end{tabular}
 \end{table}
+
+Nonostante la stima della distanza tra i piani atomici abbia portato ad una stima poco compatibile con il valore atteso,
+è possibile che si siano verificate diverse fonti di errore. In primo luogo, la distanza tra i piani atomici ci è stata fornita
+da un altro gruppo, ed è possibile che i cubi utilizzati non siano identici. Inoltre, considerando quanto questa misura sia 
+sensibile all'angolo di incidenza, è possibile che l'angolo di rotazione del cubo non sia stato misurato con precisione
+sufficiente, oppure il posizionamento di esso sulla piattaforma rotante non sia stato perfettamente orizzontale.\\
 
 \newpage
 \section{Tabelle misurazioni}
