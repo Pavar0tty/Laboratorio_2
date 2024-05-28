@@ -91,7 +91,7 @@ di osservare da questo esperimento è quello previsto dalla legge di Malus:
 \end{equation}
 Dove $I_0$ è l'intensità massima e $\theta$ è l'angolo tra la direzione di polarizzazione del fascio e quella rilevata dal ricevitore.\\
 Abbiamo rappresentato i dati raccolti in figura \ref{fig:polarizzazione} e sovrapposti alla legge di Malus \eqref{eq:malus}.
-Infine, abbiamo calcolato il valore del $\tilde{\chi^2} = 12.7$.
+Infine, abbiamo calcolato il valore del $\tilde{\chi}^2 = 12.7$.
 
 
 \begin{figure}[h!]
@@ -143,7 +143,7 @@ Per stabilire quale modello stessero seguendo i dati, abbiamo scelto di interpol
     & I = A\cdot\cos(Bx + C) + D \\
     & I = A\cdot cos(B\theta)^D
 \end{align*} 
-I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}.
+I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}, mentre i valori ottenuti sono riportati in tabella \ref{tab:fit_rotazione}.
 
 \begin{figure}[h!]
     \centering
@@ -152,8 +152,52 @@ I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}
     \label{fig:fit_rotazione}
 \end{figure}
 
+\begin{table}[h!]
+	\centering
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\begin{tabular}{|c | c|}
+			\hline
+			\textbf{Modello (1)} & \textbf{Valore} \\
+			\hline
+			$A$ & $8.58\pm 0.28$ \\
+			\hline
+		\end{tabular}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\begin{tabular}{|c | c|}
+			\hline
+			\textbf{Modello (2)} & \textbf{Valore} \\
+			\hline
+			$A$ & $1.83 \pm 0.04$ \\
+			$B$ & $3.22 \pm 0.12$ \\
+			$C$ & $0.234 \pm 0.085$ \\
+			$D$ & $1.80 \pm 0.04$ \\
+			\hline
+		\end{tabular}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\begin{tabular}{|c | c|}
+			\hline
+			\textbf{Modello (3)} & \textbf{Valore} \\
+			\hline
+			$A$ & $3.57 \pm 0.04$ \\
+			$B$ & $1.40 \pm 0.28$ \\
+			$C$ & $4.2 \pm 1.9$ \\
+			\hline
+		\end{tabular}
+	\end{minipage}
+	\caption{Risultati dei fit dell'intensità del segnale rilevato in funzione dell'angolo di rotazione}
+	\label{tab:fit_rotazione}
+\end{table}
+
+
+
 \newpage
-\textbf{MANCANO I DATI DEI FIT}
 \subsubsection{Intensità in funzione della distanza}
 \begin{figure}[h!]
     \centering
@@ -234,7 +278,7 @@ Il risultato del fit è riportato in figura \ref{fig:fit_distanza_ondulatori}.
 Il fit ha restituito i seguenti valori:
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{|c c|}
+	\begin{tabular}{|c | c|}
 		\hline
 		\textbf{Parametro} & \textbf{Valore} \\
 		\hline
@@ -256,8 +300,9 @@ dove il fattore 2 sta ad indicare il fatto che la lunghezza d'onda del fascio em
 Inserendo i valori ottenuti dal fit, propagando l'errore ed eseguendo un test di compatibilità, otteniamo:
 
 \begin{align*}
-	 & \lambda = (2.75 \pm 0.04)\ \text{m} \\
-	 & \text{compatibilità}: 2.47
+	& \lambda = (2.75 \pm 0.04)\ \text{m} \\
+	& \text{compatibilità}: 2.47
+	\label{res:lambda_ondulatori}
 \end{align*}
 
 \subsection{Conclusioni}
@@ -269,7 +314,22 @@ Tuttavia, dall'analisi dei punti successivi ci siamo convinti che il segnale sia
 non approssimabile con la legge di Malus.\\
 In seguito abbiamo tentato di stabilire la geometria del segnale, studiandone l'andamento dell'intensità al variare
 dell'angolo di rotazione e della distanza. Da queste misurazioni emerge che il segnale non è né un'onda piana, né sferica,
-ma un'onda complessa, 
+ma un'onda più complessa. In particolare, l'andamento dell'intensità del segnale in funzione del'angolo di rotazione 
+tra emettitore e ricevitore abbiamo scoperto essere approssimabile da una funzione del tipo:
+\begin{equation}
+	I = A\cdot cos(B\theta)^C
+\end{equation}
+con $B = 1.4 \pm 0.3$ elevato alla potenza $C = 4.1 \pm 1.9 $.\\
+Per quanto riguarda invece la dipendenza del segnale dalla distanza, la nostra analisi ha portato a concludere che il fascio
+emesso segue una forma funzionale del tipo:
+\begin{equation}
+	I = \frac{A}{R} + \frac{B}{R^2} + C
+\end{equation}
+ma che su piccola scala può essere approssimato correttamente da una retta.\\
+Per concludere, abbiamo stimato la lunghezza d'onda del segnale interpolando i dati raccolti attorno a tre massimi con la funzione \eqref{eq:modello_oscillante}.
+Il risultato si trova entro $2.47$ deviazioni standard dal valore atteso, corrispondente ad una percentuale di compatibilità tra il 2 e il 5\%.\\
+Pur non conoscendo la corretta forma funzionale seguita dall'onda emessa, siamo stati in grado di analizzarla e predire con buona precisione la sua
+lunghezza d'onda.
 
 
 \section{Angolo di Brewster}
@@ -394,8 +454,8 @@ Di seguito riportiamo i risultati del fit in tabella \ref{tab:fit_brew_trasmesso
 
 \newpage
 
-Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo in fondo alla 
-relazione (\ref{fig:riflesso1} e \ref{fig:riflesso2}). Il loro comportamento anomalo li ha resi poco utili per la
+Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo nelle figure 
+\ref{fig:riflesso1} e \ref{fig:riflesso2}. Il loro comportamento anomalo li ha resi poco utili per la
 ricerca dell'angolo di Brewster. Avendo osservato ciò nella prima giornata di laboratorio, 
 abbiamo effettuato nuovamente le stesse misure nella seconda giornata, ma senza ottenere miglioramenti. 
 L'andamento globale dei grafici richiama quello corretto, ma i numerosi picchi fanno intuire la necessità 
@@ -431,8 +491,8 @@ causando possibili interferenze e conseguentemente grafici anomali.\\
 
 \newpage
 \section{Interferenza}
-In questa seconda parte dell'esperienza abbiamo analizzato fenomeni legati all'interferenza tra onde. Come esperimenti da replicare 
-abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
+In questa parte dell'esperienza abbiamo analizzato fenomeni legati all'interferenza tra onde.
+Abbiamo scelto di replicare gli esperimenti dell'interferometro di Lloyd e dell'interferometro di Michelson.\\
 
 \subsection{Specchio di Lloyd}
 In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci 
@@ -518,7 +578,7 @@ ogni onda passa due volte tra lo specchio e la superficie semiriflettente.
 \subsubsection{Analisi Dati Michelson}
 In questa sezione elenchiamo i risultati ottenuti dalle misure sperimentali.
 Come suggerito dalla scheda e dal manuale Pasco, abbiamo deciso di spostare lo specchio A. Prima di tutto ci siamo posizionati attorno ad un
-massimo del segnale (picco di voltaggio sempre con multimetro palmare), successivamente abbiamo allontanato lo specchio A attraversando 10 minimi. Una volta ritrovato un massimo ci siamo segnati tale nuova posizione.
+massimo del segnale (picco di voltaggio sempre con multimetro palmare), successivamente abbiamo allontanato lo specchio attraversando 10 minimi. Una volta ritrovato un massimo ci siamo segnati tale nuova posizione.
 \begin{enumerate}
 	\item Posizione iniziale $x1 =(38.7 \pm0.2)$ cm
 	\item Voltaggio iniziale $\Delta V1 = (0.82\pm0.02)$ V 
@@ -662,7 +722,7 @@ Di seguito riportiamo un grafico dei fit effettuati per questi due modelli, per 
 	\label{fig:GraficoBragg4}
 \end{figure}
 
-\subsection{Conclusioni Bragg}
+\subsection{Conclusioni}
 Di seguito riportiamo i risultati ottenuti dal fit e in generale da questa parte dell'esperienza.
 Anche se realtivamente approssimativi i fit hanno restituito come angolo di Bragg un valore molto vicino a $138$
 e in particolare il chi-quadro ridotto è più basso per il modello gaussiano, il che sottolinea che si tratta di un segnale dove il picco è più importante delle code.
@@ -801,7 +861,7 @@ rappressenta effettivamente il segnale del raggio diffratto. Ricordiamo inoltre 
 \end{table}
 
 \newpage
-\section{Grafici Brewster}
+\section{Grafici non analizzati}
 Sono riportati i grafici che non tornano con l'andamento atteso.
 
 \begin{figure}[h!]
