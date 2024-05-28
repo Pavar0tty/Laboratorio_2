@@ -123,6 +123,7 @@ considerata per la legge di Malus.\\
     \caption{Impostazione dell'apparato per la misura dell'ampiezza del segnale in funzione dell'angolo di rotazione}
     \label{fig:ampiezza_angolo}
 \end{figure}
+\newpage
 
 Dopo aver concluso che il rilevatore reagisce all'intensità del segnale, ci siamo dedicati allo studio della geometria
 del fascio emesso. Per prima cosa, abbiamo studiato la variazione dell'intensità rilevata al variare dell'angolo di rotazione
@@ -131,8 +132,7 @@ Per fare ciò, abbiamo fissato una distanza tra i due dispositivi e ruotato grad
 passante di fronte all'emettitore. Abbiamo poi campionato la tensione rilevata dal ricevitore ad intervalli di 5 gradi, fino a quando
 il valore misurato è calato a circa zero.\\
 Di seguito riportiamo i dati raccolti:
-
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.6\textwidth]{dati_rotazione.png}
     \caption{Intensità del segnale rilevato in funzione dell'angolo di rotazione}
@@ -154,7 +154,7 @@ I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}
     \label{fig:fit_rotazione}
 \end{figure}
 
-
+\newpage
 \subsubsection{Intensità in funzione della distanza}
 
 \begin{figure}[h!]
@@ -165,7 +165,7 @@ I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}
 \end{figure}
 
 Il punto successivo consisteva nello studiare l'andamento dell'intensità del segnale in funzione della distanza tra i
-dispositivi. Mantenendo l'emettitore e il ricevitore allineati, abbiamo variato la separazione tra i due
+dispositivi. Mantenendo l'emettitore e il ricevitore allineati, abbiamo variato la distanza tra i due
 e campionato a intervalli regolari la tensione misurata.\\
 A causa del fatto che emettitore e ricevitore si trovavano uno di fronte all'altro, oltre alla decrescita
 del segnale dovuta alla distanza, abbiamo osservato un andamento oscillatorio. Questo è dovuto al fatto che
@@ -209,7 +209,7 @@ Per questo motivo, nella successiva analisi abbiamo deciso di utilizzare il mode
 
 
 \paragraph*{Andamento attorno ai massimi}
-Successivamente, abbiamo proceduto ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, riportati nella figura di seguito.
+Successivamente, abbiamo ricavando la lunghezza d'onda del fascio dai dati campionati più frequentemente, con un passo minore, riportandoli nella figura di seguito \ref{fig:distanza_zoom}.
 
 \begin{figure}[h!]
 	\centering
@@ -302,7 +302,7 @@ abbastanza lunga, lasciava passare parte del raggio incidente, determinando un a
 deciso di escludere gli ultimi dati poichè non rilevanti per il fenomeno. Vengono riportati nel grafico di destra
 i valori che abbiamo utilizzato per l'analisi.\\
 Una volta individuata la regione in cui l'intensità aumentava, abbiamo interpolato il picco con un modello parabolico.
-Vengono riportate l'interpolazione, i parametri ottenuti e il valore di $\chi^2$:
+Di seguito riportiamo i risultati del fit: 
 
 \begin{figure}[h!]
 	\centering
@@ -324,15 +324,14 @@ confrontato l'angolo ottenuto con l'angolo atteso, ottenendo una distanza in dev
 
 Riportiamo in figura \ref{fig:wrong_pol} il grafico dell'intensità del raggio trasmesso per la polarizzazione
 perpendicolare alla lastra. Abbiamo escluso le ultime misure per lo stesso motivo dell'analisi di raggio trasmesso
-con polarizzazione parallela.\\
-
-\begin{figure}[h!]
+con polarizzazione parallela.
+\begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.8\textwidth]{wrong_pol.png}
+	\includegraphics[width = 0.6\textwidth]{wrong_pol.png}
 	\caption{Intensità del raggio trasmesso - polarizzazione perpendicolare}
 	\label{fig:wrong_pol}
 \end{figure}
-
+\newpage
 Per quanto riguarda i dati e i grafici relativi all'intensità del raggio riflesso, li riportiamo per completezza,
 nonostante siano intrattabili dal punto di vista dell'analisi. Avendo osservato ciò già nella prima giornata di
 laboratorio, abbiamo effettuato nuovamente le stesse misure nella seconda giornata, ma senza ottenere miglioramenti.
@@ -341,32 +340,49 @@ campionamento maggiore, come spiegato nelle conclusioni.\\
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 0.8\textwidth]{riflesso1.png}
+	\includegraphics[width = 0.6\textwidth]{riflesso1.png}
 	\caption{Intensità del raggio riflesso - prima giornata}
 	\label{fig:riflesso1}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 0.8\textwidth]{riflesso2.png}
+	\includegraphics[width = 0.6\textwidth]{riflesso2.png}
 	\caption{Intensità del raggio riflesso - seconda giornata}
 	\label{fig:riflesso2}
 \end{figure}
 
 \subsection{Conclusioni}
 
+
+\newpage
 \section{Interferenza}
-Per la sezione di interferenza abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
+In questa seconda parte dell'esperienza abbiamo analizzato fenomeni legati all'interferenza tra onde. Come esperimenti da replicare 
+abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
 
 \subsection{Specchio Lloyd}
 In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci di microonde.
 Abbiamo disposto emettitore e ricevitore uno di fronte all'altro, misurandone la distanza $d$, in seguito abbiamo
 posizionato una lastra riflettente ad una certa distanza $h$ dal centro. \\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.5\textwidth]{LloydSetup.png}
+	\caption{Setup sperimentale per interferometro Lloyd}
+	\label{fig:setupLloyd}
+\end{figure}
+
 In questo modo si vengono a creare due fasci: il primo percorre una distanza $d$ in linea retta, mentre il secondo
 percorre una distanza $2\ \sqrt[]{h^2 + (d/2)^2}$. Tale differenza di percorso porta a delle interferenze:
 se la differenza di cammino ottico è un multiplo intero di $\lambda$ si ha interferenza costruttiva,
 altrimenti si ha interferenza distruttiva.\\
-Al fine di misurare la lunghezza d'onda delle microonde, abbiamo seguito le istruzioni fornite dal manuale
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.3\textwidth]{SchemaLloyd.png}
+	\caption{Schema riassuntivo interferometro Lloyd}
+	\label{fig:schemaLloyd}
+\end{figure}
+
+Al fine di misurare la lunghezza d'onda del fascio microonde, abbiamo seguito le istruzioni fornite dal manuale
 PASCO e abbiamo variato la distanza $h$ alla ricerca di due minimi distanti dieci volte la lunghezza d'onda,
 una volta fissata la distanza $d$. Per poter eseguire un confronto sperimentale e non solo con il valore di $\lambda$
 tabulato, abbiamo ripetuto la procedura per un'altra distanza $d$. \\
