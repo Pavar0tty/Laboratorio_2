@@ -71,26 +71,26 @@
 Di seguito riportiamo informazioni sulla strumentazione, sulle modalità di misura e in generale gli obiettivi di questa esperienza.
 Per studiare i vari fenomeni e le proprietà ottiche di onde elettromagnetiche abbiamo utilizzato come strumentazione 
 quella fornita da PASCO scientific "Advanced Microwave Optics System , WA-9316A".
-Di seguito abbiamo allegato un manuale che contiene tutte le informazioni riguardo alla
+Abbiamo anche allegato un manuale che contiene tutte le informazioni riguardo alla
 \href{https://cdn.pasco.com/product_document/Microwave-Optics-Experiment-Guide-WA-9314C.pdf}{strumentazione (clicca qui)}.
 Per quanto riguarda i fasci utilizzati, un diodo Gunn fa da sorgente di microonde linearmente polarizzate con lunghezza d'onda pari a $2.85$cm. Per la presa di misure un multimetro palmare è stato collegato al ricevitore, dunqe l'intensità del segnale è stata misurata registrando la $\Delta V$, mentre per quanto riguarda la misura di angoli abbiamo utilizzato un goniometro graduato.
 \
 \subsection{Polarizzazione}
 \paragraph*{Legge di Malus}
-Il primo obbiettivo dell'esperienza è stato quello di caratterizzare il fascio di microonde emesso dall'emettitore.
-Per fare ciò, abbiamo cominciato verificando la direzione di polarizzazione del fascio. \\
+Il primo obbiettivo dell'esperienza è stato quello di caratterizzare il fascio di microonde emesso.
+Per fare ciò, abbiamo cominciato verificando la direzione di polarizzazione del segnale. \\
 Abbiamo posizionato l'emettitore e il ricevitore uno di fronte all'altro, in modo che fossero
 allineati ed a una distanza fissa. Abbiamo quindi ruotato gradualmente il ricevitore e campionato
 la tensione rilevata dal ricevitore, fino ad aver compiuto una rotazione di 180 gradi.\\
-Dal manuale Pasco sappiamo che l'emettitore emette un fascio coerente polarizzato linearmente
-e il ricevitore è sensibile solo ad una certa polarizzazione. Il comportamento che ci aspettiamo
-di osservare da questo esperimento è quello previsto dalla legge di Malus:
+Sappiamo che l'emettitore emette un fascio coerente polarizzato linearmente
+e il ricevitore è sensibile solo ad una certa polarizzazione. Il comportamento 
+che ci aspettiamo di osservare da questo esperimento è quello previsto dalla legge di Malus:
 \begin{equation}
 	I = I_0 \cos^2(\theta)
 	\label{eq:malus}
 \end{equation}
 Dove $I_0$ è l'intensità massima e $\theta$ è l'angolo tra la direzione di polarizzazione del fascio e quella rilevata dal ricevitore.\\
-Abbiamo rappresentato i dati raccolti in figura \ref{fig:polarizzazione} e sovrapposti alla legge di Malus \eqref{eq:malus}.
+Abbiamo rappresentato i dati raccolti in figura \ref{fig:polarizzazione} e sovrapposti alla legge \eqref{eq:malus}.
 Infine, abbiamo calcolato il valore del $\tilde{\chi}^2 = 12.7$.
 
 
@@ -120,10 +120,10 @@ rilevava un segnale ridotto o nullo.
     \caption{Impostazione dell'apparato per la misura dell'ampiezza del segnale in funzione dell'angolo di rotazione}
     \label{fig:ampiezza_angolo}
 \end{figure}
-\newpage
 
-Dopo aver concluso che il rilevatore reagisce all'intensità del segnale, ci siamo dedicati allo studio della geometria
-del fascio emesso. Per prima cosa, abbiamo studiato la variazione dell'intensità rilevata al variare dell'angolo di rotazione
+
+In seguito, ci siamo dedicati allo studio della geometria del fascio emesso. 
+Per prima cosa, abbiamo studiato la variazione dell'intensità rilevata al variare dell'angolo di rotazione
 tra emettitore e ricevitore.\\
 Per fare ciò, abbiamo fissato una distanza tra i due dispositivi e ruotato gradualmente il ricevitore attorno ad un asse
 passante di fronte all'emettitore. Abbiamo poi campionato la tensione rilevata dal ricevitore ad intervalli di 5 gradi, fino a quando
@@ -137,7 +137,7 @@ Riportiamo i dati raccolti in figura \ref{fig:rotazione}.\\
     \label{fig:rotazione}
 \end{figure}
 
-Per stabilire quale modello stessero seguendo i dati, abbiamo scelto di interpolarli prima con le seguenti funzioni:
+Per stabilire quale modello stessero seguendo i dati, abbiamo scelto di interpolarli con le seguenti funzioni:
 \begin{align*}
     & I = I_0\cos(Bx)^A \\
     & I = A\cdot\cos(Bx + C) + D \\
@@ -153,46 +153,52 @@ I risultati dell'interpolazione sono riportati in figura \ref{fig:fit_rotazione}
 \end{figure}
 
 \begin{table}[h!]
-	\centering
-	\begin{minipage}{0.3\textwidth}
-		\centering
-		\begin{tabular}{|c | c|}
-			\hline
-			\textbf{Modello (1)} & \textbf{Valore} \\
-			\hline
-			$A$ & $8.58\pm 0.28$ \\
-			\hline
-		\end{tabular}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.3\textwidth}
-		\centering
-		\begin{tabular}{|c | c|}
-			\hline
-			\textbf{Modello (2)} & \textbf{Valore} \\
-			\hline
-			$A$ & $1.83 \pm 0.04$ \\
-			$B$ & $3.22 \pm 0.12$ \\
-			$C$ & $0.234 \pm 0.085$ \\
-			$D$ & $1.80 \pm 0.04$ \\
-			\hline
-		\end{tabular}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.3\textwidth}
-		\centering
-		\begin{tabular}{|c | c|}
-			\hline
-			\textbf{Modello (3)} & \textbf{Valore} \\
-			\hline
-			$A$ & $3.57 \pm 0.04$ \\
-			$B$ & $1.40 \pm 0.28$ \\
-			$C$ & $4.2 \pm 1.9$ \\
-			\hline
-		\end{tabular}
-	\end{minipage}
-	\caption{Risultati dei fit dell'intensità del segnale rilevato in funzione dell'angolo di rotazione}
-	\label{tab:fit_rotazione}
+    \centering
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \makebox[0.9\textwidth][c]{
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{Modello (1)} & \textbf{Valore} \\
+                \hline
+                $A$ & $8.58 \pm 0.28$ \\
+                \hline
+            \end{tabular}
+        }
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \makebox[0.9\textwidth][c]{
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{Modello (2)} & \textbf{Valore} \\
+                \hline
+                $A$ & $1.83 \pm 0.04$ \\
+                $B$ & $3.22 \pm 0.12$ \\
+                $C$ & $0.234 \pm 0.085$ \\
+                $D$ & $1.80 \pm 0.04$ \\
+                \hline
+            \end{tabular}
+        }
+    \end{minipage}%
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        \makebox[0.9\textwidth][c]{
+            \begin{tabular}{|c|c|}
+                \hline
+                \textbf{Modello (3)} & \textbf{Valore} \\
+                \hline
+                $A$ & $3.57 \pm 0.04$ \\
+                $B$ & $1.40 \pm 0.28$ \\
+                $C$ & $4.2 \pm 1.9$ \\
+                \hline
+            \end{tabular}
+        }
+    \end{minipage}
+    \caption{Risultati dei fit dell'intensità del segnale rilevato in funzione dell'angolo di rotazione}
+    \label{tab:fit_rotazione}
 \end{table}
 
 
@@ -312,8 +318,10 @@ Per cominciare, ci siamo domandati la validità della legge di Malus. Osservando
 ottenuto e il grafico in figura \ref{fig:polarizzazione}, si evince che i dati raccolti non sono compatibili con tale modello.
 Tuttavia, dall'analisi dei punti successivi ci siamo convinti che il segnale sia descritto da una funzione più complessa,
 non approssimabile con la legge di Malus.\\
+Va inoltre considerato che l'emettitore non produceva un fascio perfettamente polarizzato, ma con una certa dispersione di polarizzazione.
 In seguito abbiamo tentato di stabilire la geometria del segnale, studiandone l'andamento dell'intensità al variare
-dell'angolo di rotazione e della distanza. Da queste misurazioni emerge che il segnale non è né un'onda piana, né sferica,
+dell'angolo di rotazione e della distanza. \\
+Da queste misurazioni emerge che il segnale non è né un'onda piana, né sferica,
 ma un'onda più complessa. In particolare, l'andamento dell'intensità del segnale in funzione del'angolo di rotazione 
 tra emettitore e ricevitore abbiamo scoperto essere approssimabile da una funzione del tipo:
 \begin{equation}
@@ -359,9 +367,9 @@ Per verificare che l'intensità del raggio trasmesso sia dipendente dalla polari
 eseguito la stessa procedura per polarizzazione perpendicolare al piano di incidenza,
 ruotando l'emettitore di 90 gradi. \\
 
-Per l'analisi del raggio riflesso abbiamo configurato l'apparato in modo tale da far variare sia l'angolo della 
-lastra, sia l'angolo tra emettitore e ricevitore, in modo che il ricevitore seguisse il raggio riflesso. Abbiamo 
-così campionato l'intensità del raggio riflesso al variare dell'angolo di incidenza.\\
+Per l'analisi del raggio riflesso invecem abbiamo configurato l'apparato in modo tale da far variare sia l'angolo della 
+lastra, sia l'angolo tra emettitore e ricevitore, in modo tale che il ricevitore seguisse il raggio riflesso. Abbiamo 
+così campionato l'intensità del fascio al variare dell'angolo di incidenza.\\
 
 \subsection{Analisi dati}
 
@@ -372,7 +380,7 @@ Riportiamo in figura \ref{fig:trasmesso} il grafico dell'intensità del raggio t
 dell'angolo di incidenza.\\
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 0.8\textwidth]{trasmesso.png}
+	\includegraphics[width = 0.9\textwidth]{trasmesso.png}
 	\caption{Intensità del raggio trasmesso in funzione dell'angolo di incidenza}
 	\label{fig:trasmesso}
 \end{figure}
@@ -579,26 +587,27 @@ ogni onda passa due volte tra lo specchio e la superficie semiriflettente.
 In questa sezione elenchiamo i risultati ottenuti dalle misure sperimentali.
 Come suggerito dalla scheda e dal manuale Pasco, abbiamo deciso di spostare lo specchio A. Prima di tutto ci siamo posizionati attorno ad un
 massimo del segnale (picco di voltaggio sempre con multimetro palmare), successivamente abbiamo allontanato lo specchio attraversando 10 minimi. Una volta ritrovato un massimo ci siamo segnati tale nuova posizione.
+
 \begin{enumerate}
 	\item Posizione iniziale $x1 =(38.7 \pm0.2)$ cm
 	\item Voltaggio iniziale $\Delta V1 = (0.82\pm0.02)$ V 
 	\item Posizione finale $x2 =(24.5 \pm0.2)$cm
 	\item Voltaggio finale $\Delta V2 = (0.87\pm0.02)$V
 \end{enumerate}
-Ripetendo le misure cambiando la distanza:
 \begin{enumerate}
 	\item Posizione iniziale $x1 =(43.0\pm0.2)$ cm
 	\item Voltaggio iniziale $\Delta V1 = (1.1\pm0.02)$ V 
 	\item Posizione finale $x2 =(28.8\pm0.2)$cm
 	\item Voltaggio finale $\Delta V2 = (0.83\pm0.02)$V
 \end{enumerate}
-Infine di nuovo cambiando la distanza inziale:
 \begin{enumerate}
 	\item Posizione iniziale $x1 =(34.4\pm0.2)$ cm
 	\item Voltaggio iniziale $\Delta V1 = (0.83\pm0.02)$ V 
 	\item Posizione finale $x2 =(20.1\pm0.2)$cm
 	\item Voltaggio finale $\Delta V2 = (0.86\pm0.02)$V
 \end{enumerate}
+
+
 Da queste misure abbiamo estrapolato una stima del valore della lunghezza d'onda, secondo la seguente relazione:
 $$ \lambda = \frac{2\Delta x}{n} $$ 
 Facendo una media delle tre misure e utilizzando la formula di propagazione degli errori abbiamo stimato:
