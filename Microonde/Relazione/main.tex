@@ -388,18 +388,23 @@ per avere una migliore stima, ma la grande distanza tra valore atteso e valore o
 ci fa pensare che non sia un problema di campionamento, bensì di errori sistematici che spostano il picco attorno 
 a un angolo diverso da quello atteso.\\
 Il fatto che lo spostamento del picco sia dovuto ad un errore di tipo sistematico è confermato dal grafico 
-\ref{fig:wrong_pol}. Nonostante nel caso reale non debba verificarsi una crescita di intensità nella regione 
-dell'angolo di Brewster per polarizzazione perpendicolare, è curioso come nel nostro caso questo aumento 
-si possa osservare proprio attorno all'angolo ottenuto dall'interpolazione. Il fatto che per due misurazioni 
-diverse (polarizzazione parallela e perpendicolare) si sia ottenuto lo stesso risultato conferma 
-la spiegazione di errore sistematico.
+\ref{fig:wrong_pol}. Nonostante nel caso reale di polarizzazione perpendicolare non debba verificarsi una crescita
+di intensità nella regione dell'angolo di Brewster, è curioso come nel nostro caso si possa osservare un
+aumento proprio nell'intorno dell'angolo ottenuto dall'interpolazione. Molto probabilmente, la 
+polarizzazione del fascio non era perfettamente perpendicolare alla lastra e così il rilevatore ci ha fornito
+un andamento generale di diminuzione di intensità, ma con un picco, dovuto alla componente parallela del fascio.
+Analizzando tale componente abbiamo ottenuto un valore per l'angolo di Brewster compatibile con quello della
+polarizzazione parallela, ma incompatibile con l'angolo atteso.\\
+Il fatto che per due misurazioni diverse (polarizzazione parallela e perpendicolare) si sia ottenuto 
+lo stesso risultato conferma l'ipotesi di errore sistematico.
 
 
 \paragraph*{Raggio riflesso} L'andamento anomalo dei grafici \ref{fig:riflesso1} e \ref{fig:riflesso2}, relativi 
-al raggio riflesso, non ci ha permesso di determinare l'angolo di Brewster. Abbiamo pensato che il problema 
-fosse dovuto al fatto che il raggio incidente venisse separato in riflesso e rifratto, e che il raggio rifratto, 
-colpendo la seconda superficie di separazione, venisse nuovamente riflesso e rifratto. Questo comportamento porta 
-ad avere due raggi che colpiscono il ricevitore, causando possibili interferenze e grafici anomali.\\
+al raggio riflesso, non ci ha permesso di determinare l'angolo di Brewster. Abbiamo ipotizzato che il problema 
+sia dovuto al fatto che il raggio incidente, colpendo la prima superificie di separazione della lastra, 
+venga separato in riflesso e rifratto;  in seguito il raggio rifratto, colpendo la seconda superficie di separazione,
+venga nuovamente riflesso e rifratto. Questo comportamento porta ad avere due raggi che colpiscono il ricevitore,
+causando possibili interferenze e conseguentemente grafici anomali.\\
 
 
 \newpage
@@ -408,9 +413,9 @@ In questa seconda parte dell'esperienza abbiamo analizzato fenomeni legati all'i
 abbiamo scelto l'interferometro di Lloyd e l'interferometro di Michelson.\\
 
 \subsection{Specchio Lloyd}
-In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci di microonde.
-Abbiamo disposto emettitore e ricevitore uno di fronte all'altro, misurandone la distanza $d$, in seguito abbiamo
-posizionato una lastra riflettente ad una certa distanza $h$ dal centro. \\
+In questa sezione abbiamo utilizzato uno specchio di Lloyd per osservare l'interferenza tra i due fasci 
+di microonde.Abbiamo disposto emettitore e ricevitore uno di fronte all'altro, misurandone la distanza $d$, 
+in seguito abbiamo posizionato una lastra riflettente ad una certa distanza $h$ dal centro. \\
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.5\textwidth]{LloydSetup.png}
@@ -430,11 +435,11 @@ altrimenti si ha interferenza distruttiva.\\
 \end{figure}
 
 Al fine di misurare la lunghezza d'onda del fascio microonde, abbiamo seguito le istruzioni fornite dal manuale
-PASCO e abbiamo variato la distanza $h$ alla ricerca di due minimi distanti dieci volte la lunghezza d'onda,
-una volta fissata la distanza $d$. Per poter eseguire un confronto sperimentale e non solo con il valore di $\lambda$
-tabulato, abbiamo ripetuto la procedura per un'altra distanza $d$. \\
-Come formula per il calcolo della lunghezza d'onda abbiamo utilizzato la seguente, ricavata dalle relazioni geometriche
-che legano i cammini ottici e la differenza di fase tra i due fasci:
+Pasco e abbiamo variato la distanza $h$ alla ricerca di due minimi, una volta fissata la distanza $d$. 
+Per poter eseguire un confronto sperimentale e non solo con il valore di $\lambda$ tabulato, 
+abbiamo ripetuto la procedura per un'altra distanza $d$. \\
+Come formula per il calcolo della lunghezza d'onda abbiamo utilizzato la \ref{eq:lloyd}, ricavata dalle relazioni 
+geometriche che legano i cammini ottici e la differenza di fase tra i due fasci:
 \begin{equation}
 	\lambda = \frac{2h + 4\ \sqrt[]{(d/2)^2 + h^2}}{n}
 	\label{eq:lloyd}
@@ -446,10 +451,10 @@ la seconda misurazione.Come errori delle singole lunghezze d'onda abbiamo propag
 
 \subsubsection{Analisi dati}
 Riportiamo di seguito i dati raccolti durante l'esperienza e i risultati ottenuti.
-Per la prima misurazione abbiamo scelto $d = 100 \pm 1$ cm, mentre per la seconda $d = 110 \pm 1$ cm. Abbiamo stimato
-le incertezze di 1 cm poichè sugli "horn" non erano ben segnalati i punti di emissione e di ricezione
-dell'onda; non sapendo bene dove fossero localizzati abbiamo aumentato l'errore rispetto alla sensibilità della riga
-graduata.\\
+Per la prima misurazione abbiamo scelto $d = 100 \pm 1$ cm, mentre per la seconda $d = 110 \pm 1$ cm. Abbiamo 
+stimato le incertezze di 1 cm poichè sugli "horn" non erano ben segnalati i punti di emissione e di ricezione
+dell'onda; non sapendo bene dove fossero localizzati abbiamo aumentato l'errore rispetto alla sensibilità 
+della riga graduata.\\
 In tabella \ref{tab:lloyd1} riportiamo i valori di $h$ e le intensità misurate per i minimi di interferenza,
 in tabella \ref{tab:lloyd2} riportiamo i valori di $h$ e le intensità misurate per i massimi di interferenza.\\
 Come valore $\lambda_1$ abbiamo ottenuto $2.86 \pm 0.07$ cm, mentre per $\lambda_2$ abbiamo ottenuto $2.85 \pm 0.06$ cm.\\
@@ -465,14 +470,12 @@ L'ultimo punto è stato calcolato per verificare la coerenza tra i due valori di
 Dai risultati ottenuti possiamo concludere che la lunghezza d'onda delle microonde calcolata tramite interferometro
 di Lloyd è compatibile con il valore tabulato.
 Al di là della misura della lunghezza d'onda tramite interferenza, questa sezione ci ha permesso di verificare
-sperimentalmente un'ipotesi che avanziamo in altre sezioni: l'interferenza per riflessione delle microonde. Ogniqualvolta
-un esperimento richieda la rotazione del ricevitore, si possono considerare effetti di interferenza alla Lloyd,
-poichè, per angoli in cui ricevitore e emettitore sono sempre più vicini, si può modelizzare il sistema come
-un interferometro di Lloyd.\\
-In conclusione, l'interferenza alla Lloyd si ottiene quando un materiale che abbia proprietà riflettenti viene
-avvicinato all'apparecchiatura, portandoci a considerare questo effetto di interferenza in tutte le sezioni in cui
-ci troviamo a ruotare il ricevitore.\\
-
+sperimentalmente un'ipotesi che spiega problemi verificatisi in altre sezioni: l'interferenza per riflessione 
+delle microonde. Ogniqualvolta un esperimento richieda la rotazione del ricevitore, si possono considerare effetti 
+di interferenza alla Lloyd, poichè, per angoli in cui ricevitore e emettitore sono sempre più vicini, 
+si può modelizzare il sistema come un interferometro di Lloyd. Infatti l'interferenza alla Lloyd si ottiene 
+quando un materiale che abbia proprietà riflettenti viene avvicinato all'apparecchiatura, portandoci a 
+considerare questo effetto di interferenza in tutte le sezioni in cui ci troviamo a ruotare il ricevitore.\\
 
 \subsection{Interferometro di Michelson}
 In questa seconda esperienza sull'interferenza di onde abbiamo deciso di riprodurre una versione del noto esperiemento di 
