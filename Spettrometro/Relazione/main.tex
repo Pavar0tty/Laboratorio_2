@@ -18,6 +18,7 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage[table]{xcolor} 
+\usepackage{colortbl}
 \usepackage[margin=1in,letterpaper]{geometry} % decreases margins
 \usepackage{cite} % takes care of citations
 \usepackage[hidelinks]{hyperref} % adds hyper links inside the generated pdf file
@@ -26,6 +27,25 @@
 \definecolor{linkcolor}{RGB}{0, 102, 204}
 \definecolor{citecolor}{RGB}{34, 139, 34}
 \definecolor{urlcolor}{RGB}{255, 69, 0}
+\definecolor{wavelength_406}{RGB}{143,0,255} % Violet
+\definecolor{wavelength_447}{RGB}{0,0,255}   % Blue
+\definecolor{wavelength_471}{RGB}{0,255,255} % Cyan
+\definecolor{wavelength_440}{RGB}{0,0,255}   % Blue
+\definecolor{wavelength_513}{RGB}{0,255,0}   % Green
+\definecolor{wavelength_nan}{RGB}{255,255,255} % White (for nan)
+\definecolor{wavelength_540}{RGB}{0,255,0}   % Green
+\definecolor{wavelength_458}{RGB}{0,0,255}   % Blue
+\definecolor{wavelength_568}{RGB}{255,255,0} % Yellow
+\definecolor{wavelength_587}{RGB}{255,165,0} % Orange
+\definecolor{wavelength_585}{RGB}{255,165,0} % Orange
+\definecolor{wavelength_472}{RGB}{0,255,255} % Cyan
+\definecolor{wavelength_667}{RGB}{255,0,0}   % Red
+\definecolor{wavelength_676}{RGB}{255,0,0}   % Red
+\definecolor{wavelength_640}{RGB}{255,69,0}   % Red
+\definecolor{wavelength_696}{RGB}{255,0,0}   % Red
+
+
+
 
 % Setup hyperref
 \hypersetup{
@@ -132,6 +152,41 @@ In ogni caso, confrontando la deviazione standard della media con la sensibilit�
 abbiamo deciso di considerare come errore la sensibilità, perchè la deviazione standard della media era minore.
 
 \subsection{Identificazione del gas ignoto}
+Abbiamo riprodotto la configurazione riportata in figura \ref{fig:SetupPrisma}, analogamente a quanto fatto per la 
+caratterizzazione del prisma. Al posto della lampada al mercurio abbiamo posizionato una lampada contenente un gas
+ignoto. Lo scopo di questa sezione è stato quello di identificare il gas tramite il suo spettro di emissione, avendo 
+individuato i parametri $A$ e $B$ della relazione \ref{eq:Cauchy}, caratteristici del prisma utilizzato.
+Abbiamo analizzato quattro righe spettrali di colori rosso, giallo, verde e viola, per ciascuna delle quali abbiamo
+misurato l'angolo di minima deviazione in maniera analoga a quanto fatto per la caratterizzazione del prisma. Abbiamo 
+ripetuto la misura per ciascuna riga spettrale più volte e calcolato la media e la deviazione standard della media; i
+valori ricavati per gli errori sono stati confrontati con la sensibilità dello strumento (1 primo) e abbiamo deciso di
+considerare come errore la sensibilità, perchè la deviazione standard della media era minore. \\
+Alla stessa maniera di quanto svolto nella caratterizzazione del prisma, abbiamo calcolato i valori di $n$ per ciascuna
+lunghezza d'onda tramite la relazione $\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$. Infine, esplicitando
+$\lambda$ nella relazione \ref{eq:Cauchy} abbiamo calcolato i valori di $\lambda$ per ciascuna riga spettrale. \\
+Abbiamo confrontato i valori ottenuti con le lunghezze d'onda tabulate sul sito del NIST, ma con scarsi risultati.
+(Discutiamone insieme per capire cosa fare)
+Riportiamo in tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda del gas ignoto e dei gas nobili.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
+    \hline
+    \cellcolor{wavelength_406} 406 & 2 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
+    \hline
+    \cellcolor{wavelength_513} 513 & 4 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
+    \hline
+    \cellcolor{wavelength_568} 568 & 5 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
+    \hline
+    \cellcolor{wavelength_676} 676 & 8 & \cellcolor{wavelength_667} 667 & \cellcolor{wavelength_640} 640 & \cellcolor{wavelength_696} 696 \\
+    \hline
+    \end{tabular}
+    \caption{Lunghezze d'onda dei gas con valori ed errori per il gas ignoto, colorati secondo la loro lunghezza d'onda.}
+    \label{tab:prisma_ignoto}
+\end{table}
+
 
 \section{Reticolo di diffrazione}
 
