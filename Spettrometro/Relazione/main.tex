@@ -27,22 +27,22 @@
 \definecolor{linkcolor}{RGB}{0, 102, 204}
 \definecolor{citecolor}{RGB}{34, 139, 34}
 \definecolor{urlcolor}{RGB}{255, 69, 0}
-\definecolor{wavelength_406}{RGB}{143,0,255} % Violet
-\definecolor{wavelength_447}{RGB}{0,0,255}   % Blue
-\definecolor{wavelength_471}{RGB}{0,255,255} % Cyan
-\definecolor{wavelength_440}{RGB}{0,0,255}   % Blue
-\definecolor{wavelength_513}{RGB}{0,255,0}   % Green
-\definecolor{wavelength_nan}{RGB}{255,255,255} % White (for nan)
-\definecolor{wavelength_540}{RGB}{0,255,0}   % Green
-\definecolor{wavelength_458}{RGB}{0,0,255}   % Blue
-\definecolor{wavelength_568}{RGB}{255,255,0} % Yellow
-\definecolor{wavelength_587}{RGB}{255,165,0} % Orange
-\definecolor{wavelength_585}{RGB}{255,165,0} % Orange
-\definecolor{wavelength_472}{RGB}{0,255,255} % Cyan
-\definecolor{wavelength_667}{RGB}{255,0,0}   % Red
-\definecolor{wavelength_676}{RGB}{255,0,0}   % Red
-\definecolor{wavelength_640}{RGB}{255,69,0}   % Red
-\definecolor{wavelength_696}{RGB}{255,0,0}   % Red
+\definecolor{wavelength_406}{RGB}{129, 0, 204} 
+\definecolor{wavelength_447}{RGB}{0, 53, 255}  
+\definecolor{wavelength_471}{RGB}{0, 174, 255}
+\definecolor{wavelength_440}{RGB}{0, 0, 255}   
+\definecolor{wavelength_513}{RGB}{21, 255, 0}   
+\definecolor{wavelength_nan}{RGB}{210,210,210} 
+\definecolor{wavelength_540}{RGB}{129, 255, 0}  
+\definecolor{wavelength_458}{RGB}{0, 113, 255}  
+\definecolor{wavelength_568}{RGB}{219, 255, 0}
+\definecolor{wavelength_587}{RGB}{255, 233, 0} 
+\definecolor{wavelength_585}{RGB}{255, 239, 0} 
+\definecolor{wavelength_472}{RGB}{0, 178, 255}
+\definecolor{wavelength_667}{RGB}{235, 0, 0}  
+\definecolor{wavelength_676}{RGB}{227, 0, 0}  
+\definecolor{wavelength_640}{RGB}{255, 33, 0}  
+\definecolor{wavelength_696}{RGB}{209, 0, 0}
 
 
 
@@ -66,8 +66,8 @@
 %Margini 
 
 
-
 \begin{document}
+
 
 \title{{\small Università degli studi Milano-Bicocca  Dipartimento di Fisica - Laboratorio II }\\
 	Esperienza Ottica - Microonde}
@@ -93,15 +93,16 @@ Per le misure di questa esperienza abbiamo utilizzato:
 \begin{itemize}
     \item Uno spettrometro PASCO scientific Modello SP-9416, \href{https://cdn.pasco.com/product_document/Student-Spectrometer-Manual-SP-9268A.pdf}{manuale qui.}
     \item Lampade ad incadescenza Hg, Na e gas ignoti.
-    \item Prisma di vetro flint.
+    \item Prisma di vetro.
     \item Reticoli di diffrazione 300/600/1200 (linee/mm).
 \end{itemize}
 Prima della presa di misure abbiamo verificato la calibrazione degli strumenti regolando la messa a fuoco e 
-l'apertura della fenditura usando come sorgente test una lampada al Na.
+l'apertura della fenditura usando come sorgente test una lampada al sodio. Per configurare lo strumento abbiamo
+seguito le istruzioni riportate sul manuale PASCO. \\
     
 \section{Prisma}
 La prima parte dell'esperienza ha come obiettivo la caratterizzazione dell'indice di rifrazione del prisma, 
-grazie al quale è poi possibile avanzare delle ipotesi sulla natura di sorgenti gas ignoti. Come configurazione, sia per
+grazie al quale è poi possibile avanzare delle ipotesi sulla natura del gas ignoto analizzato in seguito. Come configurazione, sia per
 la sezione di caratterizzazione del prisma che per quella di identificazione del gas ignoto, abbiamo utilizzato il setup
 riportato in figura \ref{fig:SetupPrisma}.
 \begin{figure}[h!]
@@ -120,11 +121,17 @@ riportato in figura \ref{fig:SetupPrisma}.
 
 
 \subsection{Caratterizzazione del prisma}
-Dopo aver riprodotto la configurazione riportata in figura \ref{fig:SetupPrisma}, abbiamo utilizzato una lampada al 
-mercurio come sorgente. Abbiamo misurato l'angolo di minima deviazione $\delta$ e da questo abbiamo calcolato l'indice 
-di rifrazione del prisma per i vari colori utilizzando la relazione $\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$.
-Una volta ottenuti gli indici di rifrazione al variare delle lunghezze d'onda tabulate abbiamo potuto interpolare 
-la relazione \ref{eq:Cauchy} per ottenere i parametri $A$ e $B$.
+Dopo aver riprodotto la configurazione, abbiamo utilizzato una lampada al mercurio come sorgente. 
+Per misurare l'angolo di minima deviazione $\delta$, abbiamo ruotato il piano su cui poggiato il prisma fino a quando
+la riga spettrale osservata non appariva fermarsi e invertire la direzione di spostamento. \\
+Al fine di accertarci che l'errore sulle misure fosse di tipo gaussiano, abbiamo ripetuto la misura diverse volte; un analisi più
+approfondita sugli errori è trattata nella sezione **********.
+A questo punto abbiamo calcolato l'indice di rifrazione del prisma per le diverse lunghezze d'onda utilizzando la relazione 
+$$\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$$
+e risolvendo per $n$.
+Al fine di caratterizzare il prisma, ci siamo serviti della relazione di Cauchy \eqref{eq:Cauchy}, troncata al secondo termine,
+che lega l'indice di rifrazione $n$ alla lunghezza d'onda $\lambda$.
+
 \begin{equation}
     n(\lambda) = A + \frac{B}{\lambda^2}
     \label{eq:Cauchy}
@@ -138,18 +145,12 @@ Riportiamo in figura \ref{fig:Cauchy_fit} il fit ottenuto e i parametri $A$ e $B
     \label{fig:Cauchy_fit}
 \end{figure}
 
-Abbiamo ottenuto i seguenti parametri:
+Il fit ha restituito i seguenti valori dei parametri:
 \begin{itemize}
     \item $A = 1.599 \pm 0.0003$
     \item $B = (0.0061 \pm 0.0005) \mu$m
     \item $\tilde{\chi}^2 = 1.0$
 \end{itemize}
-
-\subsubsection{Considerazioni sugli errori}
-Per stimare gli errori sui gradi abbiamo deciso di ripetere la misura dell'angolo di minima deviazione più volte e 
-considerare la deviazione standard della media. Ciò era necessario affinchè l'errore considerato fosse di tipo gaussiano. 
-In ogni caso, confrontando la deviazione standard della media con la sensibilità dello strumento (1 primo), 
-abbiamo deciso di considerare come errore la sensibilità, perchè la deviazione standard della media era minore.
 
 \subsection{Identificazione del gas ignoto}
 Abbiamo riprodotto la configurazione riportata in figura \ref{fig:SetupPrisma}, analogamente a quanto fatto per la 
@@ -174,18 +175,25 @@ Riportiamo in tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda de
     \hline
     \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
     \hline
-    \cellcolor{wavelength_406} 406 & 2 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
+    \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_nan}2 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
     \hline
-    \cellcolor{wavelength_513} 513 & 4 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
+    \cellcolor{wavelength_513} 513 & \cellcolor{wavelength_nan}4 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
     \hline
-    \cellcolor{wavelength_568} 568 & 5 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
+    \cellcolor{wavelength_568} 568 & \cellcolor{wavelength_nan}5 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
     \hline
-    \cellcolor{wavelength_676} 676 & 8 & \cellcolor{wavelength_667} 667 & \cellcolor{wavelength_640} 640 & \cellcolor{wavelength_696} 696 \\
+    \cellcolor{wavelength_676} 676 & \cellcolor{wavelength_nan}8 & \cellcolor{wavelength_667} 667 & \cellcolor{wavelength_640} 640 & \cellcolor{wavelength_696} 696 \\
     \hline
     \end{tabular}
     \caption{Lunghezze d'onda dei gas con valori ed errori per il gas ignoto, colorati secondo la loro lunghezza d'onda.}
     \label{tab:prisma_ignoto}
 \end{table}
+
+\subsubsection{Considerazioni sugli errori}
+Per stimare gli errori sui gradi abbiamo deciso di ripetere la misura dell'angolo di minima deviazione più volte e 
+considerare la deviazione standard della media. Ciò era necessario affinchè l'errore considerato fosse di tipo gaussiano. 
+In ogni caso, confrontando la deviazione standard della media con la sensibilità dello strumento (1 primo), 
+abbiamo deciso di considerare come errore la sensibilità, perchè la deviazione standard della media era minore.
+
 
 
 \section{Reticolo di diffrazione}
