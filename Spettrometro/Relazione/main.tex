@@ -146,11 +146,23 @@ Riportiamo in figura \ref{fig:Cauchy_fit} il fit ottenuto e i parametri $A$ e $B
 \end{figure}
 
 Il fit ha restituito i seguenti valori dei parametri:
-\begin{itemize}
-    \item $A = 1.599 \pm 0.0003$
-    \item $B = (0.0061 \pm 0.0005) \mu$m
-    \item $\tilde{\chi}^2 = 1.0$
-\end{itemize}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Parametro} & \textbf{Valore} \\
+    \hline
+    $A$ & $1.599 \pm 0.0003$ \\
+    \hline
+    $B$ & $(0.0061 \pm 0.0005) \mu$m \\
+    \hline
+    $\tilde{\chi}^2$ & $1.0$ \\
+    \hline
+    \end{tabular}
+    \caption{Valori dei parametri $A$ e $B$ ottenuti dal fit secondo la relazione di Cauchy.}
+    \label{tab:cauchy_fit}
+\end{table}
+
 
 \subsection{Identificazione del gas ignoto}
 Abbiamo riprodotto la configurazione riportata in figura \ref{fig:SetupPrisma}, analogamente a quanto fatto per la 
@@ -199,6 +211,27 @@ abbiamo deciso di considerare come errore la sensibilità, perchè la deviazione
 \section{Reticolo di diffrazione}
 
 \subsection{Caratterizzazione del reticolo}
+
+La seconda parte dell'esperienza consisteva nell'identificazione del gas ignoto per mezzo di un reticolo di diffrazione.
+La procedura di questa sezione è stata molto simile a quella della sezione precedente, con la differenza di aver sostituito
+il prisma con un reticolo. \\
+In questo caso, il reticolo andava posto perpendicolare ai raggi uscenti dal collimatore. Per fare ciò abbiamo fatto uso della lampada
+al sodio e ruotato il telescopio fino a posizionare il mirino sul primo massimo di diffrazione della riga gialla.
+Abbiamo ripetuto questa procedura da entrambi i lati del massimo centrale e calcolato distanza angolare tra i due massimi e il massimo centrale.
+Abbiamo poi ruotato la piattaforma sulla quale poggiava il reticolo per azzerare la differenza tra i due angoli calcolati, in quanto ci aspettiamo che siano identici.\\
+
+Una volta verificata la perpendicolarità del reticolo, abbiamo misurato l'angolo tra la posizione del massimo centrale e quella dei massimi di
+interferenza secondari. Abbiamo mediato l'angolo ottenuto da destra e da sinistra e inserito i valori risultanti nella formula
+\begin{equation}
+    d \sin(\theta) = n \lambda
+    \label{eq:reticolo}
+\end{equation}
+per stimare la distanza tra le fenditure del reticolo $d$. Abbiamo ripetuto la procedura per i massimi fino all'ordine 3 e mediato nuovamente
+i valori ottenuti. \\
+La stima migliore di $d$ calcolata è:
+\begin{itemize}
+    \item $d = (3.37 \pm 0.02)\times10^{-6}$ m
+\end{itemize}
 
 \subsection{Identificazione del gas ignoto}
 
