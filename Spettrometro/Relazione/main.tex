@@ -127,17 +127,16 @@ Per misurare l'angolo di minima deviazione $\delta$, abbiamo ruotato il piano su
 la riga spettrale osservata non appariva fermarsi e invertire la direzione di spostamento. \\
 Al fine di accertarci che l'errore sulle misure fosse di tipo gaussiano, abbiamo ripetuto la misura diverse volte; un analisi più
 approfondita sugli errori è trattata nella sezione **********.
-A questo punto abbiamo calcolato l'indice di rifrazione del prisma per le diverse lunghezze d'onda utilizzando la relazione 
+A questo punto abbiamo calcolato l'indice di rifrazione del prisma per le diverse lunghezze d'onda utilizzando la seguente relazione, risolvendo per $n$.:
 $$\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$$
-e risolvendo per $n$.
 Al fine di caratterizzare il prisma, ci siamo serviti della relazione di Cauchy \eqref{eq:Cauchy}, troncata al secondo termine,
 che lega l'indice di rifrazione $n$ alla lunghezza d'onda $\lambda$.
-
 \begin{equation}
     n(\lambda) = A + \frac{B}{\lambda^2}
     \label{eq:Cauchy}
 \end{equation}
 
+Successivamente abbiamo interpolato i dati ottenuti con la relazione di Cauchy, ottenendo i valori dei parametri $A$ e $B$.
 Riportiamo in figura \ref{fig:Cauchy_fit} il fit ottenuto e i parametri $A$ e $B$ ottenuti.
 \begin{figure}[h!]
     \centering
@@ -153,40 +152,46 @@ Il fit ha restituito i seguenti valori dei parametri:
     \hline
     \textbf{Parametro} & \textbf{Valore} \\
     \hline
-    $A$ & $1.599 \pm 0.0003$ \\
+    $A$ & $1.5990 \pm 0.0003$ \\
     \hline
     $B$ & $(0.0061 \pm 0.0005) \mu$m \\
     \hline
     $\tilde{\chi}^2$ & $1.0$ \\
     \hline
     \end{tabular}
-    \caption{Valori dei parametri $A$ e $B$ ottenuti dal fit secondo la relazione di Cauchy.}
+    \caption{Valori dei parametri $A$ e $B$}
     \label{tab:cauchy_fit}
 \end{table}
 
 
+\subsection{Analisi dati}
+
+Aggiugnere qualche commento sul fit e sui dati magari sugli errori
+
+
 \subsection{Identificazione del gas ignoto}
+Per questa seconda parte lo scopo è quello di identificare il gas ignoto tramite il suo spettro di emissione, ciò è possibile 
+perchè ora conosciamo  i parametri $A$ e $B$ della relazione \ref{eq:Cauchy}, caratteristici del prisma utilizzato.
 Abbiamo riprodotto la configurazione riportata in figura \ref{fig:SetupPrisma}, analogamente a quanto fatto per la 
 caratterizzazione del prisma. Al posto della lampada al mercurio abbiamo posizionato una lampada contenente un gas
-ignoto. Lo scopo di questa sezione è stato quello di identificare il gas tramite il suo spettro di emissione, avendo 
-individuato i parametri $A$ e $B$ della relazione \ref{eq:Cauchy}, caratteristici del prisma utilizzato.
-Abbiamo analizzato quattro righe spettrali di colori rosso, giallo, verde e viola, per ciascuna delle quali abbiamo
+ignoto.
+Successivamente abbiamo analizzato quattro righe spettrali diverse: rosso, giallo, verde e viola, per ciascuna delle quali abbiamo
 misurato l'angolo di minima deviazione in maniera analoga a quanto fatto per la caratterizzazione del prisma. Abbiamo 
 ripetuto la misura per ciascuna riga spettrale più volte e calcolato la media e la deviazione standard della media; i
-valori ricavati per gli errori sono stati confrontati con la sensibilità dello strumento (1 primo) e abbiamo deciso di
+valori ricavati per gli errori sono stati confrontati con la sensibilità dello strumento per la misura dell'angolo (1 primo) e abbiamo deciso di
 considerare come errore la sensibilità, perchè la deviazione standard della media era minore. \\
-Alla stessa maniera di quanto svolto nella caratterizzazione del prisma, abbiamo calcolato i valori di $n$ per ciascuna
-lunghezza d'onda tramite la relazione $\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$. Infine, esplicitando
+Analogamente a quanto svolto per la caratterizzazione del prisma, abbiamo calcolato i valori di $n$ per ciascuna
+lunghezza d'onda tramite la relazione: $$\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$$Infine, esplicitando
 $\lambda$ nella relazione \ref{eq:Cauchy} abbiamo calcolato i valori di $\lambda$ per ciascuna riga spettrale. \\
 Abbiamo confrontato i valori ottenuti con le lunghezze d'onda tabulate sul sito del NIST, ma con scarsi risultati.
 (Discutiamone insieme per capire cosa fare)
-Riportiamo in tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda del gas ignoto e dei gas nobili.
+Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda del gas ignoto e dei gas nobili.
 
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
     \hline
-    \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
+    \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore $\lambda_{ignota}$} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
     \hline
     \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_nan}2 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
     \hline
@@ -205,7 +210,7 @@ Riportiamo in tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda de
 Per stimare gli errori sui gradi abbiamo deciso di ripetere la misura dell'angolo di minima deviazione più volte e 
 considerare la deviazione standard della media. Ciò era necessario affinchè l'errore considerato fosse di tipo gaussiano. 
 In ogni caso, confrontando la deviazione standard della media con la sensibilità dello strumento (1 primo), 
-abbiamo deciso di considerare come errore la sensibilità, perchè la deviazione standard della media era minore.
+abbiamo deciso di considerare come errore la sensibilità, poichè la deviazione standard della media era minore.
 
 
 
@@ -213,16 +218,14 @@ abbiamo deciso di considerare come errore la sensibilità, perchè la deviazione
 
 \subsection{Caratterizzazione del reticolo}
 
-La seconda parte dell'esperienza consisteva nell'identificazione del gas ignoto per mezzo di un reticolo di diffrazione.
-La procedura di questa sezione è stata molto simile a quella della sezione precedente, con la differenza di aver sostituito
-il prisma con un reticolo. \\
+La seconda parte dell'esperienza consiste nell'identificazione del gas ignoto per mezzo di un reticolo di diffrazione.
+La procedura di caratterizzazione del reticolo è piuttosto simile a quella descritta nella sezione precedente.
 In questo caso, il reticolo andava posto perpendicolare ai raggi uscenti dal collimatore. Per fare ciò abbiamo fatto uso della lampada
 al sodio e ruotato il telescopio fino a posizionare il mirino sul primo massimo di diffrazione della riga gialla.
 Abbiamo ripetuto questa procedura da entrambi i lati del massimo centrale e calcolato distanza angolare tra i due massimi e il massimo centrale.
 Abbiamo poi ruotato la piattaforma sulla quale poggiava il reticolo per azzerare la differenza tra i due angoli calcolati, in quanto ci aspettiamo che siano identici.\\
-
 Una volta verificata la perpendicolarità del reticolo, abbiamo misurato l'angolo tra la posizione del massimo centrale e quella dei massimi di
-interferenza secondari. Abbiamo mediato l'angolo ottenuto da destra e da sinistra e inserito i valori risultanti nella formula
+interferenza secondari. Abbiamo mediato l'angolo ottenuto da destra e da sinistra e inserito i valori risultanti nella seguente relazione
 \begin{equation}
     d \sin(\theta) = n \lambda
     \label{eq:reticolo}
@@ -260,7 +263,7 @@ assieme ai valori per i gas noti.
 \end{table}
 
 Confrontando i valori ottenuti con quelli tabulati, abbiamo notato che le lunghezze d'onda del gas ignoto si avvicinano
-maggiormente al neon. D'altra parte, è molto probabile che la lmpada contenesse altri gas, perchè le lunghezze d'onda
+maggiormente al nellaeon. D'altra parte, è molto probabile che la lmpada contenesse altri gas, perchè le lunghezze d'onda
 non combaciano perfettamente e i test di compatibilità non danno risultati soddisfacenti. \\ 
 
 \newpage
