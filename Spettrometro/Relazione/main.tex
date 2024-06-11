@@ -29,7 +29,7 @@
 \definecolor{urlcolor}{RGB}{255, 69, 0}
 \definecolor{wavelength_406}{RGB}{129, 0, 204} 
 \definecolor{wavelength_447}{RGB}{0, 53, 255}  
-\definecolor{wavelength_471}{RGB}{0, 174, 255}
+\definecolor{wavelength_501}{RGB}{0, 174, 255}
 \definecolor{wavelength_440}{RGB}{0, 0, 255}   
 \definecolor{wavelength_513}{RGB}{21, 255, 0}   
 \definecolor{wavelength_nan}{RGB}{210,210,210} 
@@ -138,7 +138,11 @@ la riga spettrale osservata non appariva fermarsi e invertire la direzione di sp
 Al fine di accertarci che l'errore sulle misure fosse di tipo gaussiano, abbiamo ripetuto la misura diverse volte; un analisi più
 approfondita sugli errori è trattata nella sezione **********.
 A questo punto abbiamo calcolato l'indice di rifrazione del prisma per le diverse lunghezze d'onda utilizzando la seguente relazione, risolvendo per $n$.:
-$$\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$$
+\begin{equation}
+    \sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})
+    \label{eq:indice}
+\end{equation}
+
 Al fine di caratterizzare il prisma, ci siamo serviti della relazione di Cauchy \eqref{eq:Cauchy}, troncata al secondo ordine,
 questa relazione lega l'indice di rifrazione $n$ alla lunghezza d'onda $\lambda$.
 \begin{equation}
@@ -191,37 +195,30 @@ ripetuto la misura per ciascuna riga spettrale più volte e calcolato la media e
 valori ricavati per gli errori sono stati confrontati con la sensibilità dello strumento per la misura dell'angolo (1 primo) e abbiamo deciso di
 considerare come errore la sensibilità, perchè la deviazione standard della media era minore. \\
 Analogamente a quanto svolto per la caratterizzazione del prisma, abbiamo calcolato i valori di $n$ per ciascuna
-lunghezza d'onda tramite la relazione: $$\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$$Infine, esplicitando
-$\lambda$ nella relazione \ref{eq:Cauchy} abbiamo calcolato i valori di $\lambda$ per ciascuna riga spettrale. \\
-Abbiamo confrontato i valori ottenuti con le lunghezze d'onda tabulate sul sito del NIST, ma con scarsi risultati.
-(Discutiamone insieme per capire cosa fare)
-Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda del gas ignoto e dei gas nobili.
+lunghezza d'onda tramite la relazione \refeq{eq:indice}.\\
+Infine, esplicitando
+$\lambda$ nella relazione \ref{eq:Cauchy} abbiamo stimato i valori delle lunghezze d'onda $\lambda$ per ciascuna riga spettrale. \\
+Confrontando tali valori con le lunghezze d'onda tabulate sul sito del NIST abbiamo notato una discrepanza significativa.
+Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda del gas ignoto e dei gas nobili Elio, Neon e Argon.
 
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
     \hline
-    \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore $\lambda_{ignota}$} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
+    \textbf{$\lambda_{ignota}$} [nm] & \text{$\pm\sigma_\text{ignoto}$} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
     \hline
-    \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_nan}2 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
+    \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_406}2 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
     \hline
-    \cellcolor{wavelength_513} 513 & \cellcolor{wavelength_nan}4 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
+    \cellcolor{wavelength_513} 513 & \cellcolor{wavelength_513}4 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
     \hline
-    \cellcolor{wavelength_568} 568 & \cellcolor{wavelength_nan}5 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
+    \cellcolor{wavelength_568} 568 & \cellcolor{wavelength_568}5 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
     \hline
-    \cellcolor{wavelength_676} 676 & \cellcolor{wavelength_nan}8 & \cellcolor{wavelength_667} 667 & \cellcolor{wavelength_640} 640 & \cellcolor{wavelength_696} 696 \\
+    \cellcolor{wavelength_676} 676 & \cellcolor{wavelength_676}8 & \cellcolor{wavelength_667} 667 & \cellcolor{wavelength_640} 640 & \cellcolor{wavelength_696} 696 \\
     \hline
     \end{tabular}
     \caption{Lunghezze d'onda dei gas con valori ed errori per il gas ignoto, colorati secondo la loro lunghezza d'onda.}
     \label{tab:prisma_ignoto}
 \end{table}
-
-\subsubsection{Considerazioni sugli errori}
-Per stimare gli errori sui gradi abbiamo deciso di ripetere la misura dell'angolo di minima deviazione più volte e 
-considerare la deviazione standard della media. Ciò era necessario affinchè l'errore considerato fosse di tipo gaussiano. 
-In ogni caso, confrontando la deviazione standard della media con la sensibilità dello strumento (1 primo), 
-abbiamo deciso di considerare come errore la sensibilità, poichè la deviazione standard della media era minore.
-
 
 
 \section{Reticolo di diffrazione}
@@ -274,7 +271,19 @@ assieme ai valori per i gas noti.
 
 Confrontando i valori ottenuti con quelli tabulati, abbiamo notato che le lunghezze d'onda del gas ignoto si avvicinano
 maggiormente al nellaeon. D'altra parte, è molto probabile che la lmpada contenesse altri gas, perchè le lunghezze d'onda
-non combaciano perfettamente e i test di compatibilità non danno risultati soddisfacenti. \\ 
+non combaciano perfettamente e i test di compatibilità non danno risultati soddisfacenti. \\
+
+
+\subsubsection{Considerazioni sugli errori}
+Gli esperimenti discussi hanno richiesto molta precisione nella misura degli angoli, motivo per cui abbiamo posto particolare
+attenzione allo studio degli errori. Per prima cosa ci siamo domandati la riproducibilità delle misure e la possibile presenza di errori sistematici.
+Per fare ciò, dopo aver posizionato il mirino del telescopio su una delle righe spettrali e misuratone l'angolo, ci siamo spostati
+leggermente e abbiamo ripetuto la misura. Al fine di poter garantire errori di tipo gaussiano, abbiamo ripetuto la misura
+più volte e calcolato la deviazione standard della media. Abbiamo confrontato tale valore con la sensibilità dello strumento (1/60 di grado)
+considerando per l'analisi il valore maggiore tra i due. \\
+Ci siamo accorti che le letture degli angoli rimanevano vicine tra loro oscillando di pochi primi. Questo ci ha indicato
+la presenza di un errore casuale, che abbiamo considerato gaussiano. Abbiamo inoltre supposto l'eventuale presenza di un errore
+sistematico durante l'acquisizione dei dati, in quanto lo strumento risultava di difficile lettura. \\ 
 
 \newpage
 \section{Tabelle}
