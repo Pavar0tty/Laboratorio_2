@@ -28,8 +28,8 @@
 \definecolor{citecolor}{RGB}{34, 139, 34}
 \definecolor{urlcolor}{RGB}{255, 69, 0}
 \definecolor{wavelength_406}{RGB}{129, 0, 204} 
-\definecolor{wavelength_447}{RGB}{0, 53, 255}  
-\definecolor{wavelength_501}{RGB}{0, 174, 255}
+\definecolor{wavelength_402}{RGB}{131, 0, 188}  
+\definecolor{wavelength_501}{RGB}{0, 255, 135}
 \definecolor{wavelength_440}{RGB}{0, 0, 255}   
 \definecolor{wavelength_513}{RGB}{21, 255, 0}   
 \definecolor{wavelength_nan}{RGB}{210,210,210} 
@@ -178,10 +178,6 @@ Il fit ha restituito i seguenti valori dei parametri:
 \end{table}
 
 
-\subsection{Analisi dati}
-
-Aggiugnere qualche commento sul fit e sui dati magari sugli errori
-
 
 \subsection{Identificazione del gas ignoto}
 Per questa seconda parte lo scopo è quello di identificare il gas ignoto tramite il suo spettro di emissione, ciò è possibile 
@@ -207,18 +203,28 @@ Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda
     \hline
     \textbf{$\lambda_{ignota}$} [nm] & \text{$\pm\sigma_\text{ignoto}$} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
     \hline
-    \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_406}2 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
+    \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_nan}2 & \cellcolor{wavelength_402} 402 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_440} 440 \\
     \hline
-    \cellcolor{wavelength_513} 513 & \cellcolor{wavelength_513}4 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
+    \cellcolor{wavelength_513} 513 & \cellcolor{wavelength_nan}4 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
     \hline
-    \cellcolor{wavelength_568} 568 & \cellcolor{wavelength_568}5 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
+    \cellcolor{wavelength_568} 568 & \cellcolor{wavelength_nan}5 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
     \hline
-    \cellcolor{wavelength_676} 676 & \cellcolor{wavelength_676}8 & \cellcolor{wavelength_667} 667 & \cellcolor{wavelength_640} 640 & \cellcolor{wavelength_696} 696 \\
+    \cellcolor{wavelength_676} 676 & \cellcolor{wavelength_nan}8 & \cellcolor{wavelength_667} 667 & \cellcolor{wavelength_640} 640 & \cellcolor{wavelength_696} 696 \\
     \hline
     \end{tabular}
     \caption{Lunghezze d'onda dei gas con valori ed errori per il gas ignoto, colorati secondo la loro lunghezza d'onda.}
     \label{tab:prisma_ignoto}
 \end{table}
+
+\subsection{Conclusioni prisma}
+Dal momento che abbiamo interpolato i dati raccolti con la relazione \ref{eq:Cauchy} abbiamo scelto di utilizzare 
+4 righe spettrali, avendo così due gradi di libertà. In generale, abbiamo pensato fosse meglio misurare più righe 
+piuttosto che misurarne poche in maniera molto accurata, in modo da aumentare i gradi di libertà del problema ed 
+eseguire un'interpolazione con più punti. Nel nostro caso ciò ha funzionato, come mostrato dal successo del fit.\\
+Per quanto riguarda la scelta di arrestare la relazione di Cauchy al secondo termine, crediamo che ciò sia necessario
+a causa dei gradi di libertà: dato che le linee spettrali sono in numero limitato non possiamo proseguire a piacimento
+lo sviluppo nella relazione di Cauchy (\ref{eq:Cauchy}), altrimenti il numero dei parametri diventerebbe maggiore
+del numero di dati punti raccolti sperimentalmente e l'interpolazione non sarebbe più possibile.
 
 
 \section{Reticolo di diffrazione}
@@ -258,9 +264,9 @@ assieme ai valori per i gas noti.
     \hline
     \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
     \hline
-    \cellcolor{wavelength_449} 449 & \cellcolor{wavelength_nan}0.3 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
+    \cellcolor{wavelength_449} 449 & \cellcolor{wavelength_nan}0.3 & \cellcolor{wavelength_402} 402 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_440} 440 \\
     \hline
-    \cellcolor{wavelength_503} 503 & \cellcolor{wavelength_nan}1 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
+    \cellcolor{wavelength_503} 503 & \cellcolor{wavelength_nan}1 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
     \hline
     \cellcolor{wavelength_581} 581 & \cellcolor{wavelength_nan}0.3 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
     \hline
@@ -269,9 +275,16 @@ assieme ai valori per i gas noti.
     \label{tab:reticolo_ignoto}
 \end{table}
 
-Confrontando i valori ottenuti con quelli tabulati, abbiamo notato che le lunghezze d'onda del gas ignoto si avvicinano
-maggiormente al nellaeon. D'altra parte, è molto probabile che la lmpada contenesse altri gas, perchè le lunghezze d'onda
+\subsection{Conclusioni Retticolo di diffrazione}
+
+ 
+Dopo aver confrontando i valori ottenuti con quelli tabulati, abbiamo notato che le lunghezze d'onda del gas ignoto si avvicinano 
+maggiormente all'elio.
+Riportiamo in seguito un test di compatibilità tra le lunghezze d'onda del gas ignoto e quelle dell'elio:
+
+ D'altra parte, è molto probabile che la lampada contenesse altri gas, perchè le lunghezze d'onda
 non combaciano perfettamente e i test di compatibilità non danno risultati soddisfacenti. \\
+
 
 
 \subsubsection{Considerazioni sugli errori}
