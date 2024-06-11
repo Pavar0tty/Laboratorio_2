@@ -234,8 +234,37 @@ La stima migliore di $d$ calcolata è:
 \end{itemize}
 
 \subsection{Identificazione del gas ignoto}
+Abbiamo ripetuto la procedura di identificazione del gas ignoto utilizzando il reticolo da 300 linee/mm al posto del 
+prisma. La configurazione del sistema e la procedura di misura sono le stesse della sezione di caratterizzazione del 
+reticolo. In questo caso lo scopo era trovare i valori di lunghezza d'onda delle righe emesse dal gas ignoto per poterli 
+confrontare con i valori tabulati. \\
+Abbiamo invertito la relazione \ref{eq:reticolo} per calcolare le lunghezze d'onda, che riportiamo in tabella \ref{tab:reticolo_ignoto} 
+assieme ai valori per i gas noti.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
+    \hline
+    \cellcolor{wavelength_447} 449 & \cellcolor{wavelength_nan}0.3 & \cellcolor{wavelength_447} 447 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_440} 440 \\
+    \hline
+    \cellcolor{wavelength_513} 503 & \cellcolor{wavelength_nan}1 & \cellcolor{wavelength_471} 471 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
+    \hline
+    \cellcolor{wavelength_585} 581 & \cellcolor{wavelength_nan}0.3 & \cellcolor{wavelength_587} 587 & \cellcolor{wavelength_585} 585 & \cellcolor{wavelength_472} 472 \\
+    \hline
+    \end{tabular}
+    \caption{Lunghezze d'onda dei gas con valori ed errori per il gas ignoto, colorati secondo la loro lunghezza d'onda.}
+    \label{tab:reticolo_ignoto}
+\end{table}
+
+Confrontando i valori ottenuti con quelli tabulati, abbiamo notato che le lunghezze d'onda del gas ignoto si avvicinano
+maggiormente al neon. D'altra parte, è molto probabile che la lmpada contenesse altri gas, perchè le lunghezze d'onda
+non combaciano perfettamente e i test di compatibilità non danno risultati soddisfacenti. \\ 
 
 \newpage
 \section{Tabelle}
+
+
 
 \end{document}
