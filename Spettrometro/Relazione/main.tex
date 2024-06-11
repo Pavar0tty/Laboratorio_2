@@ -122,22 +122,32 @@ riportato in figura \ref{fig:SetupPrisma}.
 
 
 \subsection{Caratterizzazione del prisma}
-Dopo aver riprodotto la configurazione, abbiamo utilizzato una lampada al mercurio come sorgente. 
-Per misurare l'angolo di minima deviazione $\delta$, abbiamo ruotato il piano su cui poggiato il prisma fino a quando
+
+
+\subsubsection{Misura angolo di minima deviazione}
+Per trovare l'indice di rifrazione del prisma trovato in Laboratorio
+abbiamo prima misutato l'angolo al vertice tra le due faccie lucidate
+del prisma. Utilizzando come sorgente una lampada al mercurio, abbiamo 
+ricavato l'angolo $\alpha$ al vertice dall'angolo che la piattaforma con goniometro
+ha misurato quando telescopio e collimatore mostrano la luce riflessa dalle due faccie:
+$$\alpha = 60^{\circ} 0' 0'' \pm 1'$$
+
+
+Successivamente per misurare l'angolo di minima deviazione $\delta$, abbiamo ruotato il piano su cui poggiato il prisma fino a quando
 la riga spettrale osservata non appariva fermarsi e invertire la direzione di spostamento. \\
 Al fine di accertarci che l'errore sulle misure fosse di tipo gaussiano, abbiamo ripetuto la misura diverse volte; un analisi più
 approfondita sugli errori è trattata nella sezione **********.
 A questo punto abbiamo calcolato l'indice di rifrazione del prisma per le diverse lunghezze d'onda utilizzando la seguente relazione, risolvendo per $n$.:
 $$\sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})$$
-Al fine di caratterizzare il prisma, ci siamo serviti della relazione di Cauchy \eqref{eq:Cauchy}, troncata al secondo termine,
-che lega l'indice di rifrazione $n$ alla lunghezza d'onda $\lambda$.
+Al fine di caratterizzare il prisma, ci siamo serviti della relazione di Cauchy \eqref{eq:Cauchy}, troncata al secondo ordine,
+questa relazione lega l'indice di rifrazione $n$ alla lunghezza d'onda $\lambda$.
 \begin{equation}
     n(\lambda) = A + \frac{B}{\lambda^2}
     \label{eq:Cauchy}
 \end{equation}
 
-Successivamente abbiamo interpolato i dati ottenuti con la relazione di Cauchy, ottenendo i valori dei parametri $A$ e $B$.
-Riportiamo in figura \ref{fig:Cauchy_fit} il fit ottenuto e i parametri $A$ e $B$ ottenuti.
+Successivamente abbiamo interpolato i dati ottenuti con la forma funzionale, ottenendo stime per i valori dei parametri $A$ e $B$.
+Riportiamo in figura \ref{fig:Cauchy_fit} il fit ottenuto e i parametri:
 \begin{figure}[h!]
     \centering
     \includegraphics[width = 0.5\textwidth]{Cauchy_fit.png}
