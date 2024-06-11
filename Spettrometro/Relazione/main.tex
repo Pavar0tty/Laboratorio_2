@@ -27,7 +27,8 @@
 \definecolor{linkcolor}{RGB}{0, 102, 204}
 \definecolor{citecolor}{RGB}{34, 139, 34}
 \definecolor{urlcolor}{RGB}{255, 69, 0}
-\definecolor{wavelength_406}{RGB}{129, 0, 204} 
+\definecolor{wavelength_406}{RGB}{129, 0, 204}
+\definecolor{wavelength_447}{RGB}{0, 53, 255} 
 \definecolor{wavelength_402}{RGB}{131, 0, 188}  
 \definecolor{wavelength_501}{RGB}{0, 255, 135}
 \definecolor{wavelength_440}{RGB}{0, 0, 255}   
@@ -97,6 +98,7 @@ Per le misure di questa esperienza abbiamo utilizzato:
     \item Prisma di vetro.
     \item Reticoli di diffrazione 300/600/1200 (linee/mm).
 \end{itemize}
+
 Prima della presa di misure abbiamo verificato la calibrazione degli strumenti regolando la messa a fuoco e 
 l'apertura della fenditura usando come sorgente test una lampada al sodio. Per configurare lo strumento abbiamo
 seguito le istruzioni riportate sul manuale PASCO. \\
@@ -122,22 +124,19 @@ riportato in figura \ref{fig:SetupPrisma}.
 
 
 \subsection{Caratterizzazione del prisma}
-
-
-\subsubsection{Misura angolo di minima deviazione}
 Per trovare l'indice di rifrazione del prisma trovato in Laboratorio
 abbiamo prima misutato l'angolo al vertice tra le due faccie lucidate
 del prisma. Utilizzando come sorgente una lampada al mercurio, abbiamo 
 ricavato l'angolo $\alpha$ al vertice dall'angolo che la piattaforma con goniometro
 ha misurato quando telescopio e collimatore mostrano la luce riflessa dalle due faccie:
-$$\alpha = 60^{\circ} 0' 0'' \pm 1'$$
+$$\alpha = 60^{\circ} 0' \pm 1'$$
 
 
 Successivamente per misurare l'angolo di minima deviazione $\delta$, abbiamo ruotato il piano su cui poggiato il prisma fino a quando
 la riga spettrale osservata non appariva fermarsi e invertire la direzione di spostamento. \\
 Al fine di accertarci che l'errore sulle misure fosse di tipo gaussiano, abbiamo ripetuto la misura diverse volte; un analisi più
-approfondita sugli errori è trattata nella sezione **********.
-A questo punto abbiamo calcolato l'indice di rifrazione del prisma per le diverse lunghezze d'onda utilizzando la seguente relazione, risolvendo per $n$.:
+approfondita sugli errori è trattata nella sezione \ref{sec:errori}.
+A questo punto abbiamo calcolato l'indice di rifrazione del prisma per le diverse lunghezze d'onda utilizzando la seguente relazione, risolvendo per $n$:
 \begin{equation}
     \sin(\frac{\delta + \alpha}{2}) = n \sin(\frac{\delta}{2})
     \label{eq:indice}
@@ -168,7 +167,7 @@ Il fit ha restituito i seguenti valori dei parametri:
     \hline
     $A$ & $1.5990 \pm 0.0003$ \\
     \hline
-    $B$ & $(0.0061 \pm 0.0005) \mu$m \\
+    $B$ & $(0.0061 \pm 0.0005) \mu m^2$ \\
     \hline
     $\tilde{\chi}^2$ & $1.0$ \\
     \hline
@@ -181,21 +180,22 @@ Il fit ha restituito i seguenti valori dei parametri:
 
 \subsection{Identificazione del gas ignoto}
 Per questa seconda parte lo scopo è quello di identificare il gas ignoto tramite il suo spettro di emissione, ciò è possibile 
-perchè ora conosciamo  i parametri $A$ e $B$ della relazione \ref{eq:Cauchy}, caratteristici del prisma utilizzato.
+perchè ora conosciamo  i parametri $A$ e $B$ della relazione \eqref{eq:Cauchy}, caratteristici del prisma utilizzato.
 Abbiamo riprodotto la configurazione riportata in figura \ref{fig:SetupPrisma}, analogamente a quanto fatto per la 
 caratterizzazione del prisma. Al posto della lampada al mercurio abbiamo posizionato una lampada contenente un gas
 ignoto.
-Successivamente abbiamo analizzato quattro righe spettrali diverse: rosso, giallo, verde e viola, per ciascuna delle quali abbiamo
-misurato l'angolo di minima deviazione in maniera analoga a quanto fatto per la caratterizzazione del prisma. Abbiamo 
-ripetuto la misura per ciascuna riga spettrale più volte e calcolato la media e la deviazione standard della media; i
+Successivamente abbiamo analizzato quattro righe spettrali diverse e per ciascuna di esse abbiamo misurato 
+l'angolo di minima deviazione in maniera analoga a quanto fatto per la caratterizzazione del prisma. 
+Abbiamo ripetuto la misura per ciascuna riga spettrale più volte e calcolato la media e la deviazione standard della media; i
 valori ricavati per gli errori sono stati confrontati con la sensibilità dello strumento per la misura dell'angolo (1 primo) e abbiamo deciso di
 considerare come errore la sensibilità, perchè la deviazione standard della media era minore. \\
 Analogamente a quanto svolto per la caratterizzazione del prisma, abbiamo calcolato i valori di $n$ per ciascuna
-lunghezza d'onda tramite la relazione \refeq{eq:indice}.\\
+lunghezza d'onda tramite la relazione \eqref{eq:indice}.\\
 Infine, esplicitando
-$\lambda$ nella relazione \ref{eq:Cauchy} abbiamo stimato i valori delle lunghezze d'onda $\lambda$ per ciascuna riga spettrale. \\
-Confrontando tali valori con le lunghezze d'onda tabulate sul sito del NIST abbiamo notato una discrepanza significativa.
-Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda del gas ignoto e dei gas nobili Elio, Neon e Argon.
+$\lambda$ nella relazione \eqref{eq:Cauchy} abbiamo stimato i valori delle lunghezze d'onda $\lambda$ per ciascuna riga spettrale. \\
+Confrontando tali valori con le lunghezze d'onda tabulate sul sito del NIST abbiamo notato che il gas ignoto si avvicina maggiormente
+all'elio.
+Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda del gas ignoto e dei gas nobili He, Ne e Ar.
 
 \begin{table}[h!]
     \centering
@@ -203,7 +203,7 @@ Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda
     \hline
     \textbf{$\lambda_{ignota}$} [nm] & \text{$\pm\sigma_\text{ignoto}$} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
     \hline
-    \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_nan}2 & \cellcolor{wavelength_402} 402 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_440} 440 \\
+    \cellcolor{wavelength_406} 406 & \cellcolor{wavelength_nan}2 & \cellcolor{wavelength_402} 402 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_440} \textcolor{white} {440} \\
     \hline
     \cellcolor{wavelength_513} 513 & \cellcolor{wavelength_nan}4 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
     \hline
@@ -216,16 +216,38 @@ Riportiamo nella tabella \ref{tab:prisma_ignoto} i valori delle lunghezze d'onda
     \label{tab:prisma_ignoto}
 \end{table}
 
-\subsection{Conclusioni prisma}
-Dal momento che abbiamo interpolato i dati raccolti con la relazione \ref{eq:Cauchy} abbiamo scelto di utilizzare 
-4 righe spettrali, avendo così due gradi di libertà. In generale, abbiamo pensato fosse meglio misurare più righe 
-piuttosto che misurarne poche in maniera molto accurata, in modo da aumentare i gradi di libertà del problema ed 
-eseguire un'interpolazione con più punti. Nel nostro caso ciò ha funzionato, come mostrato dal successo del fit.\\
-Per quanto riguarda la scelta di arrestare la relazione di Cauchy al secondo termine, crediamo che ciò sia necessario
-a causa dei gradi di libertà: dato che le linee spettrali sono in numero limitato non possiamo proseguire a piacimento
-lo sviluppo nella relazione di Cauchy (\ref{eq:Cauchy}), altrimenti il numero dei parametri diventerebbe maggiore
-del numero di dati punti raccolti sperimentalmente e l'interpolazione non sarebbe più possibile.
+Per valutare quantitativamente la compatibilità delle lunghezze d'onda ottenute sperimentalmente con quelle tabulate, 
+abbiamo eseguito un test di compatibilità per ciascuna riga spettrale. I risultati sono riportati nella tabella \ref{tab:compatibility_test_prisma}
 
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Riga spettrale} & \textbf{p-value} \\
+    \hline
+    Viola & 0.09 \\
+    \hline
+    Verde & 0.04 \\
+    \hline
+    Giallo & 0.01 \\
+    \hline
+    Rosso & 0.19 \\
+    \hline
+    \end{tabular}
+    \caption{Risultati del test di compatibilità per le righe spettrali}
+    \label{tab:compatibility_test_prisma}
+\end{table}
+
+Per stimare globalmente la compatibilità tra i dati sperimentali e quelli tabulati abbiamo utilizzato il metodo di 
+Fisher ottenendo un p-value di 0.0001.
+
+\subsection{Conclusioni prisma}
+
+Nella sezione di identificazione del gas ignoto, abbiamo notato che il gas si avvicina allo spettro dell'elio. 
+Affermiamo ciò dal momento che le righe emesse dal gas ignoto sono dello stesso colore delle righe emesse dall'elio, 
+d'altra parte i test di compatibilità e il metodo di Fisher non danno risultato positivo, probabilmente a causa di 
+errori troppo piccoli. Crediamo che questo sia dovuto al fatto che le righe osservate hanno uno spessore e la grande
+precisione dello strumento porta a stimare errori molto piccoli.\\
 
 \section{Reticolo di diffrazione}
 
@@ -243,19 +265,28 @@ interferenza secondari. Abbiamo mediato l'angolo ottenuto da destra e da sinistr
     d \sin(\theta) = n \lambda
     \label{eq:reticolo}
 \end{equation}
-per stimare la distanza tra le fenditure del reticolo $d$. Abbiamo ripetuto la procedura per i massimi fino all'ordine 3 e mediato nuovamente
+per stimare la distanza tra le fenditure del reticolo $d$. Abbiamo ripetuto la procedura per i massimi fino al terzo ordine e mediato nuovamente
 i valori ottenuti. \\
 La stima migliore di $d$ calcolata è:
-\begin{itemize}
-    \item $d = (3.37 \pm 0.02)\times10^{-6}$ m
-\end{itemize}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|}
+    \hline
+    \text{Valore di $d$} \\
+    \hline
+    $(3.37 \pm 0.02)\times10^{-6}$ m \\
+    \hline
+    \end{tabular}
+    \caption{Stima della distanza tra le fenditure del reticolo}
+    \label{tab:reticolo_d}
+\end{table}
 
 \subsection{Identificazione del gas ignoto}
 Abbiamo ripetuto la procedura di identificazione del gas ignoto utilizzando il reticolo da 300 linee/mm al posto del 
 prisma. La configurazione del sistema e la procedura di misura sono le stesse della sezione di caratterizzazione del 
 reticolo. In questo caso lo scopo era trovare i valori di lunghezza d'onda delle righe emesse dal gas ignoto per poterli 
 confrontare con i valori tabulati. \\
-Abbiamo invertito la relazione \ref{eq:reticolo} per calcolare le lunghezze d'onda, che riportiamo in tabella \ref{tab:reticolo_ignoto} 
+Abbiamo invertito la relazione \eqref{eq:reticolo} per calcolare le lunghezze d'onda, che riportiamo in tabella \ref{tab:reticolo_ignoto} 
 assieme ai valori per i gas noti.
 
 \begin{table}[h!]
@@ -264,7 +295,7 @@ assieme ai valori per i gas noti.
     \hline
     \textbf{$\lambda_{ignota}$} [nm] & \textbf{Errore} [nm] & \textbf{$\lambda_{He}$} [nm] & \textbf{$\lambda_{Ne}$} [nm] & \textbf{$\lambda_{Ar}$} [nm]\\
     \hline
-    \cellcolor{wavelength_449} 449 & \cellcolor{wavelength_nan}0.3 & \cellcolor{wavelength_402} 402 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_440} 440 \\
+    \cellcolor{wavelength_449} \textcolor{white}{449} & \cellcolor{wavelength_nan}0.3 & \cellcolor{wavelength_447} \textcolor{white}{447} & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_440} \textcolor{white}{440} \\
     \hline
     \cellcolor{wavelength_503} 503 & \cellcolor{wavelength_nan}1 & \cellcolor{wavelength_501} 501 & \cellcolor{wavelength_540} 540 & \cellcolor{wavelength_458} 458 \\
     \hline
@@ -275,19 +306,34 @@ assieme ai valori per i gas noti.
     \label{tab:reticolo_ignoto}
 \end{table}
 
-\subsection{Conclusioni Retticolo di diffrazione}
-
- 
-Dopo aver confrontando i valori ottenuti con quelli tabulati, abbiamo notato che le lunghezze d'onda del gas ignoto si avvicinano 
-maggiormente all'elio.
-Riportiamo in seguito un test di compatibilità tra le lunghezze d'onda del gas ignoto e quelle dell'elio:
-
- D'altra parte, è molto probabile che la lampada contenesse altri gas, perchè le lunghezze d'onda
-non combaciano perfettamente e i test di compatibilità non danno risultati soddisfacenti. \\
 
 
+\subsection{Conclusioni Reticolo di diffrazione}
 
-\subsubsection{Considerazioni sugli errori}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Riga spettrale} & \textbf{p-value} \\
+    \hline
+    Blu & 0.28 \\
+    \hline
+    Verde & 0.21 \\
+    \hline
+    Giallo & 0.01 \\
+    \hline
+    \end{tabular}
+    \caption{Test di compatibilità tra le lunghezze d'onda del gas ignoto e quelle dell'elio}
+    \label{tab:compatibility_test}
+\end{table}
+
+Il chi-quadro per il reticolo di diffrazione è 10, con una probabilità di ottenere un chi-quadro maggiore di 0.03.
+Notiamo che questi test restituiscono un basso livello di compatibilità, probabilmente
+il motivo è legato ad una sottostima delle incertezze. Nonostante ciò i valori sembrano davvero
+avvicinarsi di più ai valori tabulati delle lunghezze dell'elio. 
+
+\section{Considerazioni sugli errori}
+\label{sec:errori}
 Gli esperimenti discussi hanno richiesto molta precisione nella misura degli angoli, motivo per cui abbiamo posto particolare
 attenzione allo studio degli errori. Per prima cosa ci siamo domandati la riproducibilità delle misure e la possibile presenza di errori sistematici.
 Per fare ciò, dopo aver posizionato il mirino del telescopio su una delle righe spettrali e misuratone l'angolo, ci siamo spostati
@@ -297,6 +343,28 @@ considerando per l'analisi il valore maggiore tra i due. \\
 Ci siamo accorti che le letture degli angoli rimanevano vicine tra loro oscillando di pochi primi. Questo ci ha indicato
 la presenza di un errore casuale, che abbiamo considerato gaussiano. Abbiamo inoltre supposto l'eventuale presenza di un errore
 sistematico durante l'acquisizione dei dati, in quanto lo strumento risultava di difficile lettura. \\ 
+Per quanto riguarda invece l'errore sulle lunghezze d'onda, esso è stato calcolato tramite la propagazione degli errori
+attraverso le formule trattate.
+
+\subsection{Commenti finali}
+
+Per quanto riguarda il primo esperimento, avendo interpolato i dati raccolti con la relazione \eqref{eq:Cauchy} abbiamo scelto di utilizzare 
+4 righe spettrali, avendo così due gradi di libertà. In generale, abbiamo pensato fosse meglio misurare più righe 
+piuttosto che misurarne poche in maniera molto accurata, in modo da aumentare i gradi di libertà del problema ed 
+eseguire un'interpolazione con più punti. Nel nostro caso ciò ha funzionato, come mostrato dal basso valore
+del $\tilde{\chi}^2$ estratto dal fit.\\
+A proposito della scelta di arrestare la relazione di Cauchy al secondo termine, crediamo che ciò sia necessario
+a causa dei gradi di libertà: dato che le linee spettrali sono in numero limitato non possiamo proseguire a piacimento
+lo sviluppo nella relazione di Cauchy (\ref{eq:Cauchy}), altrimenti il numero dei parametri diventerebbe maggiore
+del numero di dati punti raccolti sperimentalmente e l'interpolazione non sarebbe più possibile. Ad ogni modo, tale 
+restrizione non è problematica, infatti sviluppare la relazione di Cauchy porta a sommare termini sempre più piccoli,
+trascurabili rispetto ai primi due. \\
+Per la stima del passo del reticolo, il metodo che abbiamo trovato più preciso è stato quello 
+che misurava la separazione tra una delle due righe del doppietto del sodio a destra e a sinistra del massimo centrale.
+Il motivo di ciò è dato dal fatto che utilizza la differenza angolare tra due misure, riducendo 
+l'effetto degli errori casuali.\\
+Infine, dopo aver eseguito l'analisi dei dati abbiamo potuto appurare che l'identificazione del gas ignoto tramite il reticolo
+di diffrazione ha portato a risultati più precisi rispetto all'identificazione tramite il prisma.
 
 \newpage
 \section{Tabelle}
@@ -325,24 +393,24 @@ sistematico durante l'acquisizione dei dati, in quanto lo strumento risultava di
     \label{tab:prisma_md}
     \end{table}
 
-    \begin{table}[h!]
-        \centering
-        \begin{tabular}{|c|c|c|c|c|c|c|c|}
-        \hline
-        \multicolumn{2}{|c|}{\textbf{Rosso}} & \multicolumn{2}{|c|}{\textbf{Giallo}} & \multicolumn{2}{|c|}{\textbf{Verde}} & \multicolumn{2}{|c|}{\textbf{Viola}} \\
-        \hline
-        \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} \\
-        \hline
-        227 & 33 & 228 & 10 & 228 & 33 & 230 & 5 \\
-        227 & 32 & 228 & 9 & 228 & 35 & 230 & 4 \\
-        227 & 33 & 228 & 7 & 228 & 34 & 230 & 2 \\
-        227 & 32 & 228 & 7 & 228 & 36 & 230 & 4 \\
-        227 & 34 & 228 & 6 & 228 & 36 & 230 & 5 \\
-        \hline
-        \end{tabular}
-        \caption{Angoli di minima deviazione per gas ignoto}
-        \label{tab:prisma_md_ignoto}
-        \end{table}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Rosso}} & \multicolumn{2}{|c|}{\textbf{Giallo}} & \multicolumn{2}{|c|}{\textbf{Verde}} & \multicolumn{2}{|c|}{\textbf{Viola}} \\
+    \hline
+    \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} \\    
+    \hline
+    227 & 33 & 228 & 10 & 228 & 33 & 230 & 5 \\
+    227 & 32 & 228 & 9 & 228 & 35 & 230 & 4 \\
+    227 & 33 & 228 & 7 & 228 & 34 & 230 & 2 \\
+    227 & 32 & 228 & 7 & 228 & 36 & 230 & 4 \\
+    227 & 34 & 228 & 6 & 228 & 36 & 230 & 5 \\
+    \hline
+    \end{tabular}
+    \caption{Angoli di minima deviazione per gas ignoto}
+    \label{tab:prisma_md_ignoto}
+\end{table}
         
         \begin{table}[h!]
             \centering
