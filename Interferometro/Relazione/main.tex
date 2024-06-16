@@ -1,0 +1,165 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}     %serve per mettere il modulo 
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{textcomp}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{changepage}
+\usepackage{amsmath} 
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage[table]{xcolor} 
+\usepackage{colortbl}
+\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+\usepackage{cite} % takes care of citations
+\usepackage[hidelinks]{hyperref} % adds hyper links inside the generated pdf file
+\usepackage{siunitx} % provides the \SI{}{} command for proper typesetting of units
+% Define the colors
+\definecolor{linkcolor}{RGB}{0, 102, 204}
+\definecolor{citecolor}{RGB}{34, 139, 34}
+\definecolor{urlcolor}{RGB}{255, 69, 0}
+\definecolor{wavelength_406}{RGB}{129, 0, 204}
+\definecolor{wavelength_447}{RGB}{0, 53, 255} 
+\definecolor{wavelength_402}{RGB}{131, 0, 188}  
+\definecolor{wavelength_501}{RGB}{0, 255, 135}
+\definecolor{wavelength_440}{RGB}{0, 0, 255}   
+\definecolor{wavelength_513}{RGB}{21, 255, 0}   
+\definecolor{wavelength_nan}{RGB}{210,210,210} 
+\definecolor{wavelength_540}{RGB}{129, 255, 0}  
+\definecolor{wavelength_458}{RGB}{0, 113, 255}  
+\definecolor{wavelength_568}{RGB}{219, 255, 0}
+\definecolor{wavelength_587}{RGB}{255, 233, 0} 
+\definecolor{wavelength_585}{RGB}{255, 239, 0} 
+\definecolor{wavelength_472}{RGB}{0, 178, 255}
+\definecolor{wavelength_667}{RGB}{235, 0, 0}  
+\definecolor{wavelength_676}{RGB}{227, 0, 0}  
+\definecolor{wavelength_640}{RGB}{255, 33, 0}  
+\definecolor{wavelength_696}{RGB}{209, 0, 0}
+\definecolor{wavelength_449}{RGB}{0, 65, 255}
+\definecolor{wavelength_503}{RGB}{0, 255, 110}
+\definecolor{wavelength_581}{RGB}{255, 252, 0}
+
+
+% Setup hyperref
+\hypersetup{
+    colorlinks=false, % colored links
+    linkcolor=linkcolor, % color for internal links
+    citecolor=citecolor, % color for citations
+    urlcolor=urlcolor, % color for URLs
+}
+\fancypagestyle{logoheader}{
+    \fancyhf{}
+    \fancyhead[L]{\includegraphics[width = 3cm]{infn-art-science-universita-degli-studi-di-milano-bicocca-maintainer-universita-studi-milano-bicocca.png}}
+    \renewcommand{\headrulewidth}{0pt}
+    }
+\usepackage{blindtext}
+\graphicspath{{immagini/}}
+%Required for inserting images
+%++++++++++++++++++++++++++++++++++++++++
+%Margini 
+
+
+\begin{document}
+
+
+\title{{\small Università degli studi Milano-Bicocca  Dipartimento di Fisica - Laboratorio II }\\
+	Esperienza Ottica - Interferometro}
+\author{F. Ballo, S. Franceschina, S. Dolci - Gruppo T1 39}
+\date{\today}
+\maketitle
+\thispagestyle{logoheader}
+
+
+\begin{abstract}
+	Nella seguente relazione vengono presentati i risultati ottenuti dalla sesta esperienza del corso di 
+    Laboratorio II riguardante l'analisi di fenomeni ottici.
+    L'obiettivo di questa esperienza è quello di riprodurre due esperimenti di interferometria: Fabri-Perot e Michelson.
+    Per ciascuno di questi setup riprodotti in laboratorio lo scopo è quello di verificare certe relazioni, che occorrono
+    nel momento in cui raggi luminosi interferiscono tra loro, dalle quali è possibile ricavare informazioni utili come 
+    la lunghezza d'onda della sorgente.
+	\begin{adjustwidth}{-1cm}{-1cm}
+	\end{adjustwidth}
+\end{abstract}
+\tableofcontents
+\newpage
+
+\section{Configurazione setup esperienza}
+Per le misure di questa esperienza abbiamo utilizzato:
+
+\begin{itemize}
+    \item Un interferometro di precisione PASCO scientific Modello OS-9255A/OS-9258A , \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{link.}
+\end{itemize}
+
+
+    
+\section{Fabry-Perot}
+
+La prima parte dell'esperienza ha come obiettivo 
+\subsection{Specchio}
+
+
+
+\subsection{Frange}
+
+
+
+\subsection{Conclusioni Fabry-Perot}
+
+
+
+\section{Michelson}
+
+\subsection{Specchio}
+
+
+\subsection{Frange}
+
+
+\subsection{Conclusioni Michelson}
+
+
+
+
+\section{Considerazioni sugli errori}
+\label{sec:errori}
+
+\subsection{Commenti finali}
+
+
+
+\newpage
+\section{Tabelle}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Giallo}} & \multicolumn{2}{|c|}{\textbf{Ciano}} & \multicolumn{2}{|c|}{\textbf{Blu}} & \multicolumn{2}{|c|}{\textbf{Viola}} \\
+    \hline
+    \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} & \textbf{gradi} & \textbf{primi} \\
+    \hline
+    48 & 5 & 49 & 33 & 50 & 5 & 51 & 1 \\
+    48 & 3 & 49 & 36 & 50 & 8 & 51 & 2 \\
+    48 & 1 & 49 & 35 & 50 & 8 & 51 & 0 \\
+    48 & 0 & 49 & 33 & 50 & 10 & 51 & 1 \\
+    48 & 4 & 49 & 34 & 50 & 4 & 51 & 0 \\
+    48 & 2 & 49 & 34 & 50 & 5 & 51 & 0 \\
+    48 & 2 & 49 & 31 & 50 & 6 & 51 & 1 \\
+    48 & 3 & 49 & 34 & 50 & 7 & 51 & 2 \\
+    48 & 6 & 49 & 31 & 50 & 5 & 51 & 1 \\
+    48 & 2 & 49 & 32 & 50 & 6 & 51 & 0 \\
+    \hline
+    \end{tabular}
+    \caption{Angoli di minima deviazione per mercurio}
+    \label{tab:prisma_md}
+    \end{table}
+\end{document}
