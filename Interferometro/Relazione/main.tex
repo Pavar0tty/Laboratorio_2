@@ -97,8 +97,9 @@ Per le misure di questa esperienza abbiamo utilizzato:
 
 \begin{itemize}
     \item Un interferometro di precisione PASCO scientific Modello OS-9255A/OS-9258A , \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{link.}
-    \item Sorgente: laser monocromatico coerente He-Ne con lunghezza d'onda $\lambda = \SI{632.8}{\nano\meter}$.
+    \item Sorgente: laser monocromatico He-Ne con lunghezza d'onda $\lambda = \SI{632.8}{\nano\meter}$.
     \item Lente divergente: lente da 18mm.
+    \item Specchi compresi nella dotazione PASCO
 \end{itemize}
 
 
@@ -114,8 +115,8 @@ Per farlo abbiamo montanto l'interferometro in configurazione Fabry-Perot:
     \label{fig:fabry-perot config}
 \end{figure}
 
-In tal modo, la luce del fascio laser incide contro uno specchio divergente e entra nella cavità di Fabry-Perot,
-di ampiezza $d$. Le riflessioni successive tra i due specchi formano la figura di interferenza sullo schermo, posto
+L luce del fascio laser incide contro una lente divergente e entra nella cavità di Fabry-Perot, ovvero due specchi semiriflettenti 
+distanziati $d$. Le riflessioni successive tra i due specchi formano la figura di interferenza sullo schermo, posto
 a circa un metro di distanza. \\ 
 È interessante notare come, per ricavare le relazioni che verranno utilizzate per descrivere il fenomeno, si 
 introduca l'ipotesi che i raggi luminosi siano paralleli tra di loro nell'ingresso della cavità, nonostante la 
@@ -123,9 +124,8 @@ presenza di una lente divergente. Abbiamo motivato questa ipotesi osservando che
 molto vicina alla cavità, e quindi la divergenza dei raggi luminosi è trascurabile. Non si può dire lo stesso per 
 quanto riguarda i raggi che incidono sullo schermo, essi infatti sono considerati divergenti perchè la distanza tra
 schermo e specchio è significativa.\\
-Un'altra discussione importante riguarda gli angoli delle frange di interferenza. L'angolo $\theta$ è quello riportato
-in figura \ref{fig:fabry_perot_scheda}.
-
+Un'altra osservazione importante riguarda gli angoli delle frange di interferenza. 
+Per l'angolo $\theta$, quello riportato in figura \ref{fig:fabry_perot_scheda},
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{fabry_perot_config.JPG}
@@ -133,25 +133,25 @@ in figura \ref{fig:fabry_perot_scheda}.
     \label{fig:fabry_perot_scheda}
 \end{figure}
 
-Ci si può chiedere come misurare quest'angolo e soprattutto dove si trova il suo vertice. Abbiamo posto il vertice nel
-fuoco della lente divergente e misurato la distanza tra tale fuoco e lo schermo. In questo modo, misurando in seguito
+abbiamo posto il vertice nel fuoco della lente divergente (18mm avanti) e misurato la distanza tra tale fuoco e lo schermo. In questo modo, misurando in seguito
 la distanza tra il centro della figura di interferenza e la frangia, è possibile calcolare l'angolo $\theta$ come 
-l'arcotangente del rapporto tra le due distanze. In ogni caso, tali considerazioni sono state rilevanti solo per la 
+l'arcotangente del rapporto tra le due distanze. In ogni caso, tali considerazioni sono state rilevanti solo per questa  
 prima parte dell'esperienza, in cui era richiesto di verificare la legge \ref{eq:fabry_perot} confrontando i valori di 
-angoli attesi con quelli misurati. Per tutte le altre esperienze abbiamo potuto considerare il coseno dell'angolo 
-pari a 1 perchè lo schermo si trova a grande distanza dalla sorgente puntiforme.\\
+angoli attesi con quelli misurati. Per tutte le altre esperienze abbiamo potuto considerare $\theta \approx 0$ e quindi 
+$\cos(\theta) \approx 1$ poichè lo schermo si trova a una grande distanza dalla sorgente puntiforme.
 
 \subsection{Verifica della legge di interferenza}
 
-Nella prima parte dell'esperienza abbiamo verificato la legge di interferenza, riportata in equazione
-\ref{eq:fabry_perot}:
+In questa prima parte dell'esperienza abbiamo cercato di verificare
+la seguente legge di interferenza, che descrive quando i due raggi luminosi interferiscono in fase:
 
 \begin{equation}
     \delta_r \frac{\lambda}{2 \pi} + 2d \cos(\theta) = N \lambda
     \label{eq:fabry_perot}
 \end{equation}
 
-dove $d$ è la distanza tra i due specchi, $\theta$ è l'angolo di incidenza della luce e $N$ è l'ordine di interferenza.
+$d$ è la distanza tra i due specchi, $\delta_r$ rappresenta lo sfasamento , $\theta$ è l'angolo di incidenza della luce, $N$ è l'ordine di interferenza e $\lambda$ 
+è la lunghezza d'onda del laser sorgente. \\
 Per verificarla abbiamo deciso di invertire la relazione in modo da evidenzare la dipendenza di $\cos(\theta)$ dalle
 altre variabili, ricavando la relazione \ref{eq:fabry_perot_cos}:
 
@@ -160,8 +160,9 @@ altre variabili, ricavando la relazione \ref{eq:fabry_perot_cos}:
     \label{eq:fabry_perot_cos}
 \end{equation}
 
-Abbiamo perciò misurato il raggio dei cerchi di interferenza e calcolato così il coseno dell'angolo $\theta$, 
-avendo un valore di distanza dello schermo dalla sorgente di $D = 1.375 m$. Successivamente abbiamo eseguito 
+Dopo aver verificato le opportune calibrazioni del laser, delle lenti e dello specchio,
+abbiamo misurato il diametro dei cerchi di interferenza con un calibro e calcolato così il coseno dell'angolo $\theta$. \\
+La distanza dello schermo dalla sorgente è pari a $D = 1.375 m$, assumendo come punto sorgente il fuoco della lente (18mm). Successivamente abbiamo eseguito 
 un'interpolazione tramite la legge \ref{eq:fabry_perot_cos}, mantenendo come parametri liberi $\delta_r$ e $d$.\\
 Abbiamo eseguito tale misura per quattro volte, variando d, al fine di poter verificare in più situazioni la legge.\\
 Riportiamo i grafici ottenuti....
