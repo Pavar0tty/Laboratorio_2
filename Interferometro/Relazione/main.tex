@@ -164,11 +164,25 @@ Dopo aver verificato le opportune calibrazioni del laser, delle lenti e dello sp
 abbiamo misurato il diametro dei cerchi di interferenza con un calibro e calcolato così il coseno dell'angolo $\theta$. \\
 La distanza dello schermo dalla sorgente è pari a $D = 1.375 m$, assumendo come punto sorgente il fuoco della lente (18mm). Successivamente abbiamo eseguito 
 un'interpolazione tramite la legge \ref{eq:fabry_perot_cos}, mantenendo come parametri liberi $\delta_r$ e $d$.\\
-Abbiamo eseguito tale misura per quattro volte, variando d, al fine di poter verificare in più situazioni la legge.\\
+Abbiamo ripetuto tale misura per quattro volte, variando d, al fine di poter verificare in più sconfigurazioni la legge \ref{eq:fabry_perot}.\\
 Riportiamo i grafici ottenuti....
 
 
-\subsection{Frange}
+\subsection{Calibrazione micrometro - Frange}
+L'interferometro in configurazione Fabry-Perot è dotato di un micrometro che permette 
+di variare la distanza tra i due specchi $\Delta d$.
+Quando questa $\Delta d$ varia, varia anche il cammino ottico dei raggi luminosi e quindi la posizione delle frange di interferenza.
+La legge che lega questo spostamento è la seguente:
+    \begin{equation}
+        \Delta d = \frac{\Delta N \cdot \lambda}{2 \cdot \cos(\theta)}
+        \label{eq:micrometro}
+    \end{equation}
+
+Misurando quante frange scorrono sullo schermo è possibile risalire a una misura di alta precisione
+del $\Delta d$ e quindi calibrare il micrometro.\\
+Come passo del nomio abbiamo scelto $\Delta d_\text{nomio} = 20\text{\SIUnitSymbolMicro m}$, il coseno dell'angolo $\theta$ approssimato a 1
+e infine abbiamo ripetuto la misura 5 volte ottenendo come risultato:
+
 
 
 
