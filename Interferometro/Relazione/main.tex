@@ -133,12 +133,13 @@ Per l'angolo $\theta$, quello riportato in figura \ref{fig:fabry_perot_scheda},
     \label{fig:fabry_perot_scheda}
 \end{figure}
 
-abbiamo posto il vertice nel fuoco della lente divergente (18mm avanti) e misurato la distanza tra tale fuoco e lo schermo. In questo modo, misurando in seguito
-la distanza tra il centro della figura di interferenza e la frangia, è possibile calcolare l'angolo $\theta$ come 
-l'arcotangente del rapporto tra le due distanze. In ogni caso, tali considerazioni sono state rilevanti solo per questa  
-prima parte dell'esperienza, in cui era richiesto di verificare la legge \ref{eq:fabry_perot} confrontando i valori di 
-angoli attesi con quelli misurati. Per tutte le altre esperienze abbiamo potuto considerare $\theta \approx 0$ e quindi 
-$\cos(\theta) \approx 1$ poichè lo schermo si trova a una grande distanza dalla sorgente puntiforme.
+abbiamo posto il vertice nel fuoco della lente divergente (18mm avanti) e misurato la distanza tra tale fuoco e lo schermo. 
+In questo modo, misurando in seguito la distanza tra il centro della figura di interferenza e la frangia, 
+è possibile calcolare l'angolo $\theta$ come l'arcotangente del rapporto tra le due distanze. In ogni caso, tali 
+considerazioni sono state rilevanti solo per questa prima parte dell'esperienza, in cui era richiesto di verificare 
+la legge \ref{eq:fabry_perot} confrontando i valori di angoli attesi con quelli misurati. Per tutte le altre esperienze 
+abbiamo potuto considerare $\theta \approx 0$ e quindi $\cos(\theta) \approx 1$ poichè lo schermo si trova 
+a una grande distanza dalla sorgente puntiforme.
 
 \subsection{Verifica della legge di interferenza}
 
@@ -161,12 +162,52 @@ altre variabili, ricavando la relazione \ref{eq:fabry_perot_cos}:
 \end{equation}
 
 Dopo aver verificato le opportune calibrazioni del laser, delle lenti e dello specchio,
-abbiamo misurato il diametro dei cerchi di interferenza con un calibro e calcolato così il coseno dell'angolo $\theta$. \\
-La distanza dello schermo dalla sorgente è pari a $D = 1.375 m$, assumendo come punto sorgente il fuoco della lente (18mm). Successivamente abbiamo eseguito 
-un'interpolazione tramite la legge \ref{eq:fabry_perot_cos}, mantenendo come parametri liberi $\delta_r$ e $d$.\\
-Abbiamo ripetuto tale misura per quattro volte, variando d, al fine di poter verificare in più sconfigurazioni la legge \ref{eq:fabry_perot}.\\
-Riportiamo i grafici ottenuti....
+abbiamo misurato il diametro dei cerchi di interferenza con un calibro e calcolato così il coseno dell'angolo $\theta$.\\
+La distanza dello schermo dalla sorgente è pari a $D = 1.375 m$, assumendo come punto sorgente il fuoco della lente 
+(18mm). Successivamente abbiamo eseguito un'interpolazione tramite la legge \ref{eq:fabry_perot_cos}, mantenendo come 
+parametri liberi $\delta_r$ e $d$.\\
+Abbiamo ripetuto tale misura per quattro volte, variando d, al fine di poter verificare in più configurazioni la 
+legge \ref{eq:fabry_perot}.\\
+Riportiamo i grafici ottenuti per ciascuna misurazione in figura \ref{fig:verifica_fabry_perot}:
 
+%Da discutere gli errori (anche in relazione ai valori di chi quadro ottenuti)
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{verifica_fabry_perot.png}
+    \caption{Interpolazioni della legge \ref{eq:fabry_perot_cos}.}
+    \label{fig:verifica_fabry_perot}
+\end{figure}
+
+Riportiamo nella tabella \ref{tab:dati_interpolazioni_FP} i valori ottenuti per i parametri $\delta_r$ e $d$ 
+e i relativi errori, insiema ai valori di $\tilde{\chi}^2$ e p-value ottenuti dalle interpolazioni.
+
+%Da discutere le unità di misura dei parametri.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c||c|c|c|}
+    \hline
+    \multicolumn{3}{|c||}{\textbf{Interpolazione 1}} & \multicolumn{3}{c|}{\textbf{Interpolazione 2}} \\
+    \hline
+    \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} & \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} \\
+    \hline
+    \textbf{d1} & 0.00252 & 4.82e-07 & \textbf{d2} & 0.00254 & 4.83e-07 \\
+    \textbf{delta1} & 5.01e+04 & 9.56 & \textbf{delta2} & 5.04e+04 & 9.58 \\
+    \textbf{$\tilde{\chi}^2_1$} & 0.107 & \textbf{Pvalue 1:} 1 & \textbf{$\tilde{\chi}^2_2$} & 0.0398 & \textbf{Pvalue 2:} 1 \\
+    \hline
+    \multicolumn{3}{|c||}{\textbf{Interpolazione 3}} & \multicolumn{3}{c|}{\textbf{Interpolazione 4}} \\
+    \hline
+    \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} & \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} \\
+    \hline
+    \textbf{d3} & 0.00219 & 4.22e-07 & \textbf{d4} & 0.00255 & 4.84e-07 \\
+    \textbf{delta3} & 4.34e+04 & 8.36 & \textbf{delta4} & 5.06e+04 & 9.60 \\
+    \textbf{$\tilde{\chi}^2_3$} & 0.75 & \textbf{Pvalue 3:} 0.678 & \textbf{$\tilde{\chi}^2_4$} & 0.0756 & \textbf{Pvalue 4:} 1 \\
+    \hline
+    \end{tabular}
+    \caption{Dati, deviazioni e test $\tilde{\chi}^2$ con p-value, suddivisi per interpolazione.}
+    \label{tab:dati_interpolazioni_FP}
+    \end{table}
 
 \subsection{Calibrazione micrometro - Frange}
 L'interferometro in configurazione Fabry-Perot è dotato di un micrometro che permette 
