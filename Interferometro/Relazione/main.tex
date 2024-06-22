@@ -160,15 +160,16 @@ altre variabili, ricavando la relazione \ref{eq:fabry_perot_cos}:
     \cos(\theta) = \frac{N \lambda}{2d} - \frac{\delta_r \lambda}{4 d \pi}
     \label{eq:fabry_perot_cos}
 \end{equation}
-
 Dopo aver verificato le opportune calibrazioni del laser, delle lenti e dello specchio,
 abbiamo misurato il diametro dei cerchi di interferenza con un calibro e calcolato così il coseno dell'angolo $\theta$.\\
-La distanza dello schermo dalla sorgente è pari a $D = 1.375 m$, assumendo come punto sorgente il fuoco della lente 
-(18mm). Successivamente abbiamo eseguito un'interpolazione tramite la legge \ref{eq:fabry_perot_cos}, mantenendo come 
+
+\subsection{Analisi Dati legge di interferenza}
+Di seguito riportiamo i dati raccolti in laboratorio; la distanza dello schermo dalla sorgente è pari a $D = 1.37 \pm0.01 m$, assumendo come punto sorgente il fuoco della lente 
+(18mm). Successivamente per la verifica del modello abbiamo eseguito un'interpolazione con la legge \ref{eq:fabry_perot_cos}, mantenendo come 
 parametri liberi $\delta_r$ e $d$.\\
 Abbiamo ripetuto tale misura per quattro volte, variando d, al fine di poter verificare in più configurazioni la 
 legge \ref{eq:fabry_perot}.\\
-Riportiamo i grafici ottenuti per ciascuna misurazione in figura \ref{fig:verifica_fabry_perot}:
+Riportiamo di seguito i grafici dei fit ottenuti per ciascuna delle misurazioni in figura \ref{fig:verifica_fabry_perot}:
 
 %Da discutere gli errori (anche in relazione ai valori di chi quadro ottenuti)
 
@@ -179,8 +180,8 @@ Riportiamo i grafici ottenuti per ciascuna misurazione in figura \ref{fig:verifi
     \label{fig:verifica_fabry_perot}
 \end{figure}
 
-Riportiamo nella tabella \ref{tab:dati_interpolazioni_FP} i valori ottenuti per i parametri $\delta_r$ e $d$ 
-e i relativi errori, insiema ai valori di $\tilde{\chi}^2$ e p-value ottenuti dalle interpolazioni.
+Nella tabella \ref{tab:dati_interpolazioni_FP} riportiamo i valori ottenuti per i parametri $\delta_r$ e $d$ 
+con i relativi errori, insiema ai valori del $\tilde{\chi}^2$ e p-value trovati dalle interpolazioni.
 
 %Da discutere le unità di misura dei parametri.
 
@@ -192,17 +193,17 @@ e i relativi errori, insiema ai valori di $\tilde{\chi}^2$ e p-value ottenuti da
     \hline
     \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} & \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} \\
     \hline
-    \textbf{d1} & 0.00252 & 4.82e-07 & \textbf{d2} & 0.00254 & 4.83e-07 \\
-    \textbf{delta1} & 5.01e+04 & 9.56 & \textbf{delta2} & 5.04e+04 & 9.58 \\
-    \textbf{$\tilde{\chi}^2_1$} & 0.107 & \textbf{Pvalue 1:} 1 & \textbf{$\tilde{\chi}^2_2$} & 0.0398 & \textbf{Pvalue 2:} 1 \\
+    \text{d} & 0.00252 & 4.82e-07 & \text{d} & 0.00254 & 4.83e-07 \\
+    \textbf{$\delta_r$} & 5.01e+04 & 9.56 & \textbf{$\delta_r$} & 5.04e+04 & 9.58 \\
+    \textbf{$\tilde{\chi}^2$} & 0.00307 & \textbf{p-value :} 1 & \textbf{$\tilde{\chi}^2$} & 0.0398 & \textbf{p-value :} 1 \\
     \hline
     \multicolumn{3}{|c||}{\textbf{Interpolazione 3}} & \multicolumn{3}{c|}{\textbf{Interpolazione 4}} \\
     \hline
     \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} & \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} \\
     \hline
-    \textbf{d3} & 0.00219 & 4.22e-07 & \textbf{d4} & 0.00255 & 4.84e-07 \\
-    \textbf{delta3} & 4.34e+04 & 8.36 & \textbf{delta4} & 5.06e+04 & 9.60 \\
-    \textbf{$\tilde{\chi}^2_3$} & 0.75 & \textbf{Pvalue 3:} 0.678 & \textbf{$\tilde{\chi}^2_4$} & 0.0756 & \textbf{Pvalue 4:} 1 \\
+    \text{d} & 0.00219 & 4.22e-07 & \text{d} & 0.00255 & 4.84e-07 \\
+    \textbf{$\delta_r$} & 4.34e+04 & 8.36 & \textbf{$\delta_r$} & 5.06e+04 & 9.60 \\
+    \textbf{$\tilde{\chi}^2$} & 0.75 & \textbf{p-value :} 0.678 & \textbf{$\tilde{\chi}^2$} & 0.0756 & \textbf{p-value :} 1 \\
     \hline
     \end{tabular}
     \caption{Dati, deviazioni e test $\tilde{\chi}^2$ con p-value, suddivisi per interpolazione.}
@@ -221,11 +222,35 @@ La legge che lega questo spostamento è la seguente:
 
 Misurando quante frange scorrono sullo schermo è possibile risalire a una misura di alta precisione
 del $\Delta d$ e quindi calibrare il micrometro.\\
-Come passo del nomio abbiamo scelto $\Delta d_\text{nomio} = 20\text{\SIUnitSymbolMicro m}$, il coseno dell'angolo $\theta$ approssimato a 1
-e infine abbiamo ripetuto la misura 5 volte ottenendo come risultato:
+Dopo aver registrato una posizione di partenza inziale dello specchio abbiamo scelto $\Delta d_\text{nomio} = 20\text{\SIUnitSymbolMicro m}$ come passo del nomio,
+ il coseno dell'angolo $\theta$ approssimato a circa 1, dato che assumiamo incidenza normale.
+Infine abbiamo ripetuto la misura più volte, sempre ripartendo
+dalle stessa posizione iniziale cercando così di ridurre l'errore 
+statistico e ottenendo una media per la distanza.
 
+\subsection{Analisi Dati calibrazione micrometro}
+Riportiamo in seguito i dati ottenuti dalle misurazioni:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d$} & \textbf{Errore $\pm\sigma$}  \\
+    \hline
+    1 & 61 & 19,300 & 0.003 \\
+    2 & 64 & 20,249 & 0.003 \\
+    3 & 59 & 18,667 & 0.003 \\
+    4 & 60 & 18,984 & 0.003 \\
+    5 & 60 & 18,984 & 0.003 \\
+    5 & 64 & 20,249 & 0.003 \\
+    \hline
+    \end{tabular}
+    \caption{Dati raccolti per la calibrazione del micrometro.}
+    \label{tab:calibrazione_micrometro}
+    \end{table}
 
-
+Riportiamo in seguito per la stima della distanza il valor medio e la deviazione standard$$\Delta d_\text{mis} = 19.41 \pm0.07\text{\SIUnitSymbolMicro m} $$
+Gli errori riportati nella tabella sono stati calcolati con l'ooportuna formula di propagazione degli errori, riportiamo  inoltre
+che per questi calcoli abbiamo utilizzato come valore di $\lambda$ la lunghezza d'onda del laser He-Ne $\lambda = \SI{632.8}{\nano\meter} \pm0.1$ aggiungere citazione.
 
 \subsection{Conclusioni Fabry-Perot}
 
