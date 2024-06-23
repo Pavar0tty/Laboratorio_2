@@ -289,7 +289,21 @@ Per risalire all'indice di rifrazione dell'aria, abbiamo utilizzato la formula \
 
 laddove $P_i$ e $P_f$ sono le pressioni iniziale e finale ($P_i = \SI{101.325}{\kilo\pascal}$), $\Delta N$ 
 è il numero di frange contate, $d = \SI{0.03 \pm 0}{m}$ è la larghezza della camera a vuoto e $\lambda$ è la 
-lunghezza d'onda del laser.
+lunghezza d'onda del laser. Abbiamo ripetuto la misura per quattro volte, variando la pressione finale, e contando le 
+frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_dati} i dati raccolti e in tabella 
+\ref{tab:indice_rifrazione_aria} i valori ottenuti per l'indice di rifrazione dell'aria. Qui di seguito riportiamo
+il valore ottenuto per l'indice di rifrazione dell'aria, con relativo errore $n_{aria} = 1.00035 \pm 0.00002$.\\
+Gli errori sui singoli valori dell'indice di rifrazione sono stati calcolati con la formula di propagazione degli errori,
+a, partire dalla relazione \ref{eq:indice_rifrazione_aria}, in cui $P_f$ ha come errore la sensibilità del manometro 
+($\SI{2}{\kilo\pascal}$). L'errore sul valore medio è stato calcolato pesando gli errori delle singole misure, con la 
+formula \ref{eq:errore_valore_medio}:
+\begin{equation}
+    \sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
+    \label{eq:errore_valore_medio}
+\end{equation}
+
+Operando un test di compatibilità con il valore atteso (pari a $n_{aria} = 1.000292$), otteniamo una distanza in 
+deviazioni standard pari a 2.37.\\
 
 \subsection{Misura indice rifrazione vetro}
 
@@ -328,5 +342,42 @@ lunghezza d'onda del laser.
     \end{tabular}
     \caption{Distanze tra gli specchi ottenute dalla formula \ref{eq:micrometro}.}
     \label{tab:calibrazione_micrometro_michelson}
-    \end{table}
+\end{table}
+
+%Tabella per Michelson - Indice di rifrazione aria
+%valori acquisiti
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{$P_f$} & \textbf{Sensibilità} & \textbf{$\Delta N$} \\
+    \hline
+    76 & 2 & 16 \\
+    80 & 2 & 18 \\
+    50 & 2 & 11 \\
+    42 & 2 & 9 \\
+    \hline
+    \end{tabular}
+    \caption{Dati acquisiti per la misura dell'indice di rifrazione dell'aria.}
+    \label{tab:indice_rifrazione_aria_dati}
+\end{table}
+
+%valori di n calcolati
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Indice} & \textbf{$n_{aria}$} & \textbf{Errore} \\
+    \hline
+    1 & \num{1.00051} & \num{0.00005} \\
+    2 & \num{1.00071} & \num{0.00008} \\
+    3 & \num{1.00011} & \num{0.00008} \\
+    4 & \num{1.00007} & \num{0.00005} \\
+    \hline
+    \end{tabular}
+    \caption{Indici di rifrazione ottenuti dalla formula \ref{eq:indice_rifrazione_aria}.}
+    \label{tab:indice_rifrazione_aria}
+\end{table}
+
+
 \end{document}
