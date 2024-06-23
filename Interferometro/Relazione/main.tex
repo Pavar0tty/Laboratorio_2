@@ -276,12 +276,19 @@ la misura per quattro volte, spostando di $20 \text{\SIUnitSymbolMicro m}$ la di
 dal nonio. Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati ottenuti. Come valore ottenuto
 abbiamo deciso di considerare la media delle misure effettuate, ed errore la loro deviazione standard, in quanto 
 misure non dotate di errore, perchè ricavate a partire da N e $\lambda$; ecco il valore di $\Delta d$ ottenuto: 
-$\Delta d_\text{mis} = 1.94 \pm0.05\text{\SIUnitSymbolMicro m} $
+$\Delta d_\text{mis} = 1.94 \pm0.05\text{\SIUnitSymbolMicro m} $. L'errore sul valore medio è stato calcolato pesando 
+gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
+\begin{equation}
+    \sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
+    \label{eq:errore_valore_medio}
+\end{equation}
 
 \subsection{Misura indice rifrazione aria}
-%aggiungere spiegazioni
-
-Per risalire all'indice di rifrazione dell'aria, abbiamo utilizzato la formula \ref{eq:indice_rifrazione_aria}:
+In questa parte dell'esperienza abbiamo utilizzato l'interferometro Michelson per misurare l'indice di rifrazione 
+dell'aria, sfruttando il fatto che, variando la pressione, il numero di frange di interferenza cambia. La configurazione
+ricalca quella della figura \ref{fig:michelson config}, con la differenza che abbiamo inserito una camera a vuoto in uno 
+dei bracci dell'interferometro.\\
+Si è utilizzata la formula \ref{eq:indice_rifrazione_aria} per risalire all'indice di rifrazione dell'aria :
 \begin{equation}
     n = 1 + \frac{\Delta N \lambda P_f}{2 d (P_i - P_f)}
     \label{eq:indice_rifrazione_aria}
@@ -289,20 +296,18 @@ Per risalire all'indice di rifrazione dell'aria, abbiamo utilizzato la formula \
 
 laddove $P_i$ e $P_f$ sono le pressioni iniziale e finale ($P_i = \SI{101.325}{\kilo\pascal}$), $\Delta N$ 
 è il numero di frange contate, $d = \SI{0.03 \pm 0}{m}$ è la larghezza della camera a vuoto e $\lambda$ è la 
-lunghezza d'onda del laser. Abbiamo ripetuto la misura per quattro volte, variando la pressione finale, e contando le 
+lunghezza d'onda del laser.\\
+Come procedura di misura abbiamo fatto variare la pressione nel compressore e contato il numero di frange che scorrevano
+sul muro. Abbiamo ripetuto la misura per quattro volte, variando la pressione finale, e contando le 
 frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_dati} i dati raccolti e in tabella 
 \ref{tab:indice_rifrazione_aria} i valori ottenuti per l'indice di rifrazione dell'aria. Qui di seguito riportiamo
 il valore ottenuto per l'indice di rifrazione dell'aria, con relativo errore $n_{aria} = 1.00035 \pm 0.00002$.\\
 Gli errori sui singoli valori dell'indice di rifrazione sono stati calcolati con la formula di propagazione degli errori,
-a, partire dalla relazione \ref{eq:indice_rifrazione_aria}, in cui $P_f$ ha come errore la sensibilità del manometro 
+a partire dalla relazione \ref{eq:indice_rifrazione_aria}, in cui $P_f$ ha come errore la sensibilità del manometro 
 ($\SI{2}{\kilo\pascal}$). L'errore sul valore medio è stato calcolato pesando gli errori delle singole misure, con la 
-formula \ref{eq:errore_valore_medio}:
-\begin{equation}
-    \sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
-    \label{eq:errore_valore_medio}
-\end{equation}
+formula \ref{eq:errore_valore_medio}.
 
-Operando un test di compatibilità con il valore atteso (pari a $n_{aria} = 1.000292$), otteniamo una distanza in 
+Operando un test di compatibilità con il valore atteso (pari a $n_{aria} = 1.00029$), otteniamo una distanza in 
 deviazioni standard pari a 2.37.\\
 
 \subsection{Misura indice rifrazione vetro}
