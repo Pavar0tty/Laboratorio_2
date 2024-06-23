@@ -115,7 +115,7 @@ Per farlo abbiamo montanto l'interferometro in configurazione Fabry-Perot:
     \label{fig:fabry-perot config}
 \end{figure}
 
-L luce del fascio laser incide contro una lente divergente e entra nella cavità di Fabry-Perot, ovvero due specchi semiriflettenti 
+La luce del fascio laser incide contro una lente divergente e entra nella cavità di Fabry-Perot, ovvero due specchi semiriflettenti 
 distanziati $d$. Le riflessioni successive tra i due specchi formano la figura di interferenza sullo schermo, posto
 a circa un metro di distanza. \\ 
 È interessante notare come, per ricavare le relazioni che verranno utilizzate per descrivere il fenomeno, si 
@@ -195,7 +195,7 @@ con i relativi errori, insiema ai valori del $\tilde{\chi}^2$ e p-value trovati 
     \hline
     \text{d} & 0.00252 & 4.82e-07 & \text{d} & 0.00254 & 4.83e-07 \\
     \textbf{$\delta_r$} & 5.01e+04 & 9.56 & \textbf{$\delta_r$} & 5.04e+04 & 9.58 \\
-    \textbf{$\tilde{\chi}^2$} & 0.00307 & \textbf{p-value :} 1 & \textbf{$\tilde{\chi}^2$} & 0.0398 & \textbf{p-value :} 1 \\
+    \textbf{$\tilde{\chi}^2$}07 & \textbf{p-value :} 1 & \textbf{$\tilde{\chi}^2$} & 0.0398 & \textbf{p-value :} 1 \\
     \hline
     \multicolumn{3}{|c||}{\textbf{Interpolazione 3}} & \multicolumn{3}{c|}{\textbf{Interpolazione 4}} \\
     \hline
@@ -236,23 +236,22 @@ Riportiamo in seguito i dati ottenuti dalle misurazioni:
     \centering
     \begin{tabular}{|c|c|c|c|c|}
     \hline
-    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d$} & \textbf{Errore $\pm\sigma$}  \\
+    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d$}  \\
     \hline
-    1 & 61 & 19,300 & 0.003 \\
-    2 & 64 & 20,249 & 0.003 \\
-    3 & 59 & 18,667 & 0.003 \\
-    4 & 60 & 18,984 & 0.003 \\
-    5 & 60 & 18,984 & 0.003 \\
-    5 & 64 & 20,249 & 0.003 \\
+    1 & 61 & 19.300 \\
+    2 & 64 & 20.249 \\
+    3 & 59 & 18.667 \\
+    4 & 60 & 18.984 \\
+    5 & 60 & 18.984 \\
+    5 & 64 & 20.249 \\
     \hline
     \end{tabular}
-    \caption{Dati raccolti per la calibrazione del micrometro.}
+    \caption{Dati raccolti per la calibrazione del micrometro-Fabry-Perot.}
     \label{tab:calibrazione_micrometro}
     \end{table}
 
-Riportiamo in seguito per la stima della distanza il valor medio e la deviazione standard $\Delta d_\text{mis} = 19.41 \pm0.07\text{\SIUnitSymbolMicro m} $
-Le incertezze riportate nella tabella sono stati calcolate con l'oportuna formula di propagazione degli errori, riportiamo  inoltre
-che per questi calcoli abbiamo utilizzato come valore tabulato la lunghezza d'onda del laser He-Ne $\lambda = \SI{632.8}{\nano\meter} \pm0.1$ \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}.
+Riportiamo in seguito per la stima della distanza il valor medio e la deviazione standard $$\Delta d_\text{mis} = 19.41 \pm0.07\text{\SIUnitSymbolMicro m} $$riportiamo  inoltre
+che per questi calcoli abbiamo utilizzato come valore tabulato la lunghezza d'onda del laser He-Ne $\lambda = \SI{632.8}{\nano\meter}$ \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}.
 Abbiamo inoltre verificato che anche utilizzando $\lambda_\text{aria} = \frac{\lambda_0}{n_\text{aria}}$ dove $n_\text{aria} = 1,0003$ è l'indice di rifrazione dell'aria, la precisione della misura non cambia.
 
 \subsection{Conclusioni Fabry-Perot}
@@ -270,48 +269,117 @@ dell'aria e del vetro.
 \end{figure}
 
 \subsection{Verifica calibrazione micrometro}
-Per eseguire la calibrazione del micrometro abbiamo seguito lo stesso procedimento utilizzato per Fabry-Perot, 
-utilizzando la formula \ref{eq:micrometro} per calcolare la distanza $\Delta d$ tra i due specchi. Abbiamo ripetuto
-la misura per quattro volte, spostando di $20 \text{\SIUnitSymbolMicro m}$ la distanza tra gli specchi, almeno in base a quanto segnato 
-dal nonio. Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati ottenuti. Come valore ottenuto
-abbiamo deciso di considerare la media delle misure effettuate, ed errore la loro deviazione standard, in quanto 
-misure non dotate di errore, perchè ricavate a partire da N e $\lambda$; ecco il valore di $\Delta d$ ottenuto: 
-$\Delta d_\text{mis} = 1.94 \pm0.05\text{\SIUnitSymbolMicro m} $. L'errore sul valore medio è stato calcolato pesando 
+Per la calibrazione del micrometro abbiamo seguito lo stesso procedimento utilizzato per Fabry-Perot, 
+utilizzando la  \ref{eq:micrometro} per calcolare la distanza $\Delta d$ percorsa dallo specchio mobile. Abbiamo ripetuto
+la misura per quattro volte, spostando conm un passo di $20 \text{\SIUnitSymbolMicro m}$, (valore segnato 
+dal nonio). Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati. Come valore ottenuto
+abbiamo deciso di considerare la media delle misure effettuate, e per errore la loro deviazione standard, in quanto 
+misure non dotate di errore, perchè ricavate a partire da N e $\lambda$:
+$$\Delta d_\text{mis} = 19.4 \pm0.05\text{\SIUnitSymbolMicro m} $$
+L'errore sul valore medio è stato calcolato pesando 
 gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
 \begin{equation}
     \sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
     \label{eq:errore_valore_medio}
 \end{equation}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d$}  \\
+    \hline
+    1 & 62 & 19.6 \\
+    2 & 60 & 18.9 \\
+    3 & 60 & 18.9 \\
+    4 & 60 & 18.9 \\
+    5 & 64 & 20.2 \\
+    \hline
+    \end{tabular}
+    \caption{Dati raccolti per la calibrazione del micrometro con Michelson.}
+    \label{tab:calibrazione_micrometro_michelson}
+    \end{table}
+
+Inserire qualcosa su quale dei due metodi quindi ha dato un risultato più preciso (Michelson)
+\newpage
 
 \subsection{Misura indice rifrazione aria}
-In questa parte dell'esperienza abbiamo utilizzato l'interferometro Michelson per misurare l'indice di rifrazione 
-dell'aria, sfruttando il fatto che, variando la pressione, il numero di frange di interferenza cambia. La configurazione
-ricalca quella della figura \ref{fig:michelson config}, con la differenza che abbiamo inserito una camera a vuoto in uno 
+In questa parte dell'esperienza abbiamo utilizzato l'interferometro in configurazione Michelson per misurare l'indice di rifrazione 
+dell'aria, sfruttando il fatto che, variando la pressione cambia l'indice e di conseguenza il numero di frange di interferenza che scorrono. La configurazione
+ricalca quella della figura \ref{fig:michelson config}, con la differenza che abbiamo inserito una cella a vuoto in uno 
 dei bracci dell'interferometro.\\
-Si è utilizzata la formula \ref{eq:indice_rifrazione_aria} per risalire all'indice di rifrazione dell'aria :
+Abbiamo utilizzata la formula \ref{eq:indice_rifrazione_aria} per risalire all'indice di rifrazione dell'aria :
 \begin{equation}
     n = 1 + \frac{\Delta N \lambda P_f}{2 d (P_i - P_f)}
     \label{eq:indice_rifrazione_aria}
 \end{equation}
 
-laddove $P_i$ e $P_f$ sono le pressioni iniziale e finale ($P_i = \SI{101.325}{\kilo\pascal}$), $\Delta N$ 
-è il numero di frange contate, $d = \SI{0.03 \pm 0}{m}$ è la larghezza della camera a vuoto e $\lambda$ è la 
+Laddove $P_i$ e $P_f$ sono le pressioni iniziale e finale ($P_i = \SI{101.325}{\kilo\pascal}$), $\Delta N$ 
+è il numero di frange contate, $d = \SI{0.03 \pm 0}{m}$ la larghezza della cella a vuoto e $\lambda$ è la 
 lunghezza d'onda del laser.\\
 Come procedura di misura abbiamo fatto variare la pressione nel compressore e contato il numero di frange che scorrevano
 sul muro. Abbiamo ripetuto la misura per quattro volte, variando la pressione finale, e contando le 
 frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_dati} i dati raccolti e in tabella 
-\ref{tab:indice_rifrazione_aria} i valori ottenuti per l'indice di rifrazione dell'aria. Qui di seguito riportiamo
-il valore ottenuto per l'indice di rifrazione dell'aria, con relativo errore $n_{aria} = 1.00035 \pm 0.00002$.\\
+\ref{tab:indice_rifrazione_aria} i valori ottenuti per l'indice di rifrazione dell'aria. 
+\begin{table}[h!]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{$P_f \textbf[kPa]$} & \textbf{$\pm\sigma$} & \textbf{$\Delta N$} \\
+        \hline
+        76 & 2 & 16 \\
+        80 & 2 & 18 \\
+        50 & 2 & 11 \\
+        42 & 2 & 9 \\
+        \hline
+        \end{tabular}
+        \caption{Dati per misura indice aria.}
+        \label{tab:indice_rifrazione_aria_dati}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \text{Misura} & \text{$n_{aria}$} & \text{Errore $\pm\sigma$} \\
+        \hline
+        1 & \num{1.00051} & \num{0.00005} \\
+        2 & \num{1.00071} & \num{0.00008} \\
+        3 & \num{1.00011} & \num{0.00008} \\
+        4 & \num{1.00007} & \num{0.00005} \\
+        \hline
+        \end{tabular}
+        \caption{Indici aria risultanti}
+        \label{tab:indice_rifrazione_aria}
+    \end{minipage}
+\end{table}
+
+
+
+
+
+Qui di seguito riportiamo
+la miglior stima del valore ottenuto per l'indice di rifrazione dell'aria, con relativo errore:
+ $$n_{aria} = 1.00035 \pm 0.00002$$\\
 Gli errori sui singoli valori dell'indice di rifrazione sono stati calcolati con la formula di propagazione degli errori,
 a partire dalla relazione \ref{eq:indice_rifrazione_aria}, in cui $P_f$ ha come errore la sensibilità del manometro 
 ($\SI{2}{\kilo\pascal}$). L'errore sul valore medio è stato calcolato pesando gli errori delle singole misure, con la 
 formula \ref{eq:errore_valore_medio}.
 
-Operando un test di compatibilità con il valore atteso (pari a $n_{aria} = 1.00029$), otteniamo una distanza in 
+Operando un test di compatibilità con il valore atteso per l'indice di rifrazione dell'aria, pari a $n_{aria} = 1.00029$, otteniamo una distanza in 
 deviazioni standard pari a 2.37.\\
 
 \subsection{Misura indice rifrazione vetro}
-
+Sempre mantenendo la configuazione Michelson, abbiamo montato un supporto con una lastra di vetro
+per cercare di ricavarne l'indice di rifrazione. Servendoci di un rotational pointer è possibile
+aumentare o diminuire l'angolo di incidenza del raggio sulla lastra, allungando o accorciando il cammino ottico 
+del raggio nel mezzo, di conseguenza, similmente a quanto fatto prima, possiamo contare il numero di frange $\Delta N$ che scorre 
+al variare dell'angolo $\theta$
+\begin{equation}
+2 \cdot d \cdot (D_i - D_f) = \Delta N \cdot \lambda
+\label{eq:fringe_count}
+\end{equation}
 
 
 \subsection{Misura lunghezza d'onda con righello reticolo}
@@ -333,57 +401,10 @@ deviazioni standard pari a 2.37.\\
 %Tabella per Michelson - Calibrazione micrometro
 
 %Non c'è errore perchè sul numero di frange non c'è errore
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|}
-    \hline
-    \textbf{d} & \textbf{Valore} [$\mu m$] \\
-    \hline
-    $d_1$ & 19.6 \\
-    $d_2$ & 18.9 \\
-    $d_3$ & 18.9 \\
-    $d_4$ & 18.9 \\
-    $d_5$ & 20.2 \\
-    \hline
-    \end{tabular}
-    \caption{Distanze tra gli specchi ottenute dalla formula \ref{eq:micrometro}.}
-    \label{tab:calibrazione_micrometro_michelson}
-\end{table}
 
 %Tabella per Michelson - Indice di rifrazione aria
 %valori acquisiti
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{$P_f$} & \textbf{Sensibilità} & \textbf{$\Delta N$} \\
-    \hline
-    76 & 2 & 16 \\
-    80 & 2 & 18 \\
-    50 & 2 & 11 \\
-    42 & 2 & 9 \\
-    \hline
-    \end{tabular}
-    \caption{Dati acquisiti per la misura dell'indice di rifrazione dell'aria.}
-    \label{tab:indice_rifrazione_aria_dati}
-\end{table}
 
-%valori di n calcolati
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Indice} & \textbf{$n_{aria}$} & \textbf{Errore} \\
-    \hline
-    1 & \num{1.00051} & \num{0.00005} \\
-    2 & \num{1.00071} & \num{0.00008} \\
-    3 & \num{1.00011} & \num{0.00008} \\
-    4 & \num{1.00007} & \num{0.00005} \\
-    \hline
-    \end{tabular}
-    \caption{Indici di rifrazione ottenuti dalla formula \ref{eq:indice_rifrazione_aria}.}
-    \label{tab:indice_rifrazione_aria}
-\end{table}
 
 
 \end{document}
