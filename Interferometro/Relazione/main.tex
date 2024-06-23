@@ -169,7 +169,7 @@ Di seguito riportiamo i dati raccolti in laboratorio; la distanza dello schermo 
 parametri liberi $\delta_r$ e $d$.\\
 Abbiamo ripetuto tale misura per quattro volte, variando d, al fine di poter verificare in più configurazioni la 
 legge \ref{eq:fabry_perot}.\\
-Riportiamo di seguito i grafici dei fit ottenuti per ciascuna delle misurazioni in figura \ref{fig:verifica_fabry_perot}:
+Riportiamo i grafici dei fit ottenuti per ciascuna delle misurazioni in figura \ref{fig:verifica_fabry_perot}:
 
 %Da discutere gli errori (anche in relazione ai valori di chi quadro ottenuti)
 
@@ -222,7 +222,7 @@ La legge che lega questo spostamento è la seguente:
 
 Misurando quante frange scorrono sullo schermo è possibile risalire a una misura di alta precisione
 del $\Delta d$ e quindi calibrare il micrometro.\\
-Dopo aver registrato una posizione di partenza inziale dello specchio abbiamo scelto $\Delta d_\text{nomio} = 20\text{\SIUnitSymbolMicro m}$ come passo del nomio,
+Dopo aver registrato una posizione di partenza inziale dello specchio abbiamo scelto $\Delta d_\text{nonio} = 20\text{\SIUnitSymbolMicro m}$ come passo del nonio,
  il coseno dell'angolo $\theta$ approssimato a circa 1, dato che assumiamo incidenza normale.
 Infine abbiamo ripetuto la misura più volte, sempre ripartendo
 dalle stessa posizione iniziale cercando così di ridurre l'errore 
@@ -250,9 +250,12 @@ Riportiamo in seguito i dati ottenuti dalle misurazioni:
     \label{tab:calibrazione_micrometro}
     \end{table}
 
-Riportiamo in seguito per la stima della distanza il valor medio e la deviazione standard $$\Delta d_\text{mis} = 19.41 \pm0.07\text{\SIUnitSymbolMicro m} $$riportiamo  inoltre
-che per questi calcoli abbiamo utilizzato come valore tabulato la lunghezza d'onda del laser He-Ne $\lambda = \SI{632.8}{\nano\meter}$ \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}.
-Abbiamo inoltre verificato che anche utilizzando $\lambda_\text{aria} = \frac{\lambda_0}{n_\text{aria}}$ dove $n_\text{aria} = 1,0003$ è l'indice di rifrazione dell'aria, la precisione della misura non cambia.
+Per la stima della distanza, riportiamo il valor medio e l'errore standard 
+$$\Delta d_\text{mis} = (19.41 \pm0.11)\ \text{\SIUnitSymbolMicro m} $$
+Per questi calcoli abbiamo utilizzato come valore tabulato la lunghezza d'onda del laser He-Ne $\lambda = \SI{632.8}{\nano\meter}$ \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}.
+Abbiamo inoltre verificato che anche utilizzando $\lambda_\text{aria} = \frac{\lambda_0}{n_\text{aria}}$ dove $n_\text{aria} = 1,0003$ 
+è l'indice di rifrazione dell'aria, la precisione della misura non cambia.\\
+Mostrare questo fatto numericamente
 
 \subsection{Conclusioni Fabry-Perot}
 
@@ -275,11 +278,12 @@ la misura per quattro volte, spostando conm un passo di $20 \text{\SIUnitSymbolM
 dal nonio). Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati. Come valore ottenuto
 abbiamo deciso di considerare la media delle misure effettuate, e per errore la loro deviazione standard, in quanto 
 misure non dotate di errore, perchè ricavate a partire da N e $\lambda$:
-$$\Delta d_\text{mis} = 19.4 \pm0.05\text{\SIUnitSymbolMicro m} $$
+$$\Delta d_\text{mis} = (19.36 \pm0.10)\ \text{\SIUnitSymbolMicro m} $$
 L'errore sul valore medio è stato calcolato pesando 
 gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
 \begin{equation}
-    \sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
+    %\sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
+    \sigma_{\bar{x}} = \sqrt{\frac{\sum_{i=1}^{N} (\sigma_i)^2}{N}}
     \label{eq:errore_valore_medio}
 \end{equation}
 \begin{table}[h!]
@@ -300,6 +304,8 @@ gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
     \end{table}
 
 Inserire qualcosa su quale dei due metodi quindi ha dato un risultato più preciso (Michelson)
+
+Mettiamo le tabelle infondo
 \newpage
 
 \subsection{Misura indice rifrazione aria}
@@ -346,8 +352,8 @@ frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_da
         \hline
         1 & \num{1.00051} & \num{0.00005} \\
         2 & \num{1.00071} & \num{0.00008} \\
-        3 & \num{1.00011} & \num{0.00008} \\
-        4 & \num{1.00007} & \num{0.00005} \\
+        3 & \num{1.00011} & \num{0.00009} \\
+        4 & \num{1.00007} & \num{0.00006} \\
         \hline
         \end{tabular}
         \caption{Indici aria risultanti}
@@ -359,16 +365,15 @@ frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_da
 
 
 
-Qui di seguito riportiamo
-la miglior stima del valore ottenuto per l'indice di rifrazione dell'aria, con relativo errore:
- $$n_{aria} = 1.00035 \pm 0.00002$$\\
+Miglior stima del valore ottenuto per l'indice di rifrazione dell'aria, con relativo errore:
+ $$n_{aria} = 1.00035 \pm 0.00005$$\\
 Gli errori sui singoli valori dell'indice di rifrazione sono stati calcolati con la formula di propagazione degli errori,
 a partire dalla relazione \ref{eq:indice_rifrazione_aria}, in cui $P_f$ ha come errore la sensibilità del manometro 
 ($\SI{2}{\kilo\pascal}$). L'errore sul valore medio è stato calcolato pesando gli errori delle singole misure, con la 
 formula \ref{eq:errore_valore_medio}.
 
-Operando un test di compatibilità con il valore atteso per l'indice di rifrazione dell'aria, pari a $n_{aria} = 1.00029$, otteniamo una distanza in 
-deviazioni standard pari a 2.37.\\
+Operando un test di compatibilità con il valore atteso per l'indice di rifrazione dell'aria, pari a $n = 1.00029$, otteniamo una distanza in 
+deviazioni standard pari a $1.18$, che corrisponde ad una percentuale di circa 35$\%$.\\
 
 \subsection{Misura indice rifrazione vetro}
 Sempre mantenendo la configuazione Michelson, abbiamo montato un supporto con una lastra di vetro
