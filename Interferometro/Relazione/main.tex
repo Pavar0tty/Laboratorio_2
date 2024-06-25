@@ -130,7 +130,7 @@ abbiamo posto il vertice nel fuoco della lente divergente (18mm avanti) e misura
 In questo modo, misurando in seguito la distanza tra il centro della figura di interferenza e la frangia, 
 è possibile calcolare l'angolo $\theta$ come l'arcotangente del rapporto tra le due distanze. In ogni caso, tali 
 considerazioni sono state rilevanti solo per questa prima parte dell'esperienza, in cui era richiesto di verificare 
-la legge \ref{eq:fabry_perot} confrontando i valori di angoli attesi con quelli misurati. Per tutte le altre esperienze 
+la legge \eqref{eq:fabry_perot} confrontando i valori di angoli attesi con quelli misurati. Per tutte le altre esperienze 
 abbiamo potuto considerare $\theta \approx 0$ e quindi $\cos(\theta) \approx 1$ poichè lo schermo si trova 
 a una grande distanza dalla sorgente puntiforme.
 \begin{figure}[h!]
@@ -167,7 +167,7 @@ Di seguito riportiamo i dati raccolti in laboratorio; la distanza dello schermo 
 (18mm). Successivamente per la verifica del modello abbiamo eseguito un'interpolazione con la legge \ref{eq:fabry_perot_cos}, mantenendo come 
 parametri liberi $\delta_r$ e $d$.\\
 Abbiamo ripetuto tale misura per quattro volte, variando d, al fine di poter verificare in più configurazioni la 
-legge \ref{eq:fabry_perot}.\\
+legge \eqref{eq:fabry_perot}.\\
 Riportiamo i grafici dei fit ottenuti per ciascuna delle misurazioni in figura \ref{fig:verifica_fabry_perot}:
 
 %Da discutere gli errori (anche in relazione ai valori di chi quadro ottenuti)
@@ -175,7 +175,7 @@ Riportiamo i grafici dei fit ottenuti per ciascuna delle misurazioni in figura \
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1\textwidth]{verifica_fabry_perot.png}
-    \caption{Interpolazioni della legge \ref{eq:fabry_perot_cos}.}
+    \caption{Interpolazioni della legge \eqref{eq:fabry_perot_cos}.}
     \label{fig:verifica_fabry_perot}
 \end{figure}
 
@@ -259,14 +259,14 @@ dell'aria e del vetro.
 
 \subsection{Verifica calibrazione micrometro}
 Per la calibrazione del micrometro abbiamo seguito lo stesso procedimento utilizzato per Fabry-Perot, 
-utilizzando la  \ref{eq:micrometro} per calcolare la distanza $\Delta d$ percorsa dallo specchio mobile. Abbiamo ripetuto
+utilizzando la  \eqref{eq:micrometro} per calcolare la distanza $\Delta d$ percorsa dallo specchio mobile. Abbiamo ripetuto
 la misura per quattro volte, spostando con un passo di $20 \text{\SIUnitSymbolMicro m}$, (valore segnato 
 dal nonio). Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati. Come valore ottenuto
 abbiamo deciso di considerare la media delle misure effettuate, e per errore la loro deviazione standard, in quanto 
 misure non dotate di errore poichè ricavate a partire da N e $\lambda$:
 $$\Delta d_\text{mis} = (19.36 \pm0.10)\ \text{\SIUnitSymbolMicro m} $$
 L'errore sul valore medio è stato calcolato pesando 
-gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
+gli errori delle singole misure, con la formula \eqref{eq:errore_valore_medio}:
 \begin{equation}
     %\sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
     \sigma_{\bar{x}} = \sqrt{\frac{\sum_{i=1}^{N} (\sigma_i)^2}{N}}
@@ -330,15 +330,14 @@ $$m = (2.484 ± 0.033)\cdot 10^{-9} \ \text{Pa}^{-1}$$
     \label{fig:m_aria}
 \end{figure}
 
-Operando un test di compatibilità con il valore atteso, pari a $m = 2.887 \cdot 10^{-9}$ Pa, otteniamo un valore del
+Operando un test di compatibilità con il valore atteso, pari a $m = 2.887 \cdot 10^{-9}\ \text{Pa}^{-1}$, otteniamo un valore del
 t-test pari a $t \approx 11$, molto lontano dal valore desiderato di 1.
 Sospettiamo alla base di questa discrepanza ci sia un errore sistematico, probabilmente dovuto a un'errata calibrazione
-della cella a vuoto.
-Un altra fonte di errore potrebbe essere un incorretto conteggio o un'errata interpretazione delle frange stesse.\\
+della cella a vuoto, un incorretto conteggio o un'errata interpretazione delle frange stesse.\\
 
 
 \subsection{Misura indice rifrazione vetro}
-Sempre mantenendo la configurazione Michelson, abbiamo montato un supporto con una lastra di vetro (spessore $d= 5\text{mm}$), come rappresentato in figura \ref{fig:michelson_vetro},
+Mantenendo la configurazione Michelson, abbiamo montato un supporto con una lastra di vetro (spessore $d= 5\text{mm}$), come rappresentato in figura \ref{fig:michelson_vetro},
 al fine di ricavarne l'indice di rifrazione.
 \begin{figure}[h!]
     \centering
@@ -369,10 +368,10 @@ La formula per ricavare l'indice di rifrazione del vetro è dunque la seguente:
 \end{equation}
 
 Abbiamo ripetuto la misura quattro volte, partendo sempre dal minimo cammino ottico come posizione iniziale
-e raggiungendo vari diversi angoli finali. Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati ottenuti:
+e raggiungendo vari diversi angoli finali. Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati ottenuti.
 
 
-Gli indici di rifrazione del vetro ottenuti sono stati calcolati con la formula \ref{eq:indice_rifrazione_vetro} e le incertezze
+Gli indici di rifrazione del vetro ottenuti sono stati calcolati con la formula \eqref{eq:indice_rifrazione_vetro} e le incertezze
 con la formula per la propagazione degli errori. Il valore medio ottenuto per l'indice di rifrazione del vetro è:
 $$ n_\text{vetro} = 1.70 \pm 0.05$$
 
@@ -380,12 +379,12 @@ $$ n_\text{vetro} = 1.70 \pm 0.05$$
 \subsection{Misura lunghezza d'onda con righello reticolo}
 
 Lo scopo di questa sezione è misurare la lunghezza d'onda del laser utilizzato in laboratorio, tramite l'utilizzo 
-di un righello, le cui tacche agiscono da reticolo. Riportiamo in figura \ref{Righello_config} la configurazione
+di un righello, le cui tacche agiscono da reticolo di diffrazione. Riportiamo in figura \ref{fig:Righello_config} la configurazione
 che abbiamo seguito per effettuare le misure.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.4\textwidth]{Righello_config.png}
+    \includegraphics[width=0.6\textwidth]{Righello_config.png}
     \caption{Configurazione righello reticolo.}
     \label{fig:Righello_config}
 \end{figure}
@@ -405,10 +404,6 @@ interferenza.\\
 
 Abbiamo osservato sullo schermo due punti più luminosi, il primo corrispondente al massimo di riflessione dell'ordine $N = 0$ e il secondo al raggio passante.
 Oltre a questi due punti sono comparsi altri N-massimi di interferenza , dai quali è possibile ricavare allo stesso modo la relazione tra l'ordine N e l'angolo corrispondente.
-
-Riportiamo in seguito i risultati ottenuti per queste misure:
-
-
 Il valor medio e la deviazione standard ottenuti per la lunghezza d'onda del laser è 
 
 $$ \lambda_\text{mis1}= (666 \pm 14) \text{nm}$$
@@ -426,10 +421,17 @@ notare figure di interferenza e ottenere una buona stima di $\lambda$.
 
 \section{Considerazioni sugli errori}
 \label{sec:errori}
-Le sorgenti principali di errori in questa esperienza erano, l'allineamento degli specchi, del laser
-e le vibrazioni del tavolo di lavoro. Per ridurre questi errori abbiamo verificato al meglio che potevamo la calibrazione degli strumenti. 
-Un'altra fonte di errori casuali era invece la capacità di non perdere il conto mentre le frange scorrevano sulla parete; in particolare per ridurre quest'ultimo 
-abbiamo cercato di misurare più frange possibili e ripeterlo più volte per poi calcolare la media.
+
+La nostra preoccupazione principale è stata quella di garantire la gaussianità degli errori, in modo da poter
+applicare correttamente le formule di propagazione degli errori e di calcolare correttamente le incertezze sui
+valori misurati.\\
+Per quanto riguarda alcune misure di lunghezza, abbiamo ripetuto più volte le misure e calcolando media ed errore standard su di essa.
+Quando non è stato possibile ripetere le misure, abbiamo utilizzato la definizione di distribuzione di probabilità uniforme per calcolare l'errore
+sulle misure come $ \frac{errore}{\sqrt{12}} $.
+Infine, per minimizzare gli errori sistematici, abbiamo cercato di mantenere costanti le condizioni di lavoro e di calibrare
+al meglio gli strumenti a nostra disposizione.\\
+
+
 
 
 \section{Tabelle}
@@ -445,7 +447,7 @@ abbiamo cercato di misurare più frange possibili e ripeterlo più volte per poi
     3 & 59 & 18.667 \\
     4 & 60 & 18.984 \\
     5 & 60 & 18.984 \\
-    5 & 64 & 20.249 \\
+    6 & 64 & 20.249 \\
     \hline
     \end{tabular}
     \caption{Dati raccolti per la calibrazione del micrometro-Fabry-Perot.}
