@@ -242,7 +242,9 @@ distanza $\Delta d$ è sicuramente maggiore tramite l'interferenza rispetto ad u
 È importante sottolineare questo fatto per mettere in evidenza come, ogni volta che abbiamo effettuato una misura, 
 il valore di $\Delta d$ fosse diverso, nonostante fosse vicino a 20 \text{\SIUnitSymbolMicro m}. Ripetendo più volte
 la misura e calcolando la media, ci siamo avvicinati il più possibile ad ottenere una stima della distanza di tipo 
-gaussiano, dominata da errore gaussiano. \\
+gaussiano, dominata da errore gaussiano. L'errore sulla media è stato ottenuto con la deviazione standard della media, 
+perchè i valori di $\Delta d$ trovati in ogni singola misurazione non sono dotati di errore, avendo considerato $\lambda$
+come nota e non essendoci errore sulla misura del numero di frange.\\
 
 \newpage
 \section{Interferometro Michelson}
@@ -264,13 +266,9 @@ dal nonio). Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i 
 abbiamo deciso di considerare la media delle misure effettuate, e per errore la loro deviazione standard, in quanto 
 misure non dotate di errore poichè ricavate a partire da N e $\lambda$:
 $$\Delta d_\text{mis} = (19.36 \pm0.10)\ \text{\SIUnitSymbolMicro m} $$
-L'errore sul valore medio è stato calcolato pesando 
-gli errori delle singole misure, con la formula \eqref{eq:errore_valore_medio}:
-\begin{equation}
-    %\sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
-    \sigma_{\bar{x}} = \sqrt{\frac{\sum_{i=1}^{N} (\sigma_i)^2}{N}}
-    \label{eq:errore_valore_medio}
-\end{equation}
+L'errore sul valore medio è stato calcolato proprio come nel caso di Fabry-Perot, con la deviazione standard della media,
+in quanto i valori di $\Delta d$ trovati in ogni singola misurazione non sono dotati di errore, avendo considerato 
+$\lambda$ come nota e non essendoci errore sulla misura del numero di frange.\\
 
 
 \subsection{Confronto tra due metodi di calibrazione}
