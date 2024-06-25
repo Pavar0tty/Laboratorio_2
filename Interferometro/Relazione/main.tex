@@ -189,10 +189,10 @@ con i relativi errori, insieme ai valori del $\tilde{\chi}^2$ e p-value trovati 
     \hline
     \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} & \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} \\
     \hline
-    \text{d} & 0.00252 & 4.82e-07 & \text{d} & 0.00254 & 4.83e-07 \\
+    \text{d [m]} & 0.00252 & 4.82e-07 & \text{d [m]} & 0.00254 & 4.83e-07 \\
     \textbf{$\delta_r$} & 5.01e+04 & 9.56 & \textbf{$\delta_r$} & 5.04e+04 & 9.58 \\
     \hline
-    \textbf{$\tilde{\chi}^2$} & 07 & \textbf{p-value :} 1 & \textbf{$\tilde{\chi}^2$} & 0.0398 & \textbf{p-value :} 1 \\
+    \textbf{$\tilde{\chi}^2$} & 0.07 & \textbf{p-value :} 1 & \textbf{$\tilde{\chi}^2$} & 0.0398 & \textbf{p-value :} 1 \\
     \hline
     \addlinespace[10pt]
     \hline
@@ -200,7 +200,7 @@ con i relativi errori, insieme ai valori del $\tilde{\chi}^2$ e p-value trovati 
     \hline
     \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} & \textbf{Parametro} & \textbf{Valore} & \textbf{Errore} \\
     \hline
-    \text{d} & 0.00219 & 4.22e-07 & \text{d} & 0.00255 & 4.84e-07 \\
+    \text{d [m]} & 0.00219 & 4.22e-07 & \text{d [m]} & 0.00255 & 4.84e-07 \\
     \textbf{$\delta_r$} & 4.34e+04 & 8.36 & \textbf{$\delta_r$} & 5.06e+04 & 9.60 \\
     \textbf{$\tilde{\chi}^2$} & 0.75 & \textbf{p-value :} 0.678 & \textbf{$\tilde{\chi}^2$} & 0.0756 & \textbf{p-value :} 1 \\
     \hline
@@ -227,20 +227,22 @@ Infine abbiamo ripetuto la misura più volte, sempre ripartendo
 dalle stessa posizione iniziale cercando così di ridurre l'errore 
 statistico e ottenendo una media per la distanza.
 
-
-%Riguardiamo gli errori
 \subsection{Analisi Dati calibrazione micrometro}
-Riportiamo in seguito i dati ottenuti dalle misurazioni:
-
-
+Riportiamo in tabella \ref{tab:calibrazione_micrometro} i dati raccolti per la calibrazione del micrometro. 
+Abbiamo eseguito la misura per sei volte, variando sempre di $20 \text{\SIUnitSymbolMicro m}$ la distanza tra i due specchi.
 Per la stima della distanza, riportiamo il valor medio e l'errore standard 
 $$\Delta d_\text{mis} = (19.41 \pm0.11)\ \text{\SIUnitSymbolMicro m} $$
 Per questi calcoli abbiamo utilizzato come valore tabulato la lunghezza d'onda del laser He-Ne $\lambda = \SI{632.8}{\nano\meter}$ \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}.
 Abbiamo inoltre verificato che anche utilizzando $\lambda_\text{aria} = \frac{\lambda_0}{n_\text{aria}}$ dove $n_\text{aria} = 1,0003$ 
 è l'indice di rifrazione dell'aria, la precisione della misura non cambia.\\
-Mostrare questo fatto numericamente
 
 \subsection{Conclusioni Fabry-Perot}
+Il valore ottenuto per la calibrazione del micrometro è compatibile con il valore atteso. La precisione della 
+distanza $\Delta d$ è sicuramente maggiore tramite l'interferenza rispetto ad una misura diretta con il nonio.
+È importante sottolineare questo fatto per mettere in evidenza come, ogni volta che abbiamo effettuato una misura, 
+il valore di $\Delta d$ fosse diverso, nonostante fosse vicino a 20 \text{\SIUnitSymbolMicro m}. Ripetendo più volte
+la misura e calcolando la media, ci siamo avvicinati il più possibile ad ottenere una stima della distanza di tipo 
+gaussiano, dominata da errore gaussiano. \\
 
 \newpage
 \section{Interferometro Michelson}
