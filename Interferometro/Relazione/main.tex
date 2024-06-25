@@ -97,7 +97,7 @@ Per le misure di questa esperienza abbiamo utilizzato:
 
 \begin{itemize}
     \item Un interferometro di precisione PASCO scientific Modello OS-9255A/OS-9258A , \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}
-    \item Sorgente: laser monocromatico He-Ne con lunghezza d'onda $\lambda_{laser} = \SI{632.8}{\nano\meter}$.
+    \item Sorgente: laser monocromatico He-Ne con lunghezza d'onda $\lambda_{laser} = \SI{632.8}{\nano\meter}$ \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}.
     \item Lente divergente: lente da 18mm.
     \item Specchi compresi nella dotazione PASCO
 \end{itemize}
@@ -219,22 +219,22 @@ La legge che lega questo spostamento è la seguente:
         \label{eq:micrometro}
     \end{equation}
 
-Misurando quante frange scorrono sullo schermo è possibile risalire a una misura di maggior precisione
-del $\Delta d$ e quindi calibrare il micrometro.\\
-Dopo aver registrato una posizione di partenza inziale dello specchio abbiamo scelto $\Delta d_\text{nonio} = 20\text{\SIUnitSymbolMicro m}$ come passo del nonio,
- il coseno dell'angolo $\theta$ approssimato a circa 1, dato che assumiamo incidenza normale.
+Misurando quante frange scorrono sullo schermo, è possibile risalire a una misura di maggior precisione
+di $\Delta d$ e quindi calibrare il micrometro confrontando la misura ottenuta con il nonio rispetto a quella dell'interferometro.\\
+Dopo aver registrato una posizione di partenza inziale dello specchio, abbiamo scelto $\Delta d_\text{nonio} = 20\ \text{\SIUnitSymbolMicro m}$ come passo del nonio
+e il coseno dell'angolo $\theta$ approssimato a circa 1, assumendo incidenza normale.
 Infine abbiamo ripetuto la misura più volte, sempre ripartendo
 dalle stessa posizione iniziale cercando così di ridurre l'errore 
 statistico e ottenendo una media per la distanza.
 
 \subsection{Analisi Dati calibrazione micrometro}
 Riportiamo in tabella \ref{tab:calibrazione_micrometro} i dati raccolti per la calibrazione del micrometro. 
-Abbiamo eseguito la misura per sei volte, variando sempre di $20 \text{\SIUnitSymbolMicro m}$ la distanza tra i due specchi.
-Per la stima della distanza, riportiamo il valor medio e l'errore standard 
+Abbiamo eseguito la misura sei volte, variando per quanto possibile sempre di $20\ \text{\SIUnitSymbolMicro m}$ la distanza tra i due specchi.
+Per la stima della distanza, riportiamo il valor medio e l'errore standard risultanti:
 $$\Delta d_\text{mis} = (19.41 \pm0.11)\ \text{\SIUnitSymbolMicro m} $$
-Per questi calcoli abbiamo utilizzato come valore tabulato la lunghezza d'onda del laser He-Ne $\lambda = \SI{632.8}{\nano\meter}$ \href{https://www.pasco.com/products/lab-apparatus/light-and-optics/advanced-optics/os-9255}{[link]}.
-Abbiamo inoltre verificato che anche utilizzando $\lambda_\text{aria} = \frac{\lambda_0}{n_\text{aria}}$ dove $n_\text{aria} = 1,0003$ 
-è l'indice di rifrazione dell'aria, la precisione della misura non cambia.\\
+Per questi calcoli abbiamo utilizzato come valore tabulato la lunghezza d'onda del laser $\lambda_{laser} = \SI{632.8}{\nano\meter}$.
+Abbiamo inoltre verificato che utilizzando $\lambda_\text{aria} = \frac{\lambda_0}{n_\text{aria}}$ dove $n_\text{aria} = 1,0003$,
+$\Delta d_\text{mis} \approx 19.40\ \text{\SIUnitSymbolMicro m}$, una variazione trascurabile.
 
 \subsection{Conclusioni Fabry-Perot}
 Il valore ottenuto per la calibrazione del micrometro è compatibile con il valore atteso. La precisione della 
@@ -242,7 +242,7 @@ distanza $\Delta d$ è sicuramente maggiore tramite l'interferenza rispetto ad u
 È importante sottolineare questo fatto per mettere in evidenza come, ogni volta che abbiamo effettuato una misura, 
 il valore di $\Delta d$ fosse diverso, nonostante fosse vicino a 20 \text{\SIUnitSymbolMicro m}. Ripetendo più volte
 la misura e calcolando la media, ci siamo avvicinati il più possibile ad ottenere una stima della distanza di tipo 
-gaussiano, dominata da errore gaussiano. \\
+gaussiano, dominata da errore normale. \\
 
 \newpage
 \section{Interferometro Michelson}
