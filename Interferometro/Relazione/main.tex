@@ -125,14 +125,7 @@ molto vicina alla cavità, e quindi la divergenza dei raggi luminosi è trascura
 quanto riguarda i raggi che incidono sullo schermo, essi infatti sono considerati divergenti perchè la distanza tra
 schermo e specchio è significativa.\\
 Un'altra osservazione importante riguarda gli angoli delle frange di interferenza. 
-Per l'angolo $\theta$, quello riportato in figura \ref{fig:fabry_perot_scheda},
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{fabry_perot_config.JPG}
-    \caption{Configurazione Fabry-Perot.}
-    \label{fig:fabry_perot_scheda}
-\end{figure}
-
+Per l'angolo $\theta$, quello riportato in figura \ref{fig:fabry_perot_scheda}, 
 abbiamo posto il vertice nel fuoco della lente divergente (18mm avanti) e misurato la distanza tra tale fuoco e lo schermo. 
 In questo modo, misurando in seguito la distanza tra il centro della figura di interferenza e la frangia, 
 è possibile calcolare l'angolo $\theta$ come l'arcotangente del rapporto tra le due distanze. In ogni caso, tali 
@@ -140,6 +133,12 @@ considerazioni sono state rilevanti solo per questa prima parte dell'esperienza,
 la legge \ref{eq:fabry_perot} confrontando i valori di angoli attesi con quelli misurati. Per tutte le altre esperienze 
 abbiamo potuto considerare $\theta \approx 0$ e quindi $\cos(\theta) \approx 1$ poichè lo schermo si trova 
 a una grande distanza dalla sorgente puntiforme.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fabry_perot_config.JPG}
+    \caption{Configurazione Fabry-Perot.}
+    \label{fig:fabry_perot_scheda}
+\end{figure}
 
 \subsection{Verifica della legge di interferenza}
 
@@ -187,7 +186,7 @@ con i relativi errori, insieme ai valori del $\tilde{\chi}^2$ e p-value trovati 
 
 \begin{table}[h!]
     \centering
-    \begin{tabular}{|c|c|c||c|c|c|}
+    \begin{tabular}{|c|c|c|  |c|c|c|}
     \hline
     \multicolumn{3}{|c||}{\textbf{Interpolazione 1}} & \multicolumn{3}{c|}{\textbf{Interpolazione 2}} \\
     \hline
@@ -195,7 +194,10 @@ con i relativi errori, insieme ai valori del $\tilde{\chi}^2$ e p-value trovati 
     \hline
     \text{d} & 0.00252 & 4.82e-07 & \text{d} & 0.00254 & 4.83e-07 \\
     \textbf{$\delta_r$} & 5.01e+04 & 9.56 & \textbf{$\delta_r$} & 5.04e+04 & 9.58 \\
-    \textbf{$\tilde{\chi}^2$}07 & \textbf{p-value :} 1 & \textbf{$\tilde{\chi}^2$} & 0.0398 & \textbf{p-value :} 1 \\
+    \hline
+    \textbf{$\tilde{\chi}^2$} & 07 & \textbf{p-value :} 1 & \textbf{$\tilde{\chi}^2$} & 0.0398 & \textbf{p-value :} 1 \\
+    \hline
+    \addlinespace[10pt]
     \hline
     \multicolumn{3}{|c||}{\textbf{Interpolazione 3}} & \multicolumn{3}{c|}{\textbf{Interpolazione 4}} \\
     \hline
@@ -318,8 +320,8 @@ formula \eqref{eq:errore_valore_medio}.
 
 Dopo aver calcolato il valore dell'indice di rifrazione dell'aria per le pressioni misurate, abbiamo proceduto eseguendo un fit tramite
 un modello lineare per stimare il valore della costante $m$ e il suo errore. Il risultato del fit è riportato in figura \ref{fig:m_aria};
-il valore ottenuto per$m$ è:
-$$m = (2.287 ± 0.105) 10^{-6} \ \text{Pa}^{-1}$$
+il valore ottenuto è:
+$$m = (2.484 ± 0.033)\cdot 10^{-9} \ \text{Pa}^{-1}$$
 
 \begin{figure}[h!]
     \centering
@@ -328,10 +330,11 @@ $$m = (2.287 ± 0.105) 10^{-6} \ \text{Pa}^{-1}$$
     \label{fig:m_aria}
 \end{figure}
 
-
-
-Operando un test di compatibilità con il valore atteso per l'indice di rifrazione dell'aria, pari a $n = 1.00029$, otteniamo una distanza in 
-deviazioni standard pari a $1.18$, che corrisponde ad una percentuale di circa 35$\%$.\\
+Operando un test di compatibilità con il valore atteso, pari a $m = 2.887 \cdot 10^{-9}$ Pa, otteniamo un valore del
+t-test pari a $t \approx 11$, molto lontano dal valore desiderato di 1.
+Sospettiamo alla base di questa discrepanza ci sia un errore sistematico, probabilmente dovuto a un'errata calibrazione
+della cella a vuoto.
+Un altra fonte di errore potrebbe essere un incorretto conteggio o un'errata interpretazione delle frange stesse.\\
 
 
 \subsection{Misura indice rifrazione vetro}
@@ -366,22 +369,8 @@ La formula per ricavare l'indice di rifrazione del vetro è dunque la seguente:
 \end{equation}
 
 Abbiamo ripetuto la misura quattro volte, partendo sempre dal minimo cammino ottico come posizione iniziale
-e raggiungendo vari diversi angoli finali. Riportiamo in seguito i risultati ottenuti:
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \textbf{Misura} & \textbf{$\Delta N$} &\textbf{$\theta_i$} &\textbf{$\theta_f$} & \textbf{$n_\text{vetro}$} & \textbf{$\pm\sigma$} \\
-    \hline
-    1 & 19 & -0.4 & 4.0 & 1.69 & 0.05 \\
-    2 & 29 & -0.4 & 5.0 & 1.70 & 0.04 \\
-    3 & 42 & -0.4 & 6.1 & 1.70 & 0.04 \\
-    4 & 11 & -0.4 & 2.9 & 1.72 & 0.07 \\
-    \hline
-    \end{tabular}
-    \caption{Indici di rifrazione del vetro ottenuti.}
-    \label{tab:indice_rifrazione_vetro}
-\end{table}
+e raggiungendo vari diversi angoli finali. Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati ottenuti:
+
 
 Gli indici di rifrazione del vetro ottenuti sono stati calcolati con la formula \ref{eq:indice_rifrazione_vetro} e le incertezze
 con la formula per la propagazione degli errori. Il valore medio ottenuto per l'indice di rifrazione del vetro è:
@@ -437,7 +426,7 @@ notare figure di interferenza e ottenere una buona stima di $\lambda$.
 
 \section{Considerazioni sugli errori}
 \label{sec:errori}
-Le sorgenti principali di errori in questa esperienza erano sicuramente, l'allineamento degli specchi, del laser
+Le sorgenti principali di errori in questa esperienza erano, l'allineamento degli specchi, del laser
 e le vibrazioni del tavolo di lavoro. Per ridurre questi errori abbiamo verificato al meglio che potevamo la calibrazione degli strumenti. 
 Un'altra fonte di errori casuali era invece la capacità di non perdere il conto mentre le frange scorrevano sulla parete; in particolare per ridurre quest'ultimo 
 abbiamo cercato di misurare più frange possibili e ripeterlo più volte per poi calcolare la media.
@@ -514,6 +503,22 @@ abbiamo cercato di misurare più frange possibili e ripeterlo più volte per poi
         \caption{Indici aria risultanti}
         \label{tab:indice_rifrazione_aria}
     \end{minipage}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{Misura} & \textbf{$\Delta N$} &\textbf{$\theta_i$} &\textbf{$\theta_f$} & \textbf{$n_\text{vetro}$} & \textbf{$\pm\sigma$} \\
+    \hline
+    1 & 19 & -0.4 & 4.0 & 1.69 & 0.05 \\
+    2 & 29 & -0.4 & 5.0 & 1.70 & 0.04 \\
+    3 & 42 & -0.4 & 6.1 & 1.70 & 0.04 \\
+    4 & 11 & -0.4 & 2.9 & 1.72 & 0.07 \\
+    \hline
+    \end{tabular}
+    \caption{Indici di rifrazione del vetro ottenuti.}
+    \label{tab:indice_rifrazione_vetro}
 \end{table}
 
 
