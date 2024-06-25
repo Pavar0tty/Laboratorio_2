@@ -242,9 +242,7 @@ distanza $\Delta d$ è sicuramente maggiore tramite l'interferenza rispetto ad u
 È importante sottolineare questo fatto per mettere in evidenza come, ogni volta che abbiamo effettuato una misura, 
 il valore di $\Delta d$ fosse diverso, nonostante fosse vicino a 20 \text{\SIUnitSymbolMicro m}. Ripetendo più volte
 la misura e calcolando la media, ci siamo avvicinati il più possibile ad ottenere una stima della distanza di tipo 
-gaussiano, dominata da errore gaussiano. L'errore sulla media è stato ottenuto con la deviazione standard della media, 
-perchè i valori di $\Delta d$ trovati in ogni singola misurazione non sono dotati di errore, avendo considerato $\lambda$
-come nota e non essendoci errore sulla misura del numero di frange.\\
+gaussiano, dominata da errore gaussiano. \\
 
 \newpage
 \section{Interferometro Michelson}
@@ -266,9 +264,13 @@ dal nonio). Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i 
 abbiamo deciso di considerare la media delle misure effettuate, e per errore la loro deviazione standard, in quanto 
 misure non dotate di errore poichè ricavate a partire da N e $\lambda$:
 $$\Delta d_\text{mis} = (19.36 \pm0.10)\ \text{\SIUnitSymbolMicro m} $$
-L'errore sul valore medio è stato calcolato proprio come nel caso di Fabry-Perot, con la deviazione standard della media,
-in quanto i valori di $\Delta d$ trovati in ogni singola misurazione non sono dotati di errore, avendo considerato 
-$\lambda$ come nota e non essendoci errore sulla misura del numero di frange.\\
+L'errore sul valore medio è stato calcolato pesando 
+gli errori delle singole misure, con la formula \eqref{eq:errore_valore_medio}:
+\begin{equation}
+    %\sigma_{\bar{x}} = \frac{1}{N} \sqrt{\sum_{i=1}^{N} (\sigma_i)^2}
+    \sigma_{\bar{x}} = \sqrt{\frac{\sum_{i=1}^{N} (\sigma_i)^2}{N}}
+    \label{eq:errore_valore_medio}
+\end{equation}
 
 
 \subsection{Confronto tra due metodi di calibrazione}
@@ -294,7 +296,7 @@ dell'aria, sfruttando la sua dipendenza lineare dalla pressione. La configurazio
 con l'unica differenza il fatto che è stata inserita una cella a vuoto in uno dei bracci dell'interferometro.\\
 Al variare della pressione dell'aria all'interno della cella, l'indice di rifrazione dell'aria cambia; come conseguenza, è possibile
 osservare un cambiamento nel numero di frange di interferenza che scorrono sul muro.\\
-Ci siamo serviti della formula \ref{eq:indice_rifrazione_aria} per risalire all'indice di rifrazione dell'aria :
+Ci siamo serviti della formula \eqref{eq:indice_rifrazione_aria} per risalire all'indice di rifrazione dell'aria :
 \begin{align}
     n &= 1 + m \cdot P \\
     m &=  \frac{\Delta N \lambda }{2 d (P_i - P_f)}
@@ -318,7 +320,7 @@ formula \eqref{eq:errore_valore_medio}.
 Dopo aver calcolato il valore dell'indice di rifrazione dell'aria per le pressioni misurate, abbiamo proceduto eseguendo un fit tramite
 un modello lineare per stimare il valore della costante $m$ e il suo errore. Il risultato del fit è riportato in figura \ref{fig:m_aria};
 il valore ottenuto è:
-$$m = (2.484 ± 0.033)\cdot 10^{-9} \ \text{Pa}^{-1}$$
+$$m = (2.484 \pm 0.033)\cdot 10^{-9} \ \text{Pa}^{-1}$$
 
 \begin{figure}[h!]
     \centering
@@ -398,7 +400,7 @@ La formula che lega la lunghezza d'onda alla distanza tra le frange di interfere
 Dove abbiamo indicato con $d$ la distanza tra le tacche del righello, N l'ordine di interferenza, $\theta_{inc}$ 
 l'angolo di incidenza del raggio luminoso(abbiamo inclinato il laser), $\theta_N$ l'angolo tra la normale allo schermo e l'N-esimo massimo di 
 interferenza.\\
-
+a
 Abbiamo osservato sullo schermo due punti più luminosi rispetto agli altri, il primo corrispondente al massimo di riflessione dell'ordine $N = 0$ e il secondo al raggio passante.
 Oltre a questi due punti sono comparsi altri N-massimi di interferenza, dai quali è possibile ricavare la relazione tra l'ordine N di interferenza e l'angolo corrispondente.
 Valor medio e la deviazione standard ottenuti per la lunghezza d'onda del laser sono:
