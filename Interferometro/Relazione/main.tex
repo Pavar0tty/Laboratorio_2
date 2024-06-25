@@ -159,11 +159,13 @@ altre variabili, ricavando la relazione \ref{eq:fabry_perot_cos}:
     \cos(\theta) = \frac{N \lambda}{2d} - \frac{\delta_r \lambda}{4 d \pi}
     \label{eq:fabry_perot_cos}
 \end{equation}
+
 Dopo aver verificato le opportune calibrazioni del laser, delle lenti e dello specchio,
 abbiamo misurato il diametro dei cerchi di interferenza con un calibro e calcolato così il coseno dell'angolo $\theta$.\\
 
 \subsection{Analisi Dati legge di interferenza}
-Di seguito riportiamo i dati raccolti in laboratorio; la distanza dello schermo dalla sorgente è pari a $D = 1.37 \pm0.01 m$, assumendo come punto sorgente il fuoco della lente 
+Riportiamo i dati raccolti in laboratorio in tabella \ref{tab:raggi_fabry_perot}.
+La distanza dello schermo dalla sorgente è pari a $D = 1.37 \pm0.01 m$, assumendo come punto sorgente il fuoco della lente 
 (18mm). Successivamente per la verifica del modello abbiamo eseguito un'interpolazione con la legge \ref{eq:fabry_perot_cos}, mantenendo come 
 parametri liberi $\delta_r$ e $d$.\\
 Abbiamo ripetuto tale misura per quattro volte, variando d, al fine di poter verificare in più configurazioni la 
@@ -423,6 +425,30 @@ al meglio gli strumenti a nostra disposizione.\\
 
 
 \section{Tabelle}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Raggi 1 [cm]} & \textbf{Raggi 2 [cm]} & \textbf{Raggi 3 [cm]} & \textbf{Raggi 4 [cm]} \\
+    \hline
+    15.65 & 15.60 & 16.75 & 13.10 \\
+    22.60 & 21.65 & 23.50 & 21.00 \\
+    27.95 & 27.00 & 27.90 & 26.90 \\
+    32.45 & 31.05 & 32.45 & 30.70 \\
+    35.10 & 34.60 & 36.85 & 34.45 \\
+    39.05 & 38.20 & 39.85 & 37.80 \\
+    42.55 & 41.85 & 42.65 & 41.25 \\
+    44.70 & 44.60 & 46.10 & 43.90 \\
+    48.10 & 47.15 & 51.30 & 46.75 \\
+    50.10 & 49.60 & 53.40 & 49.30 \\
+    52.75 & 52.20 & 55.85 & 51.30 \\
+    54.85 & 54.65 & 58.30 & 54.45 \\
+    \hline
+    \end{tabular}
+    \caption{Tabella dei raggi misurati.}
+    \label{tab:raggi_fabry_perot}
+\end{table}
 
 \begin{table}[h!]
     \centering
