@@ -106,7 +106,7 @@ Per le misure di questa esperienza abbiamo utilizzato:
 \section{Fabry-Perot}
 La prima parte dell'esperienza consiste nella verifica della legge che descrive
 i massimi di interferenza, visibili quando due sorgenti si sommano in fase. 
-Per farlo abbiamo montanto l'interferometro in configurazione Fabry-Perot:
+Per farlo abbiamo montato l'interferometro in configurazione Fabry-Perot:
 
 \begin{figure}[ht]
     \centering
@@ -181,7 +181,7 @@ Riportiamo i grafici dei fit ottenuti per ciascuna delle misurazioni in figura \
 \end{figure}
 
 Nella tabella \ref{tab:dati_interpolazioni_FP} riportiamo i valori ottenuti per i parametri $\delta_r$ e $d$ 
-con i relativi errori, insiema ai valori del $\tilde{\chi}^2$ e p-value trovati dalle interpolazioni.
+con i relativi errori, insieme ai valori del $\tilde{\chi}^2$ e p-value trovati dalle interpolazioni.
 
 %Da discutere le unità di misura dei parametri.
 
@@ -220,7 +220,7 @@ La legge che lega questo spostamento è la seguente:
         \label{eq:micrometro}
     \end{equation}
 
-Misurando quante frange scorrono sullo schermo è possibile risalire a una misura di alta precisione
+Misurando quante frange scorrono sullo schermo è possibile risalire a una misura di maggior precisione
 del $\Delta d$ e quindi calibrare il micrometro.\\
 Dopo aver registrato una posizione di partenza inziale dello specchio abbiamo scelto $\Delta d_\text{nonio} = 20\text{\SIUnitSymbolMicro m}$ come passo del nonio,
  il coseno dell'angolo $\theta$ approssimato a circa 1, dato che assumiamo incidenza normale.
@@ -232,23 +232,7 @@ statistico e ottenendo una media per la distanza.
 %Riguardiamo gli errori
 \subsection{Analisi Dati calibrazione micrometro}
 Riportiamo in seguito i dati ottenuti dalle misurazioni:
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d$}  \\
-    \hline
-    1 & 61 & 19.300 \\
-    2 & 64 & 20.249 \\
-    3 & 59 & 18.667 \\
-    4 & 60 & 18.984 \\
-    5 & 60 & 18.984 \\
-    5 & 64 & 20.249 \\
-    \hline
-    \end{tabular}
-    \caption{Dati raccolti per la calibrazione del micrometro-Fabry-Perot.}
-    \label{tab:calibrazione_micrometro}
-    \end{table}
+
 
 Per la stima della distanza, riportiamo il valor medio e l'errore standard 
 $$\Delta d_\text{mis} = (19.41 \pm0.11)\ \text{\SIUnitSymbolMicro m} $$
@@ -274,10 +258,10 @@ dell'aria e del vetro.
 \subsection{Verifica calibrazione micrometro}
 Per la calibrazione del micrometro abbiamo seguito lo stesso procedimento utilizzato per Fabry-Perot, 
 utilizzando la  \ref{eq:micrometro} per calcolare la distanza $\Delta d$ percorsa dallo specchio mobile. Abbiamo ripetuto
-la misura per quattro volte, spostando conm un passo di $20 \text{\SIUnitSymbolMicro m}$, (valore segnato 
+la misura per quattro volte, spostando con un passo di $20 \text{\SIUnitSymbolMicro m}$, (valore segnato 
 dal nonio). Riportiamo in tabella \ref{tab:calibrazione_micrometro_michelson} i risultati. Come valore ottenuto
 abbiamo deciso di considerare la media delle misure effettuate, e per errore la loro deviazione standard, in quanto 
-misure non dotate di errore, perchè ricavate a partire da N e $\lambda$:
+misure non dotate di errore poichè ricavate a partire da N e $\lambda$:
 $$\Delta d_\text{mis} = (19.36 \pm0.10)\ \text{\SIUnitSymbolMicro m} $$
 L'errore sul valore medio è stato calcolato pesando 
 gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
@@ -286,11 +270,204 @@ gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
     \sigma_{\bar{x}} = \sqrt{\frac{\sum_{i=1}^{N} (\sigma_i)^2}{N}}
     \label{eq:errore_valore_medio}
 \end{equation}
+
+
+\subsection{Confronto tra due metodi di calibrazione}
+
+Abbiamo confrontato i valori ottenuti per la calibrazione del micrometro con i due diversi setup, Fabry-Perot e Michelson:
+\begin{itemize}
+    \item[-] Fabry-Perot: $\Delta d_\text{mis} = (19.41 \pm0.11)\ \text{\SIUnitSymbolMicro m} $
+    \item[-] Michelson: $\Delta d_\text{mis} = (19.36 \pm0.10)\ \text{\SIUnitSymbolMicro m} $
+\end{itemize}
+
+Entrambi i metodi di misura in teoria raggiungono la stessa precisione, essendo entrambi basati sulla stessa legge di interferenza.
+Tuttavia i valori ottenuti per la distanza $\Delta d$ sono leggermente diversi, e questo può essere dovuto a diversi fattori.
+E' risaputo che l'interferometro Fabry-Perot sia il metodo che permette di raggiungere una risoluzione spettrale maggiore (frange più nitide e distinte), tuttavia questo risulta più utile nelle misure di lunghezze d'onda.
+Ci aspettiamo invece che Michelson sia il metodo più preciso per la misura della distanza $\Delta d$ , sia per quanto riguarda il setup e l'allineamento degli specchi (Fabry-Perot era molto più sensibile a vibrazioni del piano di lavoro)
+sia per la maggiore distanza tra specchio e schermo, il che dovrebbe ridurre l'errore di misura.\\
+
+
+\newpage
+
+\subsection{Misura indice rifrazione aria}
+In questa parte dell'esperienza abbiamo utilizzato l'interferometro in configurazione di Michelson per misurare l'indice di rifrazione 
+dell'aria, sfruttando la sua dipendenza lineare dalla pressione. La configurazione dell'apparato ricalca quella della figura \ref{fig:michelson config}, 
+con l'unica differenza il fatto che è stata inserita una cella a vuoto in uno dei bracci dell'interferometro.\\
+Al variare della pressione dell'aria all'interno della cella, l'indice di rifrazione dell'aria cambia; come conseguenza, è possibile
+osservare un cambiamento nel numero di frange di interferenza che scorrono sul muro.\\
+Ci siamo serviti della formula \ref{eq:indice_rifrazione_aria} per risalire all'indice di rifrazione dell'aria :
+\begin{align}
+    n &= 1 + m \cdot P \\
+    m &=  \frac{\Delta N \lambda }{2 d (P_i - P_f)}
+    \label{eq:indice_rifrazione_aria}
+\end{align}
+
+Laddove $P_i$ e $P_f$ sono le pressioni iniziale e finale ($P_i = \SI{101.325}{\kilo\pascal}$), $\Delta N$ 
+è il numero di frange contate, $d = \SI{0.03 \pm 0}{m}$ la larghezza della cella a vuoto e $\lambda$ è la 
+lunghezza d'onda del laser.\\
+Come procedura di misura abbiamo fatto variare la pressione nella cella a vuoto e contato il numero di frange che scorrevano
+sul muro. Abbiamo ripetuto la misura quattro volte, variando la pressione finale, e contando le 
+frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_dati} i dati raccolti e in tabella 
+\ref{tab:indice_rifrazione_aria} i valori ottenuti per l'indice di rifrazione dell'aria. 
+
+
+Gli errori sui singoli valori dell'indice di rifrazione sono stati calcolati con la formula di propagazione degli errori,
+a partire dalle relazioni \eqref{eq:indice_rifrazione_aria}, in cui $P_f$ ha come errore la sensibilità del manometro 
+($\SI{2}{\kilo\pascal}$). L'errore sul valore medio è stato calcolato pesando gli errori delle singole misure, con la 
+formula \eqref{eq:errore_valore_medio}.
+
+Dopo aver calcolato il valore dell'indice di rifrazione dell'aria per le pressioni misurate, abbiamo proceduto eseguendo un fit tramite
+un modello lineare per stimare il valore della costante $m$ e il suo errore. Il risultato del fit è riportato in figura \ref{fig:m_aria};
+il valore ottenuto per$m$ è:
+$$m = (2.287 ± 0.105) 10^{-6} \ \text{Pa}^{-1}$$
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fit_m_aria.png}
+    \caption{Fit lineare per l'indice di rifrazione dell'aria.}
+    \label{fig:m_aria}
+\end{figure}
+
+
+
+Operando un test di compatibilità con il valore atteso per l'indice di rifrazione dell'aria, pari a $n = 1.00029$, otteniamo una distanza in 
+deviazioni standard pari a $1.18$, che corrisponde ad una percentuale di circa 35$\%$.\\
+
+
+\subsection{Misura indice rifrazione vetro}
+Sempre mantenendo la configurazione Michelson, abbiamo montato un supporto con una lastra di vetro (spessore $d= 5\text{mm}$), come rappresentato in figura \ref{fig:michelson_vetro},
+al fine di ricavarne l'indice di rifrazione.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Michelson_vetro.png}
+    \caption{Configurazione Michelson con vetro.}
+    \label{fig:michelson_vetro}
+\end{figure}
+
+ Servendoci di un rotational pointer è possibile
+aumentare o diminuire l'angolo di incidenza del raggio sulla lastra, allungando o accorciando il cammino ottico 
+del raggio nel mezzo, di conseguenza, similmente a quanto fatto prima, possiamo contare il numero di frange $\Delta N$ che scorre 
+al variare dell'angolo $\theta$, il tutto è governato dalla legge \eqref{eq:fringe_count}:
+\begin{equation}
+2 \cdot d \cdot (D_i - D_f) = \Delta N \cdot \lambda
+\label{eq:fringe_count}
+\end{equation}
+
+Dove D e D' sono le distanze percorse in aria, mentre d e d' percorse in vetro:
+\begin{itemize}
+    \item[-] $D_i = D \cdot n_\text{aria} + d \cdot n_\text{vetro}$
+    \item[-] $D_f = D' \cdot n_\text{aria} + d' \cdot n_\text{vetro}$
+\end{itemize} 
+
+La formula per ricavare l'indice di rifrazione del vetro è dunque la seguente:
+\begin{equation}
+    n_\text{vetro} = \frac{(2d -\Delta N \lambda)(1-\cos(\theta))}{2d (1-\cos(\theta)) - \Delta N \lambda}
+    \label{eq:indice_rifrazione_vetro}
+\end{equation}
+
+Abbiamo ripetuto la misura quattro volte, partendo sempre dal minimo cammino ottico come posizione iniziale
+e raggiungendo vari diversi angoli finali. Riportiamo in seguito i risultati ottenuti:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    \textbf{Misura} & \textbf{$\Delta N$} &\textbf{$\theta_i$} &\textbf{$\theta_f$} & \textbf{$n_\text{vetro}$} & \textbf{$\pm\sigma$} \\
+    \hline
+    1 & 19 & -0.4 & 4.0 & 1.69 & 0.05 \\
+    2 & 29 & -0.4 & 5.0 & 1.70 & 0.04 \\
+    3 & 42 & -0.4 & 6.1 & 1.70 & 0.04 \\
+    4 & 11 & -0.4 & 2.9 & 1.72 & 0.07 \\
+    \hline
+    \end{tabular}
+    \caption{Indici di rifrazione del vetro ottenuti.}
+    \label{tab:indice_rifrazione_vetro}
+\end{table}
+
+Gli indici di rifrazione del vetro ottenuti sono stati calcolati con la formula \ref{eq:indice_rifrazione_vetro} e le incertezze
+con la formula per la propagazione degli errori. Il valore medio ottenuto per l'indice di rifrazione del vetro è:
+$$ n_\text{vetro} = 1.70 \pm 0.05$$
+
+
+\subsection{Misura lunghezza d'onda con righello reticolo}
+
+Lo scopo di questa sezione è misurare la lunghezza d'onda del laser utilizzato in laboratorio, tramite l'utilizzo 
+di un righello, le cui tacche agiscono da reticolo. Riportiamo in figura \ref{Righello_config} la configurazione
+che abbiamo seguito per effettuare le misure.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Righello_config.png}
+    \caption{Configurazione righello reticolo.}
+    \label{fig:Righello_config}
+\end{figure}
+
+In particolare, la distanza tra le tacche è di $d = \SI{1}{\milli\meter}$, e la distanza tra il righello e lo 
+schermo è di $D = \SI{1.03}{\meter}$.\\
+La formula che lega la lunghezza d'onda alla distanza tra le frange di interferenza è la seguente:
+
+\begin{equation}
+    \lambda = \frac{d (\cos(\theta_{inc})-\cos(\theta_N))}{N}
+    \label{eq:lunghezza_onda}
+\end{equation}
+
+Dove abbiamo indicato con $d$ la distanza tra le tacche del righello, N l'ordine di interferenza, $\theta_{inc}$ 
+l'angolo di incidenza del raggio luminoso(abbiamo inclinato il laser), $\theta_N$ l'angolo tra la normale allo schermo e l'N-esimo massimo di 
+interferenza.\\
+
+Abbiamo osservato sullo schermo due punti più luminosi, il primo corrispondente al massimo di riflessione dell'ordine $N = 0$ e il secondo al raggio passante.
+Oltre a questi due punti sono comparsi altri N-massimi di interferenza , dai quali è possibile ricavare allo stesso modo la relazione tra l'ordine N e l'angolo corrispondente.
+
+Riportiamo in seguito i risultati ottenuti per queste misure:
+
+
+Il valor medio e la deviazione standard ottenuti per la lunghezza d'onda del laser è 
+
+$$ \lambda_\text{mis1}= (666 \pm 14) \text{nm}$$
+$$ \lambda_\text{mis2}= (640 \pm 19) \text{nm}$$
+
+
+
+Per rispondere alla domanda "Cosa cambia rispetto al reticolo usato nello spettrometro?" dobbiamo 
+considerare che il reticolo dello spettrometro è molto più preciso e accurato, in quanto è stato costruito appositamente per 
+la misura delle lunghezze d'onda. Il righello, invece, è un oggetto di uso comune macroscopico. 
+Chiaramente la distanza tra le tacche del righello è si precisa ma relativamente, in generale la risoluzione spettrale 
+è molto minore rispetto a quella di uno spettrometro.\\
+Tuttavia è interessante notare che anche con un oggetto di uso comune e di dimensioni decisamente maggiori, rispetto alla lunghezza d'onda del laser, sia possibile 
+notare figure di interferenza e ottenere una buona stima di $\lambda$.
+
+\section{Considerazioni sugli errori}
+\label{sec:errori}
+Le sorgenti principali di errori in questa esperienza erano sicuramente, l'allineamento degli specchi, del laser
+e le vibrazioni del tavolo di lavoro. Per ridurre questi errori abbiamo verificato al meglio che potevamo la calibrazione degli strumenti. 
+Un'altra fonte di errori casuali era invece la capacità di non perdere il conto mentre le frange scorrevano sulla parete; in particolare per ridurre quest'ultimo 
+abbiamo cercato di misurare più frange possibili e ripeterlo più volte per poi calcolare la media.
+
+
+\section{Tabelle}
+
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
     \hline
-    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d$}  \\
+    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d[\text{\SIUnitSymbolMicro m}]$}  \\
+    \hline
+    1 & 61 & 19.300 \\
+    2 & 64 & 20.249 \\
+    3 & 59 & 18.667 \\
+    4 & 60 & 18.984 \\
+    5 & 60 & 18.984 \\
+    5 & 64 & 20.249 \\
+    \hline
+    \end{tabular}
+    \caption{Dati raccolti per la calibrazione del micrometro-Fabry-Perot.}
+    \label{tab:calibrazione_micrometro}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Misura} & \textbf{Frange $\Delta N$} & \textbf{Distanza $\Delta d [\text{\SIUnitSymbolMicro m}]$}  \\
     \hline
     1 & 62 & 19.6 \\
     2 & 60 & 18.9 \\
@@ -301,31 +478,9 @@ gli errori delle singole misure, con la formula \ref{eq:errore_valore_medio}:
     \end{tabular}
     \caption{Dati raccolti per la calibrazione del micrometro con Michelson.}
     \label{tab:calibrazione_micrometro_michelson}
-    \end{table}
+\end{table}
 
-Inserire qualcosa su quale dei due metodi quindi ha dato un risultato più preciso (Michelson)
 
-Mettiamo le tabelle infondo
-\newpage
-
-\subsection{Misura indice rifrazione aria}
-In questa parte dell'esperienza abbiamo utilizzato l'interferometro in configurazione Michelson per misurare l'indice di rifrazione 
-dell'aria, sfruttando il fatto che, variando la pressione cambia l'indice e di conseguenza il numero di frange di interferenza che scorrono. La configurazione
-ricalca quella della figura \ref{fig:michelson config}, con la differenza che abbiamo inserito una cella a vuoto in uno 
-dei bracci dell'interferometro.\\
-Abbiamo utilizzata la formula \ref{eq:indice_rifrazione_aria} per risalire all'indice di rifrazione dell'aria :
-\begin{equation}
-    n = 1 + \frac{\Delta N \lambda P_f}{2 d (P_i - P_f)}
-    \label{eq:indice_rifrazione_aria}
-\end{equation}
-
-Laddove $P_i$ e $P_f$ sono le pressioni iniziale e finale ($P_i = \SI{101.325}{\kilo\pascal}$), $\Delta N$ 
-è il numero di frange contate, $d = \SI{0.03 \pm 0}{m}$ la larghezza della cella a vuoto e $\lambda$ è la 
-lunghezza d'onda del laser.\\
-Come procedura di misura abbiamo fatto variare la pressione nel compressore e contato il numero di frange che scorrevano
-sul muro. Abbiamo ripetuto la misura per quattro volte, variando la pressione finale, e contando le 
-frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_dati} i dati raccolti e in tabella 
-\ref{tab:indice_rifrazione_aria} i valori ottenuti per l'indice di rifrazione dell'aria. 
 \begin{table}[h!]
     \centering
     \begin{minipage}{0.45\textwidth}
@@ -360,56 +515,6 @@ frange di interferenza. Riportiamo in tabella \ref{tab:indice_rifrazione_aria_da
         \label{tab:indice_rifrazione_aria}
     \end{minipage}
 \end{table}
-
-
-
-
-
-Miglior stima del valore ottenuto per l'indice di rifrazione dell'aria, con relativo errore:
- $$n_{aria} = 1.00035 \pm 0.00005$$\\
-Gli errori sui singoli valori dell'indice di rifrazione sono stati calcolati con la formula di propagazione degli errori,
-a partire dalla relazione \ref{eq:indice_rifrazione_aria}, in cui $P_f$ ha come errore la sensibilità del manometro 
-($\SI{2}{\kilo\pascal}$). L'errore sul valore medio è stato calcolato pesando gli errori delle singole misure, con la 
-formula \ref{eq:errore_valore_medio}.
-
-Operando un test di compatibilità con il valore atteso per l'indice di rifrazione dell'aria, pari a $n = 1.00029$, otteniamo una distanza in 
-deviazioni standard pari a $1.18$, che corrisponde ad una percentuale di circa 35$\%$.\\
-
-\subsection{Misura indice rifrazione vetro}
-Sempre mantenendo la configuazione Michelson, abbiamo montato un supporto con una lastra di vetro
-per cercare di ricavarne l'indice di rifrazione. Servendoci di un rotational pointer è possibile
-aumentare o diminuire l'angolo di incidenza del raggio sulla lastra, allungando o accorciando il cammino ottico 
-del raggio nel mezzo, di conseguenza, similmente a quanto fatto prima, possiamo contare il numero di frange $\Delta N$ che scorre 
-al variare dell'angolo $\theta$
-\begin{equation}
-2 \cdot d \cdot (D_i - D_f) = \Delta N \cdot \lambda
-\label{eq:fringe_count}
-\end{equation}
-
-
-\subsection{Misura lunghezza d'onda con righello reticolo}
-
-
-
-
-
-\section{Considerazioni sugli errori}
-\label{sec:errori}
-
-\subsection{Commenti finali}
-
-
-
-\newpage
-\section{Tabelle}
-
-%Tabella per Michelson - Calibrazione micrometro
-
-%Non c'è errore perchè sul numero di frange non c'è errore
-
-%Tabella per Michelson - Indice di rifrazione aria
-%valori acquisiti
-
 
 
 \end{document}
